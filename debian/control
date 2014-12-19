@@ -1,0 +1,24 @@
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+Source: whonix-libvirt
+Section: misc
+Priority: optional
+Maintainer: Patrick Schleizer <adrelanos@riseup.net>
+Build-Depends: debhelper (>= 8), faketime
+Homepage: https://github.com/Whonix/whonix-libvirt
+Vcs-Browser: https://github.com/Whonix/whonix-libvirt
+Vcs-Git: https://github.com/Whonix/whonix-libvirt.git
+Standards-Version: 3.9.4
+
+Package: whonix-libvirt
+Architecture: all
+Depends: ${misc:Depends}
+Description: Whonix Libvirt XML Files for KVM and QEMU
+ Libvirt XML files for Whonix-Gateway, Whonix-Workstation,
+ Whonix-Custom-Workstation and Whonix's internal network.
+ .
+ See also:
+ - https://www.whonix.org/wiki/KVM
+ - https://www.whonix.org/wiki/QEMU
