@@ -9,7 +9,7 @@ cd ..
 cd ..
 cd ..
 
-chmod o+rwx /var/run/libvirt/libvirt-sock
+sudo chmod o+rwx /var/run/libvirt/libvirt-sock
 
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix_network.xml
 #virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix_network.xml
