@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -x
+#set -e
+
+mydir="$( cd "$( dirname "$0" )" && pwd )"
+cd "$mydir"
+cd ..
+cd ..
+cd ..
+
+virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix_network.xml
+virsh -c qemu:///system net-autostart Whonix
+virsh -c qemu:///system net-start Whonix
+
+for target in kvm qemu; do
+   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml
+   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml
+   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml
+done
+
+true "$0: All tests passed."
