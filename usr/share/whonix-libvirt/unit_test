@@ -37,14 +37,14 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
 for target in kvm qemu; do
-   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
-   virsh -c qemu:///system undefine Whonix-Gateway || true
+   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml
+   virsh -c qemu:///system undefine Whonix-Gateway
 
-   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
-   virsh -c qemu:///system undefine Whonix-Workstation || true
+   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml
+   virsh -c qemu:///system undefine Whonix-Workstation
 
-   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
-   virsh -c qemu:///system undefine Whonix-Custom-Workstation || true
+   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml
+   virsh -c qemu:///system undefine Whonix-Custom-Workstation
 done
 
 true "------------------------------------------------------------"
