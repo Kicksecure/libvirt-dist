@@ -19,10 +19,15 @@ virsh -c qemu:///system net-start Whonix || true
 for target in kvm qemu; do
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
    virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
+   virsh -c qemu:///system undefine Whonix-Gateway || true
+
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
    virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
+   virsh -c qemu:///system undefine Whonix-Workstation || true
+
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
    virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
+   virsh -c qemu:///system undefine Whonix-Custom-Workstation || true
 done
 
 true "$0: All tests passed."
