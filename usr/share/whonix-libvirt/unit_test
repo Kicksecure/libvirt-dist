@@ -14,7 +14,7 @@ sudo chmod o+rwx /var/run/libvirt/libvirt-sock
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix_network.xml
 virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix_network.xml
 virsh -c qemu:///system net-autostart Whonix
-virsh -c qemu:///system net-start Whonix
+virsh -c qemu:///system net-start Whonix || true
 
 for target in kvm qemu; do
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml
