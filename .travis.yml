@@ -1,7 +1,7 @@
 before_install:
-  - echo "deb http://de.archive.ubuntu.com/ubuntu utopic main universe" | sudo tee -a /etc/apt/sources.list
-  - echo "deb http://de.archive.ubuntu.com/ubuntu utopic-updates main universe" | sudo tee -a /etc/apt/sources.list
-  - echo "deb http://de.archive.ubuntu.com/ubuntu utopic-security main universe" | sudo tee -a /etc/apt/sources.list
+  - echo "deb http://de.archive.ubuntu.com/ubuntu vivid main universe" | sudo tee -a /etc/apt/sources.list
+  - echo "deb http://de.archive.ubuntu.com/ubuntu vivid-updates main universe" | sudo tee -a /etc/apt/sources.list
+  - echo "deb http://de.archive.ubuntu.com/ubuntu vivid-security main universe" | sudo tee -a /etc/apt/sources.list
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 3B4FE6ACC0B21F32
   - sudo apt-get update -qq
   - sudo apt-get install -y qemu-kvm libvirt-bin virt-manager
