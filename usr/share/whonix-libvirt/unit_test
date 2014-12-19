@@ -3,7 +3,7 @@
 set -x
 set -e
 
-if [ "$CI" = "true" ]; then
+if [ ! "$CI" = "true" ]; then
    true "ERROR: You probably do not want to run this outside of a CI \
 environment, because it uses virsh to undefine virtual machines."
    exit 1
