@@ -3,4 +3,4 @@ before_install:
   - sudo apt-get install -y qemu-kvm libvirt-bin virt-manager
 
 script:
-- /usr/share/whonix-libvirt/unit_test
+- ./usr/share/whonix-libvirt/unit_test
