@@ -32,11 +32,11 @@ true "------------------------------------------------------------"
 
 ## Debugging.
 
-virsh -c qemu:///system net-dumpxml default || true
-virsh -c qemu:///system net-dumpxml default --inactive || true
+virsh -c qemu:///system net-dumpxml default
+virsh -c qemu:///system net-dumpxml default --inactive
 
-virsh -c qemu:///system net-dumpxml Whonix || true
-virsh -c qemu:///system net-dumpxml Whonix --inactive || true
+virsh -c qemu:///system net-dumpxml Whonix
+virsh -c qemu:///system net-dumpxml Whonix --inactive
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
