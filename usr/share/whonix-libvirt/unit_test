@@ -43,6 +43,19 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
 for target in kvm qemu; do
+   virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml
+   true "-----"
+   virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml
+   true "-----"
+   virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml
+   true "-----"
+done
+
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+
+for target in kvm qemu; do
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
