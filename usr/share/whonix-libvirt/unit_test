@@ -30,6 +30,18 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
+## Debugging.
+
+virsh -c qemu:///system net-dumpxml default || true
+virsh -c qemu:///system net-dumpxml default --inactive || true
+
+virsh -c qemu:///system net-dumpxml Whonix || true
+virsh -c qemu:///system net-dumpxml Whonix --inactive || true
+
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+
 for target in kvm qemu; do
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
