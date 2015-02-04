@@ -1,0 +1,252 @@
+commit a9714edd51ec3b131a754318901620f220b4c75c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 4 00:41:01 2015 +0000
+
+    updated makefile generic to version 1.3
+
+commit c3355c80935742197894ef9985b553769c6bdfa4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 3 23:59:02 2015 +0000
+
+    Added creation of upstream changelog to debian/rules
+
+commit 63bc1ab76437815e7e5ba2fd861be9f20b59152b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 17 18:51:37 2015 +0000
+
+    refactoring
+
+commit d4de551a899b555c4dbda1b5947f96a71e07463c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 7 19:45:11 2015 +0000
+
+    added readme
+
+commit cd8e077dae1136dbff3185071f3773c5a38e86a1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 7 19:35:04 2015 +0000
+
+    bumped compat from 8 to 9
+
+commit cfa32dd736f1db042497366090f4ff7ca112ae8e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 1 17:38:43 2015 +0000
+
+    show version numbers of relevant packages in unit test
+
+commit 3a7a1157a5adb2bbb0d13d14eea653781346acd9
+Merge: 8b82c9d 5855890
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 1 17:37:18 2015 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5855890cf1c48914956404164cb7008c2cf9e0b6
+Merge: 6e8e233 0681699
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 1 18:35:55 2015 +0100
+
+    Merge pull request #4 from HulaHoopWhonix/patch-4
+    
+    Update Whonix-Workstation_qemu.xml
+
+commit 6e8e23374bea7b1793d68575b528f9f3fa2f02fa
+Merge: ebe4d56 ce6ccbb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 1 18:35:48 2015 +0100
+
+    Merge pull request #3 from HulaHoopWhonix/patch-3
+    
+    Update Whonix-Workstation_kvm.xml
+
+commit ebe4d56699826c852d6393ef4f723491fbcf1faf
+Merge: dbcac67 e919149
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 1 18:35:40 2015 +0100
+
+    Merge pull request #2 from HulaHoopWhonix/patch-2
+    
+    Update Whonix-Custom-Workstation_qemu.xml
+
+commit dbcac67a685346b2100a7571f2785eaa03d2c842
+Merge: 8b82c9d ebbfdca
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 1 18:35:33 2015 +0100
+
+    Merge pull request #1 from HulaHoopWhonix/patch-1
+    
+    bumped up ws cpu no. to 2
+
+commit 0681699858b5fe32779e46a741cc0cd6e1b70444
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Jan 1 17:26:32 2015 +0000
+
+    Update Whonix-Workstation_qemu.xml
+
+commit ce6ccbbaec4613a1a7206ee1902314b6a528ad9e
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Jan 1 17:14:22 2015 +0000
+
+    Update Whonix-Workstation_kvm.xml
+
+commit e919149a84bb57c523501740500bd864f3ea5fa5
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Jan 1 17:13:13 2015 +0000
+
+    Update Whonix-Custom-Workstation_qemu.xml
+
+commit ebbfdca2de7e1ea39af0420f5c5673b1c87de2c3
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Jan 1 17:12:02 2015 +0000
+
+    Update Whonix-Custom-Workstation_kvm.xml
+
+commit 8b82c9db1f9c524f40544a8a64d3658239d76cf3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 20 19:16:31 2014 +0000
+
+    unit test
+
+commit 79984707f4c2d02150dc97cf974fbf6ebb8758a2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 20 19:15:51 2014 +0000
+
+    unit test
+
+commit 4bcac51b264b9d78042899be005e4c06549224ab
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 20 19:11:07 2014 +0000
+
+    unit test: use "virsh domxml-to-native qemu-argv"
+
+commit 2ff13849ea0a36c1b42b8698addbc7827fac5cb1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 20 00:08:23 2014 +0000
+
+    debugging
+
+commit 1aec6b906a0acabd6ea1e62105eed34bb023babe
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:54:44 2014 +0000
+
+    unit test
+
+commit ef0aeb7ae96d0da53aeea17ff54df32ba575afcf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:54:07 2014 +0000
+
+    unit test
+
+commit 57ef7dff75e0fa73fee6531ff85d23f6e22eab59
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:53:46 2014 +0000
+
+    unit test
+
+commit 3b17468e00dde603b2de4516e118cacc9f001a8a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:51:31 2014 +0000
+
+    unit test
+
+commit 0da6156d151876440085fa599bdb91b71767c06b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:36:26 2014 +0000
+
+    CI
+
+commit 267b0a98437292b90f8b86a729f84b3f6ebeeb8c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:26:45 2014 +0000
+
+    CI
+
+commit 2b4110bd97e7ca6a222072c38a20144702b22666
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:15:44 2014 +0000
+
+    unit test
+
+commit 462fd612781e96915b6e002af7ce186e7ecfc196
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 19:03:07 2014 +0000
+
+    CI
+
+commit cda989b01c5a5fcd3fc9f947b593ef149b90473e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 18:56:21 2014 +0000
+
+    CI
+
+commit 5b8c04dcd04f44a653843e77cff6bce95ca35220
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 18:24:36 2014 +0000
+
+    fix
+
+commit 3b757c22f3133fd05595ab75572c882cd940f8a7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 18:22:36 2014 +0000
+
+    test
+
+commit 0e70c6f4ac7b625b75f1488766fe5c8fe2423ad0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 18:18:39 2014 +0000
+
+    test
+
+commit 956e812dc6294dd11e232c5f8b9dc839c1dc7030
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 18:14:16 2014 +0000
+
+    unit test
+
+commit ee3025087ed30fe68378838f949e0074800395b7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 18:11:17 2014 +0000
+
+    unit test
+
+commit 738d9aba0dc1fc7bf34e3379cdde1222b2a43bc0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 09:11:23 2014 +0000
+
+    unit test
+
+commit b193af888c5f707231b6f7b67cd56478b2263088
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 09:06:03 2014 +0000
+
+    CI
+
+commit aebf305572ca8d08a70e52ce0f9b92ed1dc4c9ff
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 09:02:30 2014 +0000
+
+    CI
+
+commit 2420886c11b83c7271b9416003c3c98973cc98dc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 08:57:32 2014 +0000
+
+    initial implementation of unit test
+
+commit 99aac44b2dee216fd18c7026bf2f7f66e5c309a5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 08:57:10 2014 +0000
+
+    initial implementation of unit test
+
+commit e5da89b251f89d38992b4bb61f46a2db3af68515
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 08:22:49 2014 +0000
+
+    packaging
+
+commit 05e8d9f4e7bdbdb9091f60533997ca34397c3803
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 19 08:17:07 2014 +0000
+
+    initial import from https://github.com/Whonix/Whonix/tree/master/libvirt
