@@ -1,4 +1,4 @@
-<domain type='qemu'>
+<domain type='kvm'>
   <name>Whonix-Gateway</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <memory unit='KiB'>524288</memory>
@@ -49,7 +49,7 @@
     <input type='tablet' bus='usb'/>
     <input type='mouse' bus='ps2'/>
     <graphics type='spice' autoport='yes'>
-      <clipboard copypaste='no'/>
+      <clipboard copypaste='yes'/>
       <filetransfer enable='no'/>
     </graphics>
     <sound model='ich6'/>
