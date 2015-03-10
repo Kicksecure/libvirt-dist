@@ -52,7 +52,7 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-for target in kvm qemu; do
+for target in kvm; do
    virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
    true "-----"
    virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
@@ -65,7 +65,7 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-for target in kvm qemu; do
+for target in kvm; do
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
    virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
@@ -75,7 +75,7 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-for target in kvm qemu; do
+for target in kvm; do
    virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml
    virsh -c qemu:///system undefine Whonix-Gateway
 
