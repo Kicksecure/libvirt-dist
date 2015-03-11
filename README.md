@@ -1,11 +1,10 @@
-# Whonix Libvirt XML Files for KVM and QEMU #
+# Whonix Libvirt XML Files for KVM #
 
 Libvirt XML files for Whonix-Gateway, Whonix-Workstation,
 Whonix-Custom-Workstation and Whonix's internal network.
 
 See also:
 - https://www.whonix.org/wiki/KVM
-- https://www.whonix.org/wiki/QEMU
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 
