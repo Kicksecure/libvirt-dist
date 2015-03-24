@@ -1,3 +1,140 @@
+commit ac37be3da80b2a202cfaf3a00fc9b25b7603d291
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 24 17:27:03 2015 +0000
+
+    updated makefile generic to version 1.4
+
+commit 221b708aca68e79511667660b42c40659aeef4d6
+Merge: 9cdcf40 f745e96
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Mar 11 12:54:16 2015 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit f745e96d800b237a23a5a5c71a694b5266459bf5
+Merge: 9cdcf40 9044d91
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Mar 11 13:53:46 2015 +0100
+
+    Merge pull request #11 from HulaHoopWhonix/patch-11
+    
+    minor edit
+
+commit 9044d910fe83bba5390f07cb7d05a4b005090bbe
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 23:57:36 2015 +0000
+
+    minor edit
+
+commit 9cdcf40bc1c99bc01ef80e8db6b36949736ad131
+Merge: c9624a5 8a5facf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 21:52:49 2015 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c9624a5f1e04c3e69b5751068827cfb7327a65ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 21:51:06 2015 +0000
+
+    ci_test: qemu has been deprecated, removed from ci test
+
+commit 8a5facf342c4da4dccf6250fbcb33ab31e152ced
+Merge: f0a1ea3 0ddd1de
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 22:43:08 2015 +0100
+
+    Merge pull request #10 from HulaHoopWhonix/patch-10
+    
+    Rename Whonix-Custom-Workstation_kvm.xml to Whonix-Custom-Workstation.xm...
+
+commit f0a1ea3ab7ddca9c109613f7d997f3244eeda17a
+Merge: fc63a5a b5ce22d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 22:42:53 2015 +0100
+
+    Merge pull request #9 from HulaHoopWhonix/patch-9
+    
+    Delete Whonix-Custom-Workstation_qemu.xml
+
+commit fc63a5a317ecbc600d04c5110f798462c4a8c0d9
+Merge: a13f042 d88226a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 22:42:40 2015 +0100
+
+    Merge pull request #8 from HulaHoopWhonix/patch-8
+    
+    file rename + enable clipboard for bridge usability
+
+commit a13f04233ee1c67143b75acb783dacd1562fa6de
+Merge: 8956f65 52a12e7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 22:42:18 2015 +0100
+
+    Merge pull request #7 from HulaHoopWhonix/patch-7
+    
+    Rename Whonix-Workstation_kvm.xml to Whonix-Workstation.xml
+
+commit 8956f6500a50aa1423d0812578b781adc8b32809
+Merge: e7b0c4c 8d1983a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 22:41:04 2015 +0100
+
+    Merge pull request #6 from HulaHoopWhonix/patch-6
+    
+    Delete Whonix-Gateway_qemu.xml
+
+commit e7b0c4c05f4e2d7b0826e9c064fa6f3a756562f2
+Merge: 930e208 687cda8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 22:40:46 2015 +0100
+
+    Merge pull request #5 from HulaHoopWhonix/patch-5
+    
+    Delete Whonix-Workstation_qemu.xml
+
+commit 0ddd1ded396f921c4966f2918b72f8ad8ec2ef45
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 21:20:53 2015 +0000
+
+    Rename Whonix-Custom-Workstation_kvm.xml to Whonix-Custom-Workstation.xml
+
+commit b5ce22d6080c40cd4732214a9b06811f1ee4122d
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 21:19:37 2015 +0000
+
+    Delete Whonix-Custom-Workstation_qemu.xml
+
+commit d88226af0c0c58ef4a71ec99c2578729feb90c1c
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 21:18:48 2015 +0000
+
+    file rename + enable clipboard for bridge usability
+
+commit 52a12e7bbc7e81693f118aaf86402191fc42eb76
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 21:17:14 2015 +0000
+
+    Rename Whonix-Workstation_kvm.xml to Whonix-Workstation.xml
+
+commit 8d1983abaa5a7bbbdb2f7ca7c89db6071eaf7c55
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 21:15:25 2015 +0000
+
+    Delete Whonix-Gateway_qemu.xml
+
+commit 687cda8fca3364b01c07690806742f2c7beb8249
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Mar 10 21:14:29 2015 +0000
+
+    Delete Whonix-Workstation_qemu.xml
+
+commit 930e20841af7d3e1c37b6d1034edffe3f69204f4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 4 00:56:45 2015 +0000
+
+    bumped changelog version
+
 commit 7bfc5af2216a55c8917f2bfa98e4a323def439d3
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 4 00:45:08 2015 +0000
