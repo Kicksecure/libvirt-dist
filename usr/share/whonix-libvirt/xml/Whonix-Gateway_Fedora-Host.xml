@@ -1,0 +1,66 @@
+<domain type='kvm'>
+  <name>Whonix-Gateway</name>
+  <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
+  <memory unit='KiB'>524288</memory>
+  <currentMemory unit='KiB'>524288</currentMemory>
+  <vcpu placement='static'>1</vcpu>
+  <os>
+    <type>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <features>
+    <acpi/>
+    <apic eoi='on'/>
+    <pae/>
+    <hap/>
+    <pvspinlock/>
+  </features>
+  <clock offset='utc'>
+    <timer name='rtc' tickpolicy='catchup' track='guest'/>
+    <timer name='kvmclock' present='no'/>
+    <timer name='pit' present='no'/>
+    <timer name='hpet' present='no'/>
+    <timer name='hypervclock' present='no'/>
+  </clock>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <pm>
+    <suspend-to-mem enabled='no'/>
+    <suspend-to-disk enabled='no'/>
+  </pm>
+  <devices>
+    <disk type='file' device='disk'>
+      <driver type='qcow2'/>
+      <source file='/var/lib/libvirt/images/Whonix-Gateway.qcow2'/>
+      <target dev='vda' bus='virtio'/>
+    </disk>
+    <interface type='network'>
+      <source network='default'/>
+      <model type='virtio'/>
+    </interface>
+    <interface type='network'>
+      <source network='Whonix'/>
+      <model type='virtio'/>
+    </interface>
+    <channel type='spicevmc'>
+      <target type='virtio' name='com.redhat.spice.0'/>
+    </channel>
+    <input type='tablet' bus='usb'/>
+    <input type='mouse' bus='ps2'/>
+    <graphics type='spice' autoport='yes'>
+      <clipboard copypaste='yes'/>
+      <filetransfer enable='no'/>
+    </graphics>
+    <sound model='ich6'/>
+    <video>
+      <model type='qxl' ram='256000' vram='256000' heads='1'>
+        <acceleration accel3d='yes' accel2d='yes'/>
+      </model>
+    </video>
+    <memballoon model='virtio'/>
+    <rng model='virtio'>
+      <backend model='random'>/dev/random</backend>
+    </rng>
+  </devices>
+</domain>
