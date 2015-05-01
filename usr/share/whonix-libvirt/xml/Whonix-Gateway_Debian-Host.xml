@@ -31,17 +31,19 @@
   </pm>
   <devices>
     <disk type='file' device='disk'>
-      <driver type='qcow2'/>
+      <driver name='qemu' type='qcow2'/>
       <source file='/var/lib/libvirt/images/Whonix-Gateway.qcow2'/>
       <target dev='vda' bus='virtio'/>
     </disk>
     <interface type='network'>
       <source network='default'/>
       <model type='virtio'/>
+      <driver name='qemu'/>
     </interface>
     <interface type='network'>
       <source network='Whonix'/>
       <model type='virtio'/>
+      <driver name='qemu'/>
     </interface>
     <channel type='spicevmc'>
       <target type='virtio' name='com.redhat.spice.0'/>
