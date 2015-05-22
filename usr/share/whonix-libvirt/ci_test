@@ -17,11 +17,11 @@ cd ..
 
 ## Work around CI issue.
 ## dpkg: error: configuration error: /etc/dpkg/dpkg.cfg.d/multiarch:1: unknown option 'foreign-architecture'
-ls -la /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
-cat /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
-rm --force /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
-
-apt-get install -y qemu-kvm libvirt-bin virt-manager
+sudo ls -la /etc/dpkg/dpkg.cfg.d/ || true
+sudo ls -la /etc/dpkg/dpkg.cfg.d/multiarch* || true
+sudo cat /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
+sudo rm --force /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
+sudo apt-get install -y qemu-kvm libvirt-bin virt-manager
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
