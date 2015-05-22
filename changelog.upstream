@@ -1,3 +1,97 @@
+commit 30fe3bde4858e242518cd0a610c98ee044b42ecd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:45:53 2015 +0000
+
+    CI
+
+commit 24ef95be82cd0805c16bd100e295dbb6e9860e1c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:38:26 2015 +0000
+
+    CI
+
+commit 2b433b314a775d58f1548c8cc87797e198092815
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:22:20 2015 +0000
+
+    CI
+
+commit 7d9b75e8dd541120cebfb683ca50ea9fa87f389f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:15:12 2015 +0000
+
+    CI
+
+commit 157c9443c498a39cd5306a5c8d8883aa2f4224ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:10:13 2015 +0000
+
+    CI
+
+commit eb54e0ee885eb84438846fb66503ed660ea6419a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 21:36:37 2015 +0000
+
+    CI
+
+commit 31d7c8b3bf4659bf111ccf6baa87a2685d966cb7
+Merge: 0838718 694d78b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 20:56:56 2015 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 694d78b8edae207b820ac3a887a97068a31e6dc4
+Merge: bc67de4 d7c9577
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:55:52 2015 +0200
+
+    Merge pull request #20 from HulaHoopWhonix/patch-20
+    
+    Update Whonix-Custom-Workstation.xml
+
+commit bc67de4d03a3c84ce5d2759e6ba9208cdfb89a34
+Merge: 2eda27d 0dd4ab1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:55:47 2015 +0200
+
+    Merge pull request #19 from HulaHoopWhonix/patch-18
+    
+    virtio hardcoded
+
+commit 2eda27deefe19e9ad94d6981d452ed1533b1dad3
+Merge: 0838718 0d1074e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 22 22:55:37 2015 +0200
+
+    Merge pull request #18 from HulaHoopWhonix/patch-19
+    
+    Update Whonix-Gateway.xml
+
+commit d7c95777863036aea6f60b248fda504446d6fb4d
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri May 22 15:49:34 2015 +0000
+
+    Update Whonix-Custom-Workstation.xml
+
+commit 0d1074e398507b9c378fc76e51903399d1006e29
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri May 22 15:47:15 2015 +0000
+
+    Update Whonix-Gateway.xml
+
+commit 0dd4ab114a4fcefc9ffc1ee175e76f8ca210ee95
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri May 22 15:45:31 2015 +0000
+
+    virtio hardcoded
+
+commit 0838718b02a67c0b64c3c2d81b49ab50b131dff8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 30 17:57:13 2015 +0000
+
+    bumped changelog version
+
 commit 2dd0a0d16cc8f6c058dc644ba5b9a3d5a05b9ec3
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 28 13:43:32 2015 +0000
