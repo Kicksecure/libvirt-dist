@@ -21,6 +21,8 @@ ls -la /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
 cat /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
 rm --force /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
 
+apt-get install -y qemu-kvm libvirt-bin virt-manager
+
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"

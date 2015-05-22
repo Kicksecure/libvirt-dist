@@ -4,7 +4,6 @@ before_install:
   - echo "deb http://de.archive.ubuntu.com/ubuntu vivid-security main universe" | sudo tee -a /etc/apt/sources.list
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 3B4FE6ACC0B21F32
   - sudo apt-get update -qq
-  - sudo apt-get install -y qemu-kvm libvirt-bin virt-manager
 
 script:
 - ./usr/share/whonix-libvirt/ci_test
