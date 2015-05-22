@@ -15,6 +15,12 @@ cd ..
 cd ..
 cd ..
 
+## Work around CI issue.
+## dpkg: error: configuration error: /etc/dpkg/dpkg.cfg.d/multiarch:1: unknown option 'foreign-architecture'
+ls -la /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
+cat /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
+rm --force /etc/dpkg/dpkg.cfg.d/multiarch:1: || true
+
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
