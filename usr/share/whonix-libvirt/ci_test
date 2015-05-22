@@ -60,39 +60,33 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-for target in kvm; do
-   virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
-   true "-----"
-   virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
-   true "-----"
-   virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
-   true "-----"
-done
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml || true
+true "-----"
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml || true
+true "-----"
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml || true
+true "-----"
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-for target in kvm; do
-   virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml || true
-   virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml || true
-   virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml || true
-done
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml || true
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml || true
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-for target in kvm; do
-   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway_${target}.xml
-   virsh -c qemu:///system undefine Whonix-Gateway
+virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+virsh -c qemu:///system undefine Whonix-Gateway
 
-   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation_${target}.xml
-   virsh -c qemu:///system undefine Whonix-Workstation
+virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+virsh -c qemu:///system undefine Whonix-Workstation
 
-   virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation_${target}.xml
-   virsh -c qemu:///system undefine Whonix-Custom-Workstation
-done
+virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+virsh -c qemu:///system undefine Whonix-Custom-Workstation
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
