@@ -15,6 +15,13 @@
     <hap/>
     <pvspinlock/>
   </features>
+  <cpu mode='custom' match='exact'>
+    <model fallback='forbid'>qemu64</model>
+    <topology sockets='1' cores='1' threads='1'/>
+    <feature policy='disable' name='tsc'/>
+    <feature policy='disable' name='clflush'/>
+    <feature policy='optional' name='aes'/>
+  </cpu>
   <clock offset='utc'>
     <timer name='rtc' tickpolicy='catchup' track='guest'/>
     <timer name='kvmclock' present='no'/>
