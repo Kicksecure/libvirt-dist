@@ -24,7 +24,7 @@
   </cpu>
   <clock offset='utc'>
     <timer name='rtc' tickpolicy='catchup' track='guest'/>
-    <timer name='kvmclock' present='no'/>
+    <timer name='kvmclock' present='yes'/>
     <timer name='pit' present='no'/>
     <timer name='hpet' present='no'/>
     <timer name='hypervclock' present='no'/>
