@@ -55,13 +55,11 @@
     <channel type='spicevmc'>
       <target type='virtio' name='com.redhat.spice.0'/>
     </channel>
-    <input type='tablet' bus='usb'/>
     <input type='mouse' bus='ps2'/>
     <graphics type='spice' autoport='yes'>
       <clipboard copypaste='yes'/>
       <filetransfer enable='no'/>
     </graphics>
-    <sound model='ich6'/>
     <video>
       <model type='qxl' ram='256000' vram='256000' heads='1'>
         <acceleration accel3d='yes' accel2d='yes'/>
