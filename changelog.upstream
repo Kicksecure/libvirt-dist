@@ -1,3 +1,245 @@
+commit 9c516578d2b7647861d80a5a3779a40237898c6e
+Merge: 06ba84d 606dd6c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 19 16:29:22 2016 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 606dd6c5de55a5f273fd2d1349b7ec8b4bc3c297
+Merge: 888ea87 298bf61
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 19 16:27:51 2016 +0100
+
+    Merge pull request #33 from HulaHoopWhonix/patch-34
+    
+    Update Whonix-Workstation.xml
+
+commit 888ea8770742cbccb3c4ca1575e7caf577e99799
+Merge: 7ac2cd9 839f6d7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 19 16:27:44 2016 +0100
+
+    Merge pull request #32 from HulaHoopWhonix/patch-33
+    
+    Update Whonix-Gateway.xml
+
+commit 7ac2cd9965b1b32bd6faa6ab078bc117ab1fbbc8
+Merge: 06ba84d ac067f1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 19 16:27:36 2016 +0100
+
+    Merge pull request #31 from HulaHoopWhonix/patch-32
+    
+    Update Whonix-Custom-Workstation.xml
+
+commit 298bf61f84e83373eb0e34f769a9b332492fc716
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Mar 3 19:11:51 2016 +0000
+
+    Update Whonix-Workstation.xml
+
+commit 839f6d79086f8790ab1576b23a7b5000d11bba77
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Mar 3 19:10:18 2016 +0000
+
+    Update Whonix-Gateway.xml
+
+commit ac067f13a32314fb1b4b84cb8cb1907c5a0d74f4
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Mar 3 19:07:50 2016 +0000
+
+    Update Whonix-Custom-Workstation.xml
+
+commit 06ba84d36e489130d1670ac05390dbca0c977556
+Merge: 46d8839 09c7208
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 20:30:27 2016 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 09c7208ce2439d1d661ca28a8f6c045bd067723b
+Merge: 0d1c0a7 1146e4a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 19:37:13 2016 +0100
+
+    Merge pull request #30 from HulaHoopWhonix/patch-31
+    
+    Update Whonix-Custom-Workstation.xml
+
+commit 0d1c0a7807638e59eb4d2ee2128ea8febcf74d84
+Merge: 3e90584 36a0e5d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 19:37:00 2016 +0100
+
+    Merge pull request #29 from HulaHoopWhonix/patch-30
+    
+    Update Whonix-Gateway.xml
+
+commit 3e90584caf33811101d59a39bac26d1a307bfb18
+Merge: 46d8839 0346f24
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 19:36:51 2016 +0100
+
+    Merge pull request #28 from HulaHoopWhonix/patch-29
+    
+    Update Whonix-Workstation.xml
+
+commit 1146e4a9e3dda2c92dfb7e18d4c109c73f20d2f0
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Feb 10 17:25:00 2016 +0000
+
+    Update Whonix-Custom-Workstation.xml
+
+commit 36a0e5d3910f5eb7d42e5c70de125b870bed1191
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Feb 10 17:24:32 2016 +0000
+
+    Update Whonix-Gateway.xml
+
+commit 0346f241e86ac88c07fe40a8783651be70cfc011
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Feb 10 17:20:35 2016 +0000
+
+    Update Whonix-Workstation.xml
+
+commit 46d8839bde9714511776df860255b6d26cf740a5
+Merge: 96d7501 9e46dc4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 03:07:56 2016 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 9e46dc4ab8c0dca4e480b385b6c2d3be20d1c0e8
+Merge: 22fbd4e 3e52782
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 03:06:01 2016 +0100
+
+    Merge pull request #27 from HulaHoopWhonix/patch-27
+    
+    Update Whonix-Gateway.xml
+
+commit 22fbd4ee44f8f16652eac5ec643bb68d9919dd69
+Merge: e17d894 257b59a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 03:05:46 2016 +0100
+
+    Merge pull request #26 from HulaHoopWhonix/patch-28
+    
+    Update Whonix-Custom-Workstation.xml
+
+commit e17d894f0dcf64257e6154af2ec9e9088eed6fd1
+Merge: 96d7501 7516edd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 10 03:05:31 2016 +0100
+
+    Merge pull request #25 from HulaHoopWhonix/patch-26
+    
+    disable svm until stretch
+
+commit 257b59a843bb7c7c1504aeb69ea83882d1c11567
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Feb 6 21:11:20 2016 +0000
+
+    Update Whonix-Custom-Workstation.xml
+
+commit 7516eddb8b87af7cfcaaa9e5e74d3cbba86337cc
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Feb 6 21:10:36 2016 +0000
+
+    Update Whonix-Workstation.xml
+
+commit 3e52782cb7397c698166ba529d015ae263608618
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Feb 6 21:08:48 2016 +0000
+
+    Update Whonix-Gateway.xml
+
+commit af76fc9093e84a75aaf81e9e1da539cfd0ae13be
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Feb 6 21:08:04 2016 +0000
+
+    disable svm until stretch
+
+commit 96d75011d0bff213465d0cc804068fd155d52031
+Merge: 4373797 150ae2c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Dec 22 02:27:47 2015 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 150ae2c50f1f5cc1b27383bfa8279b08091c039a
+Merge: 4373797 390ae6a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Dec 22 02:27:19 2015 +0100
+
+    Merge pull request #24 from HulaHoopWhonix/patch-25
+    
+    Update Whonix-Gateway.xml
+
+commit 390ae6a6bad866b73f10227bbebe2172fdce0028
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Dec 22 00:28:05 2015 +0000
+
+    Update Whonix-Gateway.xml
+
+commit 4373797af35862e02677cbb88520d0fd0e92827c
+Merge: 03a13f7 6c0a05e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 12 04:25:56 2015 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6c0a05e17c5dc49d8af132e774716e3d01818bb2
+Merge: 9212f38 072ea8b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 12 04:25:07 2015 +0000
+
+    Merge pull request #23 from HulaHoopWhonix/patch-24
+    
+    Update Whonix-Gateway.xml
+
+commit 9212f381db454b08a78ed9649839ce51d129924e
+Merge: c6704a8 c008fbd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 12 04:24:51 2015 +0000
+
+    Merge pull request #22 from HulaHoopWhonix/patch-23
+    
+    Update Whonix-Workstation.xml
+
+commit c6704a86a13c3a7963421d01bb24d46bde5e0b1b
+Merge: 03a13f7 d8060f4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 12 04:24:39 2015 +0000
+
+    Merge pull request #21 from HulaHoopWhonix/patch-21
+    
+    Update Whonix-Custom-Workstation.xml
+
+commit 072ea8b6d6f6eee9f1662148b236d3da626c8527
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Dec 12 04:10:52 2015 +0000
+
+    Update Whonix-Gateway.xml
+
+commit c008fbdf8a22771dbd7ed9aff35ee577ab678ef4
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Dec 12 04:00:17 2015 +0000
+
+    Update Whonix-Workstation.xml
+
+commit d8060f4c452949e2552a8cf2be119cfc06f6d469
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Dec 12 03:51:21 2015 +0000
+
+    Update Whonix-Custom-Workstation.xml
+
+commit 03a13f74f2654793192eebc362cea427073391ba
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 25 14:08:35 2015 +0000
+
+    bumped changelog version
+
 commit a0df2124f61c9d2721cf1f7b4ff60ed93b69840b
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jun 3 15:00:42 2015 +0000
