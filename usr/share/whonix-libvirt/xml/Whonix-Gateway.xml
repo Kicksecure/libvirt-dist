@@ -14,6 +14,9 @@
     <pae/>
     <hap/>
     <pvspinlock/>
+    <kvm>
+      <hidden state='on'/>
+    </kvm>
   </features>
   <cpu mode='custom' match='exact'>
     <model fallback='forbid'>qemu64</model>
