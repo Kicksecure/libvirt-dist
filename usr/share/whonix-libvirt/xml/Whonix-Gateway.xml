@@ -61,9 +61,7 @@
       <filetransfer enable='no'/>
     </graphics>
     <video>
-      <model type='qxl' ram='256000' vram='256000' heads='1'>
-        <acceleration accel3d='yes' accel2d='yes'/>
-      </model>
+      <model type='qxl' ram='256000' vram='256000' heads='1'/>
     </video>
     <memballoon model='virtio'/>
     <rng model='virtio'>
