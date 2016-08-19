@@ -3,7 +3,7 @@
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <memory unit='KiB'>524288</memory>
   <currentMemory unit='KiB'>524288</currentMemory>
-  <vcpu placement='static'>1</vcpu>
+  <vcpu placement='static' cpuset='0'>1</vcpu>
   <os>
     <type>hvm</type>
     <boot dev='hd'/>
