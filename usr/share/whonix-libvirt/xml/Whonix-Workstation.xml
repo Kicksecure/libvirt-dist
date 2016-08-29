@@ -3,17 +3,17 @@
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <memory unit='KiB'>1048576</memory>
   <currentMemory unit='KiB'>1048576</currentMemory>
+  <memoryBacking>
+   <nosharepages/>
+  </memoryBacking>
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <os>
     <type>hvm</type>
     <boot dev='hd'/>
   </os>
   <features>
-    <acpi/>
-    <apic eoi='on'/>
-    <pae/>
     <hap/>
-    <pvspinlock/>
+    <pvspinlock state='off'/>
   </features>
   <cpu mode='custom' match='exact'>
     <model fallback='forbid'>qemu64</model>
@@ -23,7 +23,7 @@
     <feature policy='optional' name='aes'/>
   </cpu>
   <clock offset='utc'>
-    <timer name='rtc' tickpolicy='catchup' track='guest'/>
+    <timer name='rtc' present='no'/>
     <timer name='kvmclock' present='no'/>
     <timer name='pit' present='no'/>
     <timer name='hpet' present='no'/>
