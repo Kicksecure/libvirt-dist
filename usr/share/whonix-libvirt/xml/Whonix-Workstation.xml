@@ -59,7 +59,7 @@
     <video>
       <model type='qxl' ram='256000' vram='256000' heads='1'/>
     </video>
-    <memballoon model='virtio'/>
+    <memballoon model='none'/>
     <rng model='virtio'>
       <backend model='random'>/dev/random</backend>
     </rng>
