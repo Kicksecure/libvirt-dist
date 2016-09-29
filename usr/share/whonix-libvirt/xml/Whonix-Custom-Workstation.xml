@@ -61,6 +61,7 @@
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
+      <rate bytes='1024' period='1000'/>
       <backend model='random'>/dev/random</backend>
     </rng>
   </devices>
