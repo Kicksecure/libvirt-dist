@@ -62,7 +62,7 @@
       <filetransfer enable='no'/>
     </graphics>
     <video>
-      <model type='qxl' ram='256000' vram='256000' heads='1'/>
+      <model type='qxl' ram='65536' vram='65536' heads='1'/>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
