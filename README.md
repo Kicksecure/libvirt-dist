@@ -1,10 +1,11 @@
-# Whonix Libvirt XML Files for KVM #
+# Whonix Libvirt XML Files for KVM and QEMU #
 
 Libvirt XML files for Whonix-Gateway, Whonix-Workstation,
 Whonix-Custom-Workstation and Whonix's internal network.
 
 See also:
 - https://www.whonix.org/wiki/KVM
+- https://www.whonix.org/wiki/QEMU
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 
@@ -53,7 +54,7 @@ gpg --export 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA | sudo apt-key add -
 3\. Add Whonix's APT repository.
 
 ```
-echo "deb http://sourceforge.net/projects/whonixdevelopermetafiles/files/internal/ wheezy main" > /etc/apt/sources.list.d/whonix.list
+echo "deb http://deb.whonix.org jessie main" > /etc/apt/sources.list.d/whonix.list
 ```
 
 4\. Update your package lists.
