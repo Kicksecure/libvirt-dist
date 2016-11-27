@@ -4,7 +4,7 @@
   <memory unit='KiB'>1048576</memory>
   <currentMemory unit='KiB'>1048576</currentMemory>
   <memoryBacking>
-   <nosharepages/>
+    <nosharepages/>
   </memoryBacking>
   <blkiotune>
     <weight>250</weight>
