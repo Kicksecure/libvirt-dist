@@ -6,6 +6,9 @@
   <memoryBacking>
    <nosharepages/>
   </memoryBacking>
+  <blkiotune>
+    <weight>250</weight>
+  </blkiotune>
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <os>
     <type>hvm</type>
