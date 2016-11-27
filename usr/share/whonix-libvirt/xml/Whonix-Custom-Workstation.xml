@@ -4,10 +4,10 @@
   <memory unit='KiB'>1048576</memory>
   <currentMemory unit='KiB'>1048576</currentMemory>
   <memoryBacking>
-   <nosharepages/>
+    <nosharepages/>
   </memoryBacking>
   <blkiotune>
-   <weight>250</weight>
+    <weight>250</weight>
   </blkiotune>
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <os>
