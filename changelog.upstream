@@ -1,3 +1,390 @@
+commit b2d84af503f965f91bc928ef67e5c90ec9928ef7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Nov 21 17:44:14 2016 +0000
+
+    readme
+
+commit f996b6ada1be74df056a90ecd7f3dc1d4d966560
+Merge: f17f670 00d1fe9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Sep 29 20:18:35 2016 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 00d1fe92eda7faad36dfdead73e20e2379e71ac5
+Merge: 827e49f 4856377
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Sep 29 20:17:54 2016 +0200
+
+    Merge pull request #51 from HulaHoopWhonix/patch-52
+    
+    Rate limit RNG
+
+commit 827e49f9c67ea6d4740c3dc5a10094bc28f5cecf
+Merge: 721e532 c314e90
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Sep 29 20:17:30 2016 +0200
+
+    Merge pull request #50 from HulaHoopWhonix/patch-51
+    
+    Rate limit RNG
+
+commit 721e53291ee516fecf4b27fce43276bc88c7280f
+Merge: f17f670 2ef08ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Sep 29 20:17:13 2016 +0200
+
+    Merge pull request #49 from HulaHoopWhonix/patch-50
+    
+    Rate limit RNG
+
+commit 4856377e9e20d4de57edb5f454555624e3602ef9
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Sep 29 13:33:56 2016 +0000
+
+    Rate limit RNG
+    
+    This is necessary to prevent malicious entropy starvation of other VMs and the host.
+    
+    https://www.certdepot.net/rhel7-get-started-random-number-generator/
+
+commit c314e90c6d3e1aab70e51bf0758fc42783120113
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Sep 29 13:32:33 2016 +0000
+
+    Rate limit RNG
+    
+    This is necessary to prevent malicious entropy starvation of other VMs and the host.
+    
+    https://www.certdepot.net/rhel7-get-started-random-number-generator/
+
+commit 2ef08ee37b6c82ddc3875569afcb5fad4d98fa45
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Sep 29 13:30:59 2016 +0000
+
+    Rate limit RNG
+    
+    This is necessary to prevent malicious entropy starvation of other VMs and the host.
+    
+    https://www.certdepot.net/rhel7-get-started-random-number-generator/
+
+commit f17f670847e25368b855aef837fbba3800ef3bb9
+Merge: 17314e8 b885449
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 9 14:22:08 2016 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b885449d2947505299b1171e66028c3ea5102a4e
+Merge: a107c1e 2547474
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 9 14:19:49 2016 +0200
+
+    Merge pull request #48 from HulaHoopWhonix/patch-49
+    
+    Memory balloon feature disabled. Could potentially aid rowhammer.
+
+commit a107c1e5a407c5ea05d8762cee9508ce449bd577
+Merge: 31dca46 a20d200
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 9 14:19:42 2016 +0200
+
+    Merge pull request #47 from HulaHoopWhonix/patch-48
+    
+    Memory balloon feature disabled. Could potentially aid rowhammer.
+
+commit 31dca4653d0669e3993a41b63642ff2f095d555e
+Merge: 17314e8 d9770eb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 9 14:19:34 2016 +0200
+
+    Merge pull request #46 from HulaHoopWhonix/patch-47
+    
+    Memory balloon feature disabled. Could potentially aid rowhammer.
+
+commit 2547474b444c745eaea9e62ad13d1071deaa5a91
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Sep 7 22:47:06 2016 +0000
+
+    Memory balloon feature disabled. Could potentially aid rowhammer.
+
+commit a20d20085e48ec2890aa3620f680230d66391e00
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Sep 7 22:45:27 2016 +0000
+
+    Memory balloon feature disabled. Could potentially aid rowhammer.
+
+commit d9770eb976a49136ffdb01a6836823d53b55bcac
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Sep 7 22:44:23 2016 +0000
+
+    Memory balloon feature disabled. Could potentially aid rowhammer.
+
+commit 17314e8f5cc9119aa40000334440c62930b3ce2d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 30 21:17:00 2016 +0000
+
+    sudo --non-interactive
+    
+    https://phabricator.whonix.org/T549
+
+commit 5620e921d2cf0135e1b1ae6deb8f6b746c2df83b
+Merge: 0dbd0af 773a83d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 29 17:45:03 2016 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 773a83d14bd6927fcd03344ecba35985766545a6
+Merge: 731b891 bc5082c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 29 17:43:49 2016 +0000
+
+    Merge pull request #45 from HulaHoopWhonix/patch-46
+    
+    attack surface reduction
+
+commit 731b891f4b1486c77990e65e85cf24a3b57dc4b3
+Merge: df7d27d d592c94
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 29 17:43:32 2016 +0000
+
+    Merge pull request #44 from HulaHoopWhonix/patch-45
+    
+    attack surface reduction
+
+commit df7d27d77da6f4570de3a7173f624fa0794663ee
+Merge: 0dbd0af 233381c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 29 17:43:19 2016 +0000
+
+    Merge pull request #43 from HulaHoopWhonix/patch-44
+    
+    attack surface reduction
+
+commit bc5082cda16282d9f6d24c6fc89abfe77e7f947d
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sun Aug 28 19:57:47 2016 +0000
+
+    attack surface reduction
+    
+    Disabled (for attack surface reduction):
+    
+    Rest of changes irrelevant for trusted GW.
+    
+    * (explicitly) mem dedupe in case host is silly enough to have it enabled.
+    * pae
+    * apic
+
+commit d592c947bfbea0ec94a16cbdbf35a008a67eac3c
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sun Aug 28 19:50:33 2016 +0000
+
+    attack surface reduction
+    
+    Disabled (for attack surface reduction):
+    
+    * rtc and acpi_pm timers leaving the coarse and inaccurate jiffies and refined_jiffes internal counters as the only guest source.
+    * (explicitly) mem dedupe in case host is silly enough to have it enabled.
+    * pae
+    * apic
+    * acpi
+    * pvspinlock because we don't want multithreading
+
+commit 233381c08433cf0cd2be475952a55d5d01ab1193
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sun Aug 28 19:45:10 2016 +0000
+
+    attack surface reduction
+    
+    Disabled (for attack surface reduction):
+    
+    * rtc and acpi_pm timers leaving the coarse and inaccurate jiffies and refined_jiffies guest internal counters as the only guest source.
+    * (explicitly) mem dedupe in case host is silly enough to have it enabled.
+    * pae
+    * apic
+    * acpi
+    * pvspinlock because we don't want multithreading
+
+commit 0dbd0afca542fe6fbdd15c88c8c1e4a9432718bd
+Merge: c86b3bb 81723d6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Aug 19 15:45:37 2016 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 81723d6baed378deada5ffed195667b0682f67c4
+Merge: 2bedebc bcae8ef
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Aug 19 15:44:51 2016 +0000
+
+    Merge pull request #42 from HulaHoopWhonix/patch-43
+    
+    Pin vcpu to physical cpu. Reduce to 1 cpu
+
+commit 2bedebc2c140148b518f22307d44d66d3fd731d7
+Merge: d31e8e0 c10111f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Aug 19 15:44:39 2016 +0000
+
+    Merge pull request #41 from HulaHoopWhonix/patch-42
+    
+    Pin vcpu to physical cpu. Reduce to 1 cpu
+
+commit d31e8e00c5f9a489caeb60760e49fe82e021b259
+Merge: c86b3bb 1423e91
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Aug 19 15:44:27 2016 +0000
+
+    Merge pull request #40 from HulaHoopWhonix/patch-41
+    
+    Pin vcpu to physical cpu
+
+commit bcae8efa72f853c35f84111ccaa71f8ab5804b10
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Aug 18 03:21:42 2016 +0000
+
+    Pin vcpu to physical cpu. Reduce to 1 cpu
+
+commit c10111fbd68544bda88d9ca858fe85a2b9407e2d
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Aug 18 03:19:49 2016 +0000
+
+    Pin vcpu to physical cpu. Reduce to 1 cpu
+    
+    Makes some covert channel attacks more difficult. Eliminates cross-VM cache attacks on crypto.
+
+commit 1423e91959b0e7bfb9d308fe618f9378bd12796d
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Thu Aug 18 03:12:54 2016 +0000
+
+    Pin vcpu to physical cpu
+
+commit c86b3bb5c87b924214bed79a6f0b675eb41e6f09
+Merge: 13a2946 7eab676
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jul 5 01:43:42 2016 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 7eab676f5469029608aeabe67fc329f9757aa204
+Merge: 9892d34 8abdba7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jul 5 01:42:54 2016 +0200
+
+    Merge pull request #39 from HulaHoopWhonix/patch-40
+    
+    Removing accel cruft
+
+commit 9892d345a6c627c658f2418ab129ac533e39a3c4
+Merge: 7d63a68 bda5ce7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jul 5 01:42:41 2016 +0200
+
+    Merge pull request #38 from HulaHoopWhonix/patch-39
+    
+    Removing accel cruft
+
+commit 7d63a68d5a43796e9e21a3442eb9066afe2404b9
+Merge: 13a2946 0fa5188
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jul 5 01:42:23 2016 +0200
+
+    Merge pull request #37 from HulaHoopWhonix/patch-38
+    
+    Removing accel cruft
+
+commit 8abdba796ca24b598523f6faa79e845a20dc7ef8
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Mon Jul 4 03:19:49 2016 +0000
+
+    Removing accel cruft
+
+commit bda5ce7431fde95e941332a34c3053832142b548
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Mon Jul 4 03:18:07 2016 +0000
+
+    Removing accel cruft
+
+commit 0fa518837a6f27b0657359555f96279e19a91eae
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Mon Jul 4 03:16:22 2016 +0000
+
+    Removing accel cruft
+
+commit af6fc49b31237837917892f54ce7c745a2e98847
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Mon Jul 4 03:06:59 2016 +0000
+
+    Removing accel cruft
+
+commit 13a2946940a528d0adf0d165bda01b2b0a6cb944
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jun 2 14:57:40 2016 +0000
+
+    Revert "Merge remote-tracking branch 'origin/master'"
+    
+    This reverts commit 28d8c080d46ba6923f31d268d65eeee462416ae3, reversing
+    changes made to b61635d8ad1a81ef3c9c3c2aa6de55e3e1860764.
+
+commit 28d8c080d46ba6923f31d268d65eeee462416ae3
+Merge: b61635d 1998125
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jun 2 14:55:34 2016 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 1998125faf8c50870402510fbb537a2bd97ae5cf
+Merge: e4f109b f62deb5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jun 2 11:25:51 2016 +0000
+
+    Merge pull request #36 from HulaHoopWhonix/patch-37
+    
+    Hide the KVM hypervisor from standard MSR based discovery
+
+commit e4f109b4cd605c0150108926de00f21efdefd4fd
+Merge: 4b0b398 99d5d70
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jun 2 11:25:33 2016 +0000
+
+    Merge pull request #35 from HulaHoopWhonix/patch-36
+    
+    Hide the KVM hypervisor from standard MSR based discovery
+
+commit 4b0b398a6b5deb49f4ffd2d97d1c9c4f06f97050
+Merge: b61635d 8b93ee8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jun 2 11:25:21 2016 +0000
+
+    Merge pull request #34 from HulaHoopWhonix/patch-35
+    
+    Hide the KVM hypervisor from standard MSR based discovery
+
+commit f62deb51ac83437457f57b768dfaf728c5a30aed
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jun 1 23:36:31 2016 +0000
+
+    Hide the KVM hypervisor from standard MSR based discovery
+
+commit 99d5d70a8bf6e7495295a6046491c1b97c463d19
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jun 1 23:35:08 2016 +0000
+
+    Hide the KVM hypervisor from standard MSR based discovery
+
+commit 8b93ee84f02b254a742945c941ac28c5aaf15513
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jun 1 23:33:11 2016 +0000
+
+    Hide the KVM hypervisor from standard MSR based discovery
+
+commit b61635d8ad1a81ef3c9c3c2aa6de55e3e1860764
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 7 22:54:58 2016 +0000
+
+    bumped changelog version
+
 commit 9c516578d2b7647861d80a5a3779a40237898c6e
 Merge: 06ba84d 606dd6c
 Author: Patrick Schleizer <adrelanos@riseup.net>
