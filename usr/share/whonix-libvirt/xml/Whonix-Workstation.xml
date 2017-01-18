@@ -4,8 +4,11 @@
   <memory unit='KiB'>1048576</memory>
   <currentMemory unit='KiB'>1048576</currentMemory>
   <memoryBacking>
-   <nosharepages/>
+    <nosharepages/>
   </memoryBacking>
+  <blkiotune>
+    <weight>250</weight>
+  </blkiotune>
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <os>
     <type>hvm</type>
@@ -43,7 +46,7 @@
       <target dev='vda' bus='virtio'/>
     </disk>
     <interface type='network'>
-      <source network='Whonix'/>
+      <source network='internal'/>
       <model type='virtio'/>
       <driver name='qemu'/>
     </interface>
@@ -57,7 +60,7 @@
     </graphics>
     <sound model='ich6'/>
     <video>
-      <model type='qxl' ram='256000' vram='256000' heads='1'/>
+      <model type='qxl' ram='65536' vram='65536' heads='1'/>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
