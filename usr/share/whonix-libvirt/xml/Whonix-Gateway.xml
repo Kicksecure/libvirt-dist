@@ -2,10 +2,13 @@
   <name>Whonix-Gateway</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <memory unit='KiB'>524288</memory>
-  <memoryBacking>
-   <nosharepages/>
-  </memoryBacking>
   <currentMemory unit='KiB'>524288</currentMemory>
+  <memoryBacking>
+    <nosharepages/>
+  </memoryBacking>
+  <blkiotune>
+    <weight>250</weight>
+  </blkiotune>
   <vcpu placement='static' cpuset='0'>1</vcpu>
   <os>
     <type>hvm</type>
@@ -44,12 +47,12 @@
       <target dev='vda' bus='virtio'/>
     </disk>
     <interface type='network'>
-      <source network='default'/>
+      <source network='external'/>
       <model type='virtio'/>
       <driver name='qemu'/>
     </interface>
     <interface type='network'>
-      <source network='Whonix'/>
+      <source network='internal'/>
       <model type='virtio'/>
       <driver name='qemu'/>
     </interface>
@@ -62,7 +65,7 @@
       <filetransfer enable='no'/>
     </graphics>
     <video>
-      <model type='qxl' ram='256000' vram='256000' heads='1'/>
+      <model type='qxl' ram='65536' vram='65536' heads='1'/>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>

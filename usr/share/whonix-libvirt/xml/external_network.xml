@@ -1,0 +1,6 @@
+<network>
+  <name>external</name>
+  <forward mode='nat'/>
+  <bridge name='virbr1' stp='on' delay='0'/>
+  <ip address='10.0.2.2' netmask='255.255.255.0'/>
+</network>
