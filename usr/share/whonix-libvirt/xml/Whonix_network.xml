@@ -1,4 +1,0 @@
-<network>
-  <name>Whonix</name>
-  <bridge name='virbr1' stp='on' delay='0'/>
-</network>
