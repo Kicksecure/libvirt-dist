@@ -17,6 +17,8 @@
   <features>
     <hap/>
     <pvspinlock state='off'/>
+    <pmu state='off'/>
+    <vmport state='off'/>
   </features>
   <cpu mode='custom' match='exact'>
     <model fallback='forbid'>qemu64</model>
