@@ -17,7 +17,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:43:05 2017 +0000
 
     Merge pull request #53 from HulaHoopWhonix/patch-54
-    
+
     Create external_network.xml
 
 commit d76577f9f18a0aa48c3f9536cfedd3b3a666b3f5
@@ -26,7 +26,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:42:46 2017 +0000
 
     Merge pull request #56 from HulaHoopWhonix/patch-57
-    
+
     Restored default vram values
 
 commit 91b3565d624ff224965d638bc8f46568160599b9
@@ -35,7 +35,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:42:17 2017 +0000
 
     Merge pull request #55 from HulaHoopWhonix/patch-56
-    
+
     Restored default vram values
 
 commit 8da80072ef37e2dd7ae63d0b78d867401051946f
@@ -44,7 +44,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:41:35 2017 +0000
 
     Merge pull request #54 from HulaHoopWhonix/patch-55
-    
+
     Restored default vram values
 
 commit 3c778e5eb874cda9d1fc85a1cc5c90e0c6f172a7
@@ -53,7 +53,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:40:11 2017 +0000
 
     Merge pull request #52 from HulaHoopWhonix/patch-53
-    
+
     Update and rename Whonix_network.xml to internal_network.xml
 
 commit 28f2aaff1ac09edfa6eb9e1e6f74e6d06620fbfd
@@ -145,7 +145,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Oct 13 11:09:19 2016 +0000
 
     Restored defaut vram values
-    
+
     The extra vram was a waste of RAM
 
 commit ef0a4be1b8fc71f07d7773376e6198ac6ab0b08b
@@ -173,7 +173,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 29 20:17:54 2016 +0200
 
     Merge pull request #51 from HulaHoopWhonix/patch-52
-    
+
     Rate limit RNG
 
 commit 827e49f9c67ea6d4740c3dc5a10094bc28f5cecf
@@ -182,7 +182,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 29 20:17:30 2016 +0200
 
     Merge pull request #50 from HulaHoopWhonix/patch-51
-    
+
     Rate limit RNG
 
 commit 721e53291ee516fecf4b27fce43276bc88c7280f
@@ -191,7 +191,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 29 20:17:13 2016 +0200
 
     Merge pull request #49 from HulaHoopWhonix/patch-50
-    
+
     Rate limit RNG
 
 commit 4856377e9e20d4de57edb5f454555624e3602ef9
@@ -199,9 +199,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Sep 29 13:33:56 2016 +0000
 
     Rate limit RNG
-    
+
     This is necessary to prevent malicious entropy starvation of other VMs and the host.
-    
+
     https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 commit c314e90c6d3e1aab70e51bf0758fc42783120113
@@ -209,9 +209,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Sep 29 13:32:33 2016 +0000
 
     Rate limit RNG
-    
+
     This is necessary to prevent malicious entropy starvation of other VMs and the host.
-    
+
     https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 commit 2ef08ee37b6c82ddc3875569afcb5fad4d98fa45
@@ -219,9 +219,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Sep 29 13:30:59 2016 +0000
 
     Rate limit RNG
-    
+
     This is necessary to prevent malicious entropy starvation of other VMs and the host.
-    
+
     https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 commit f17f670847e25368b855aef837fbba3800ef3bb9
@@ -237,7 +237,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 9 14:19:49 2016 +0200
 
     Merge pull request #48 from HulaHoopWhonix/patch-49
-    
+
     Memory balloon feature disabled. Could potentially aid rowhammer.
 
 commit a107c1e5a407c5ea05d8762cee9508ce449bd577
@@ -246,7 +246,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 9 14:19:42 2016 +0200
 
     Merge pull request #47 from HulaHoopWhonix/patch-48
-    
+
     Memory balloon feature disabled. Could potentially aid rowhammer.
 
 commit 31dca4653d0669e3993a41b63642ff2f095d555e
@@ -255,7 +255,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 9 14:19:34 2016 +0200
 
     Merge pull request #46 from HulaHoopWhonix/patch-47
-    
+
     Memory balloon feature disabled. Could potentially aid rowhammer.
 
 commit 2547474b444c745eaea9e62ad13d1071deaa5a91
@@ -281,7 +281,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 30 21:17:00 2016 +0000
 
     sudo --non-interactive
-    
+
     https://phabricator.whonix.org/T549
 
 commit 5620e921d2cf0135e1b1ae6deb8f6b746c2df83b
@@ -297,7 +297,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 29 17:43:49 2016 +0000
 
     Merge pull request #45 from HulaHoopWhonix/patch-46
-    
+
     attack surface reduction
 
 commit 731b891f4b1486c77990e65e85cf24a3b57dc4b3
@@ -306,7 +306,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 29 17:43:32 2016 +0000
 
     Merge pull request #44 from HulaHoopWhonix/patch-45
-    
+
     attack surface reduction
 
 commit df7d27d77da6f4570de3a7173f624fa0794663ee
@@ -315,7 +315,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 29 17:43:19 2016 +0000
 
     Merge pull request #43 from HulaHoopWhonix/patch-44
-    
+
     attack surface reduction
 
 commit bc5082cda16282d9f6d24c6fc89abfe77e7f947d
@@ -323,11 +323,11 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sun Aug 28 19:57:47 2016 +0000
 
     attack surface reduction
-    
+
     Disabled (for attack surface reduction):
-    
+
     Rest of changes irrelevant for trusted GW.
-    
+
     * (explicitly) mem dedupe in case host is silly enough to have it enabled.
     * pae
     * apic
@@ -337,9 +337,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sun Aug 28 19:50:33 2016 +0000
 
     attack surface reduction
-    
+
     Disabled (for attack surface reduction):
-    
+
     * rtc and acpi_pm timers leaving the coarse and inaccurate jiffies and refined_jiffes internal counters as the only guest source.
     * (explicitly) mem dedupe in case host is silly enough to have it enabled.
     * pae
@@ -352,9 +352,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sun Aug 28 19:45:10 2016 +0000
 
     attack surface reduction
-    
+
     Disabled (for attack surface reduction):
-    
+
     * rtc and acpi_pm timers leaving the coarse and inaccurate jiffies and refined_jiffies guest internal counters as the only guest source.
     * (explicitly) mem dedupe in case host is silly enough to have it enabled.
     * pae
@@ -375,7 +375,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 19 15:44:51 2016 +0000
 
     Merge pull request #42 from HulaHoopWhonix/patch-43
-    
+
     Pin vcpu to physical cpu. Reduce to 1 cpu
 
 commit 2bedebc2c140148b518f22307d44d66d3fd731d7
@@ -384,7 +384,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 19 15:44:39 2016 +0000
 
     Merge pull request #41 from HulaHoopWhonix/patch-42
-    
+
     Pin vcpu to physical cpu. Reduce to 1 cpu
 
 commit d31e8e00c5f9a489caeb60760e49fe82e021b259
@@ -393,7 +393,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 19 15:44:27 2016 +0000
 
     Merge pull request #40 from HulaHoopWhonix/patch-41
-    
+
     Pin vcpu to physical cpu
 
 commit bcae8efa72f853c35f84111ccaa71f8ab5804b10
@@ -407,7 +407,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Aug 18 03:19:49 2016 +0000
 
     Pin vcpu to physical cpu. Reduce to 1 cpu
-    
+
     Makes some covert channel attacks more difficult. Eliminates cross-VM cache attacks on crypto.
 
 commit 1423e91959b0e7bfb9d308fe618f9378bd12796d
@@ -429,7 +429,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 5 01:42:54 2016 +0200
 
     Merge pull request #39 from HulaHoopWhonix/patch-40
-    
+
     Removing accel cruft
 
 commit 9892d345a6c627c658f2418ab129ac533e39a3c4
@@ -438,7 +438,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 5 01:42:41 2016 +0200
 
     Merge pull request #38 from HulaHoopWhonix/patch-39
-    
+
     Removing accel cruft
 
 commit 7d63a68d5a43796e9e21a3442eb9066afe2404b9
@@ -447,7 +447,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 5 01:42:23 2016 +0200
 
     Merge pull request #37 from HulaHoopWhonix/patch-38
-    
+
     Removing accel cruft
 
 commit 8abdba796ca24b598523f6faa79e845a20dc7ef8
@@ -479,7 +479,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 14:57:40 2016 +0000
 
     Revert "Merge remote-tracking branch 'origin/master'"
-    
+
     This reverts commit 28d8c080d46ba6923f31d268d65eeee462416ae3, reversing
     changes made to b61635d8ad1a81ef3c9c3c2aa6de55e3e1860764.
 
@@ -496,7 +496,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 11:25:51 2016 +0000
 
     Merge pull request #36 from HulaHoopWhonix/patch-37
-    
+
     Hide the KVM hypervisor from standard MSR based discovery
 
 commit e4f109b4cd605c0150108926de00f21efdefd4fd
@@ -505,7 +505,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 11:25:33 2016 +0000
 
     Merge pull request #35 from HulaHoopWhonix/patch-36
-    
+
     Hide the KVM hypervisor from standard MSR based discovery
 
 commit 4b0b398a6b5deb49f4ffd2d97d1c9c4f06f97050
@@ -514,7 +514,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 11:25:21 2016 +0000
 
     Merge pull request #34 from HulaHoopWhonix/patch-35
-    
+
     Hide the KVM hypervisor from standard MSR based discovery
 
 commit f62deb51ac83437457f57b768dfaf728c5a30aed
@@ -554,7 +554,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 19 16:27:51 2016 +0100
 
     Merge pull request #33 from HulaHoopWhonix/patch-34
-    
+
     Update Whonix-Workstation.xml
 
 commit 888ea8770742cbccb3c4ca1575e7caf577e99799
@@ -563,7 +563,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 19 16:27:44 2016 +0100
 
     Merge pull request #32 from HulaHoopWhonix/patch-33
-    
+
     Update Whonix-Gateway.xml
 
 commit 7ac2cd9965b1b32bd6faa6ab078bc117ab1fbbc8
@@ -572,7 +572,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 19 16:27:36 2016 +0100
 
     Merge pull request #31 from HulaHoopWhonix/patch-32
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit 298bf61f84e83373eb0e34f769a9b332492fc716
@@ -606,7 +606,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 19:37:13 2016 +0100
 
     Merge pull request #30 from HulaHoopWhonix/patch-31
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit 0d1c0a7807638e59eb4d2ee2128ea8febcf74d84
@@ -615,7 +615,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 19:37:00 2016 +0100
 
     Merge pull request #29 from HulaHoopWhonix/patch-30
-    
+
     Update Whonix-Gateway.xml
 
 commit 3e90584caf33811101d59a39bac26d1a307bfb18
@@ -624,7 +624,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 19:36:51 2016 +0100
 
     Merge pull request #28 from HulaHoopWhonix/patch-29
-    
+
     Update Whonix-Workstation.xml
 
 commit 1146e4a9e3dda2c92dfb7e18d4c109c73f20d2f0
@@ -658,7 +658,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 03:06:01 2016 +0100
 
     Merge pull request #27 from HulaHoopWhonix/patch-27
-    
+
     Update Whonix-Gateway.xml
 
 commit 22fbd4ee44f8f16652eac5ec643bb68d9919dd69
@@ -667,7 +667,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 03:05:46 2016 +0100
 
     Merge pull request #26 from HulaHoopWhonix/patch-28
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit e17d894f0dcf64257e6154af2ec9e9088eed6fd1
@@ -676,7 +676,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 03:05:31 2016 +0100
 
     Merge pull request #25 from HulaHoopWhonix/patch-26
-    
+
     disable svm until stretch
 
 commit 257b59a843bb7c7c1504aeb69ea83882d1c11567
@@ -716,7 +716,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Dec 22 02:27:19 2015 +0100
 
     Merge pull request #24 from HulaHoopWhonix/patch-25
-    
+
     Update Whonix-Gateway.xml
 
 commit 390ae6a6bad866b73f10227bbebe2172fdce0028
@@ -738,7 +738,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 12 04:25:07 2015 +0000
 
     Merge pull request #23 from HulaHoopWhonix/patch-24
-    
+
     Update Whonix-Gateway.xml
 
 commit 9212f381db454b08a78ed9649839ce51d129924e
@@ -747,7 +747,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 12 04:24:51 2015 +0000
 
     Merge pull request #22 from HulaHoopWhonix/patch-23
-    
+
     Update Whonix-Workstation.xml
 
 commit c6704a86a13c3a7963421d01bb24d46bde5e0b1b
@@ -756,7 +756,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 12 04:24:39 2015 +0000
 
     Merge pull request #21 from HulaHoopWhonix/patch-21
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit 072ea8b6d6f6eee9f1662148b236d3da626c8527
@@ -844,7 +844,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 22 22:55:52 2015 +0200
 
     Merge pull request #20 from HulaHoopWhonix/patch-20
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit bc67de4d03a3c84ce5d2759e6ba9208cdfb89a34
@@ -853,7 +853,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 22 22:55:47 2015 +0200
 
     Merge pull request #19 from HulaHoopWhonix/patch-18
-    
+
     virtio hardcoded
 
 commit 2eda27deefe19e9ad94d6981d452ed1533b1dad3
@@ -862,7 +862,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 22 22:55:37 2015 +0200
 
     Merge pull request #18 from HulaHoopWhonix/patch-19
-    
+
     Update Whonix-Gateway.xml
 
 commit d7c95777863036aea6f60b248fda504446d6fb4d
@@ -944,7 +944,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Mar 11 13:53:46 2015 +0100
 
     Merge pull request #11 from HulaHoopWhonix/patch-11
-    
+
     minor edit
 
 commit 9044d910fe83bba5390f07cb7d05a4b005090bbe
@@ -972,7 +972,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:43:08 2015 +0100
 
     Merge pull request #10 from HulaHoopWhonix/patch-10
-    
+
     Rename Whonix-Custom-Workstation_kvm.xml to Whonix-Custom-Workstation.xm...
 
 commit f0a1ea3ab7ddca9c109613f7d997f3244eeda17a
@@ -981,7 +981,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:42:53 2015 +0100
 
     Merge pull request #9 from HulaHoopWhonix/patch-9
-    
+
     Delete Whonix-Custom-Workstation_qemu.xml
 
 commit fc63a5a317ecbc600d04c5110f798462c4a8c0d9
@@ -990,7 +990,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:42:40 2015 +0100
 
     Merge pull request #8 from HulaHoopWhonix/patch-8
-    
+
     file rename + enable clipboard for bridge usability
 
 commit a13f04233ee1c67143b75acb783dacd1562fa6de
@@ -999,7 +999,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:42:18 2015 +0100
 
     Merge pull request #7 from HulaHoopWhonix/patch-7
-    
+
     Rename Whonix-Workstation_kvm.xml to Whonix-Workstation.xml
 
 commit 8956f6500a50aa1423d0812578b781adc8b32809
@@ -1008,7 +1008,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:41:04 2015 +0100
 
     Merge pull request #6 from HulaHoopWhonix/patch-6
-    
+
     Delete Whonix-Gateway_qemu.xml
 
 commit e7b0c4c05f4e2d7b0826e9c064fa6f3a756562f2
@@ -1017,7 +1017,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:40:46 2015 +0100
 
     Merge pull request #5 from HulaHoopWhonix/patch-5
-    
+
     Delete Whonix-Workstation_qemu.xml
 
 commit 0ddd1ded396f921c4966f2918b72f8ad8ec2ef45
@@ -1117,7 +1117,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:55 2015 +0100
 
     Merge pull request #4 from HulaHoopWhonix/patch-4
-    
+
     Update Whonix-Workstation_qemu.xml
 
 commit 6e8e23374bea7b1793d68575b528f9f3fa2f02fa
@@ -1126,7 +1126,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:48 2015 +0100
 
     Merge pull request #3 from HulaHoopWhonix/patch-3
-    
+
     Update Whonix-Workstation_kvm.xml
 
 commit ebe4d56699826c852d6393ef4f723491fbcf1faf
@@ -1135,7 +1135,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:40 2015 +0100
 
     Merge pull request #2 from HulaHoopWhonix/patch-2
-    
+
     Update Whonix-Custom-Workstation_qemu.xml
 
 commit dbcac67a685346b2100a7571f2785eaa03d2c842
@@ -1144,7 +1144,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:33 2015 +0100
 
     Merge pull request #1 from HulaHoopWhonix/patch-1
-    
+
     bumped up ws cpu no. to 2
 
 commit 0681699858b5fe32779e46a741cc0cd6e1b70444
