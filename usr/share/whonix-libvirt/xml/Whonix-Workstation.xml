@@ -55,7 +55,8 @@
     <channel type='spicevmc'>
       <target type='virtio' name='com.redhat.spice.0'/>
     </channel>
-    <input type='mouse' bus='ps2'/>
+    <input type='mouse' bus='virtio'/>
+    <input type='keyboard' bus='virtio'/>
     <graphics type='spice' autoport='yes'>
       <clipboard copypaste='no'/>
       <filetransfer enable='no'/>
