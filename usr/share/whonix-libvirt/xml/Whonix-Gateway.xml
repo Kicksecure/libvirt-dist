@@ -21,12 +21,8 @@
     <pmu state='off'/>
     <vmport state='off'/>
   </features>
-  <cpu mode='custom' match='exact'>
-    <model fallback='forbid'>qemu64</model>
-    <feature policy='disable' name='tsc'/>
-    <feature policy='disable' name='clflush'/>
-    <feature policy='disable' name='svm'/>
-    <feature policy='optional' name='aes'/>
+  <cpu mode='host-passthrough'/>
+    <cache mode='passthrough'/>
   </cpu>
   <clock offset='utc'>
     <timer name='rtc' tickpolicy='catchup' track='guest'/>
@@ -61,7 +57,8 @@
     <channel type='spicevmc'>
       <target type='virtio' name='com.redhat.spice.0'/>
     </channel>
-    <input type='mouse' bus='ps2'/>
+    <input type='mouse' bus='virtio'/>
+    <input type='keyboard' bus='virtio'/>
     <graphics type='spice' autoport='yes'>
       <clipboard copypaste='yes'/>
       <filetransfer enable='no'/>
