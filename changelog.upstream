@@ -1,3 +1,78 @@
+commit 40fff7191ff275f4813d559d7085cfebe908e6d0
+Merge: 06362e3 b614db3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jun 19 15:02:54 2017 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b614db33b34f8e9ca64ea78cb017af2e4d0d34cc
+Merge: 6e29da6 5e8f50f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jun 19 14:55:19 2017 +0000
+
+    Merge pull request #63 from HulaHoopWhonix/patch-65
+    
+    Pass thru host CPU and cache info for perf
+
+commit 5e8f50fccc1d209653c48491ad4a46640a663dd9
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat May 20 14:32:43 2017 +0000
+
+    Pass thru host CPU and cache info for perf
+    
+    GW is part of the TCB so it shouldn't harm privacy.
+
+commit 6e29da650373f76cf850f21e3b6c2fc50e1d1907
+Merge: 3d41c78 14da48b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Apr 29 23:58:10 2017 +0200
+
+    Merge pull request #62 from HulaHoopWhonix/patch-63
+    
+    switched input devices to virtio
+
+commit 3d41c7800d256935979e7b055de62bbb9932448a
+Merge: c4c2255 d858686
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Apr 29 23:58:04 2017 +0200
+
+    Merge pull request #61 from HulaHoopWhonix/patch-62
+    
+    switched input devices to virtio
+
+commit c4c2255bb54cc28247d810d5c7df7a4d30e4bf91
+Merge: 06362e3 052d1cf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Apr 29 23:57:56 2017 +0200
+
+    Merge pull request #60 from HulaHoopWhonix/patch-61
+    
+    switched input devices to virtio
+
+commit 14da48bd744808c9188c1878699f8df366463f4b
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Apr 29 15:45:40 2017 +0000
+
+    switched input devices to virtio
+
+commit d858686e4d2b8bcad5b42f2d35f8bba6f5883c4d
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Apr 29 15:43:44 2017 +0000
+
+    switched input devices to virtio
+
+commit 052d1cf15b377fff8d87ab3bf0870a93a7dafe40
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Apr 29 15:41:29 2017 +0000
+
+    switched input devices to virtio
+
+commit 06362e3d22aa5de311a82146fbb65772902b9d60
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Feb 17 14:17:30 2017 +0000
+
+    bumped changelog version
+
 commit 1e64523ecc6d63e72374b055de5d273e2c81bf26
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 10 15:47:56 2017 +0000
