@@ -15,6 +15,7 @@
     <boot dev='hd'/>
   </os>
   <features>
+    <acpi/>
     <hap/>
     <pvspinlock state='off'/>
     <pmu state='off'/>
@@ -23,7 +24,6 @@
   <cpu mode='custom' match='exact'>
     <model fallback='forbid'>qemu64</model>
     <feature policy='disable' name='tsc'/>
-    <feature policy='disable' name='clflush'/>
     <feature policy='disable' name='svm'/>
     <feature policy='optional' name='aes'/>
   </cpu>
