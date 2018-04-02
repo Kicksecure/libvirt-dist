@@ -1,3 +1,46 @@
+commit 3c052a538e13cb356a5020547731fc452a5c0f52
+Merge: d35feaf 5c241c2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 2 12:21:43 2018 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5c241c2a7a7000f61ded6514f731e09ac6524e48
+Merge: 7aa920c c1322cb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 2 14:19:46 2018 +0200
+
+    Merge pull request #65 from HulaHoopWhonix/patch-67
+    
+    acpi and clflush reinstated for future features
+
+commit 7aa920ccedba3db0c379b7bed5758a555ed273ef
+Merge: d35feaf c659063
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 2 14:19:23 2018 +0200
+
+    Merge pull request #66 from HulaHoopWhonix/patch-68
+    
+     acpi and clflush reinstated for future features
+
+commit c65906339d118672cd51f5e9e1a06afe07e55350
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Mar 14 22:51:18 2018 +0000
+
+     acpi and clflush reinstated for future features
+
+commit c1322cbecfe530a1183b66ef4aa8fbcd5d3ab374
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Mar 14 22:46:22 2018 +0000
+
+    acpi and clflush reinstated fo future features
+
+commit d35feafd57a8a6d26c41cc2d80fd92c72ca74e60
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Feb 1 15:36:12 2018 +0000
+
+    bumped changelog version
+
 commit ac53a02a25ad8d03e24a433711d3a14d5fd155d1
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 29 15:50:57 2018 +0000
