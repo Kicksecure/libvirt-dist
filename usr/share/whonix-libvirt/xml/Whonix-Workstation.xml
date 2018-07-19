@@ -21,12 +21,7 @@
     <pmu state='off'/>
     <vmport state='off'/>
   </features>
-  <cpu mode='custom' match='exact'>
-    <model fallback='forbid'>qemu64</model>
-    <feature policy='disable' name='tsc'/>
-    <feature policy='disable' name='svm'/>
-    <feature policy='optional' name='aes'/>
-  </cpu>
+  <cpu mode='host-passthrough'/>
   <clock offset='utc'>
     <timer name='rtc' present='no'/>
     <timer name='kvmclock' present='no'/>
