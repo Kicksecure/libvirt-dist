@@ -1,3 +1,61 @@
+commit 3c2bd981830da18ff850b00b3a65271092025f29
+Merge: 9d3eaba 1061060
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 19 21:26:29 2018 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 106106059126af983ecdf9accf862536c53d2af1
+Merge: 383dc96 64a0d37
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 19 21:20:15 2018 +0800
+
+    Merge pull request #68 from HulaHoopWhonix/patch-70
+    
+    Enabled cpu passthrough for CPU bug fixes
+
+commit 383dc9655dda7c9caf634ee610418398f2db8196
+Merge: 7d0f43f 762eec8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 19 13:47:27 2018 +0800
+
+    Merge pull request #67 from HulaHoopWhonix/patch-69
+    
+    removed cache setting. supported later versions.
+
+commit 7d0f43f63914381304365041b15e8656ecaaefbb
+Merge: 9d3eaba 4c623d2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 19 13:47:06 2018 +0800
+
+    Merge pull request #69 from HulaHoopWhonix/patch-71
+    
+    Enabled cpu passthrough for CPU bug fixes
+
+commit 4c623d2fec553fa4fb63851ca80fcf8e24bf4c83
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 18 23:06:18 2018 +0000
+
+    Enabled cpu passthrough for CPU bug fixes
+
+commit 64a0d37c404feaa0964de802a6bf8a3d7dfd7964
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 18 23:04:48 2018 +0000
+
+    Enabled cpu passthrough for CPU bug fixes
+
+commit 762eec8d20da2d1b3ac0ed2bcfd0f51766116316
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 18 23:02:59 2018 +0000
+
+    removed cache setting. supported later versions.
+
+commit 9d3eaba7559b4b41f9cddbc606d728450c8fb4a2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 2 12:56:15 2018 +0000
+
+    bumped changelog version
+
 commit 3c052a538e13cb356a5020547731fc452a5c0f52
 Merge: d35feaf 5c241c2
 Author: Patrick Schleizer <adrelanos@riseup.net>
