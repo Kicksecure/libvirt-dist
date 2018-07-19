@@ -21,9 +21,7 @@
     <pmu state='off'/>
     <vmport state='off'/>
   </features>
-  <cpu mode='host-passthrough'>
-    <cache mode='passthrough'/>
-  </cpu>
+  <cpu mode='host-passthrough'/>
   <clock offset='utc'>
     <timer name='rtc' tickpolicy='catchup' track='guest'/>
     <timer name='kvmclock' present='yes'/>
