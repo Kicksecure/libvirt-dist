@@ -1,3 +1,67 @@
+commit 337d6ffca0edbfaecd831134ffe5cbd0f0d49989
+Merge: 8bc31b4 aeac4ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Sep 8 05:35:46 2018 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit aeac4ee03bb98d12de567af79a94f92e86afff38
+Merge: 12147c9 8e8259d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Sep 8 09:30:43 2018 +0000
+
+    Merge pull request #73 from HulaHoopWhonix/patch-74
+    
+    removed virtio input devices
+
+commit 12147c9a44a9edf5a00c4a168ab4b650928fb95d
+Merge: cd0cc8f ac19169
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Sep 8 09:30:32 2018 +0000
+
+    Merge pull request #72 from HulaHoopWhonix/patch-73
+    
+    removed virtio input devices
+
+commit cd0cc8f976f591ca02f827a85e35fc72be8336fe
+Merge: 8bc31b4 5be4be5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Sep 8 09:29:59 2018 +0000
+
+    Merge pull request #71 from HulaHoopWhonix/patch-72
+    
+    removed virtio mouse
+
+commit 8e8259d4fdf87f44bce3ec929d70919279a7fa1f
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri Sep 7 23:04:22 2018 +0000
+
+    removed virtio input devices
+
+commit 5be4be53117be98e8483b3731ce5c8ab4090539f
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri Sep 7 23:02:51 2018 +0000
+
+    removed virtio input devices
+
+commit ac19169a9c203edbb557e1847b320efbd038d5e5
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri Sep 7 23:01:35 2018 +0000
+
+    removed virtio input devices
+
+commit 9a271455d1c7364e47a4a913af1b9bcc0dd0d5f2
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri Sep 7 22:59:20 2018 +0000
+
+    removed virtio mouse
+
+commit 8bc31b4a68e7a6297977d8b9d034d9da41358e03
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Aug 27 17:05:58 2018 +0000
+
+    bumped changelog version
+
 commit 96222a738af65f77d691991202a194414ab84383
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 21 05:18:56 2018 +0800
