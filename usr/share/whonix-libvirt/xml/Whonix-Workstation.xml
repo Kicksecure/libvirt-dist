@@ -1,8 +1,8 @@
 <domain type='kvm'>
   <name>Whonix-Workstation</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
-  <memory unit='KiB'>1048576</memory>
-  <currentMemory unit='KiB'>1048576</currentMemory>
+  <memory unit='KiB'>2097152</memory>
+  <currentMemory unit='KiB'>2097152</currentMemory>
   <memoryBacking>
     <nosharepages/>
   </memoryBacking>
