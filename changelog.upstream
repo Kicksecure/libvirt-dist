@@ -1,3 +1,46 @@
+commit 8b0d6fbbcc241475f54795569d311aaa39bcec7b
+Merge: 8b2d22b 1d775f0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 12 01:29:07 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 1d775f0a46327dbedf0e6b7aee90fdfe4f5a8759
+Merge: fc6e6ed aa3593b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 12 01:28:19 2019 -0500
+
+    Merge pull request #75 from leed0s/patch-2
+    
+    Bump RAM to 2048MiB
+
+commit fc6e6ed92cf0a25ec9d3c760d461c547a438f667
+Merge: 8b2d22b 3db3146
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 12 01:28:00 2019 -0500
+
+    Merge pull request #74 from leed0s/patch-1
+    
+    Bump RAM to 2048MiB
+
+commit aa3593bb3072a6f58a00d67e9bf577539a7e6e3d
+Author: leed0s <46492361+leed0s@users.noreply.github.com>
+Date:   Tue Jan 8 15:17:23 2019 +0000
+
+    Bump RAM to 2048MiB
+
+commit 3db31462d0193ac48cfff78916d4062c83f83861
+Author: leed0s <46492361+leed0s@users.noreply.github.com>
+Date:   Tue Jan 8 15:16:17 2019 +0000
+
+    Bump RAM to 2048MiB
+
+commit 8b2d22bbe4d609fbab615e512c996fdc9904d17e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Sep 10 07:38:31 2018 +0000
+
+    bumped changelog version
+
 commit 337d6ffca0edbfaecd831134ffe5cbd0f0d49989
 Merge: 8bc31b4 aeac4ee
 Author: Patrick Schleizer <adrelanos@riseup.net>
