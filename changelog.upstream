@@ -1,3 +1,91 @@
+commit a94adee559b7821711421ddf12c5d13cf48f43e0
+Merge: e8619a9 6911192
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed May 1 01:30:41 2019 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6911192e362e368a2f4a17088b8504919ace442f
+Merge: dd80d90 020c7ca
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 30 21:29:58 2019 -0400
+
+    Merge pull request #80 from HulaHoopWhonix/patch-79
+    
+    Updated network name
+
+commit dd80d9092a3a43a41d9495d0f7af25e826794485
+Merge: ab6627b fca5558
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 30 21:29:45 2019 -0400
+
+    Merge pull request #79 from HulaHoopWhonix/patch-78
+    
+    Updated network names
+
+commit ab6627b84e9dab660bf9082c31d22b896019aa7c
+Merge: b13539c ab42a8c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 30 21:29:27 2019 -0400
+
+    Merge pull request #78 from HulaHoopWhonix/patch-77
+    
+    Updated network name
+
+commit b13539c5d9564ece13b5c3d51ece2528915d0f82
+Merge: af2cf83 749ec29
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 30 21:29:11 2019 -0400
+
+    Merge pull request #77 from HulaHoopWhonix/patch-76
+    
+    Update and rename external_network.xml to Whonix-External.xml
+
+commit af2cf83ca2f2622fe6db2d77bef989a49012a599
+Merge: e8619a9 fb8c2b7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 30 21:28:57 2019 -0400
+
+    Merge pull request #76 from HulaHoopWhonix/patch-75
+    
+    Update and rename internal_network.xml to Whonix-Internal.xml
+
+commit 020c7caa60b428641d8b4647cf0aed3465343453
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Apr 30 20:46:39 2019 +0000
+
+    Updated network name
+
+commit fca5558f3b1e486d681725dedf9ede2a52739f81
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Apr 30 20:45:24 2019 +0000
+
+    Updated network names
+
+commit ab42a8cfb9676eeda970bec207325ad79bf68212
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Apr 30 20:42:19 2019 +0000
+
+    Updated network name
+
+commit 749ec29f9d93c3ec280adf92b6acc39a69fd17a4
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Apr 30 20:40:28 2019 +0000
+
+    Update and rename external_network.xml to Whonix-External.xml
+
+commit fb8c2b7f1c78dd63cd8a529a3894e1b95c391ba5
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Apr 30 20:39:14 2019 +0000
+
+    Update and rename internal_network.xml to Whonix-Internal.xml
+
+commit e8619a9106b27b08cb053a535ca9c1b39e44f2b8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Apr 6 12:24:58 2019 +0000
+
+    bumped changelog version
+
 commit 4aea59fb520ccdfdcac44f18364f8fb061e0b0ec
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 4 05:51:11 2019 -0400
