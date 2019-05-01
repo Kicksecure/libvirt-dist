@@ -43,12 +43,12 @@
       <target dev='vda' bus='virtio'/>
     </disk>
     <interface type='network'>
-      <source network='external'/>
+      <source network='Whonix-External'/>
       <model type='virtio'/>
       <driver name='qemu'/>
     </interface>
     <interface type='network'>
-      <source network='internal'/>
+      <source network='Whonix-Internal'/>
       <model type='virtio'/>
       <driver name='qemu'/>
     </interface>
