@@ -1,3 +1,61 @@
+commit 692bd4b241d4ee0c8c0269d77c2ecd3ee744d32a
+Merge: 435fc6e 4f7541b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat May 4 02:37:57 2019 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 4f7541b943de7dafb3b30511a4e048b865bbd315
+Merge: d367421 0cc6faf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat May 4 02:36:54 2019 -0400
+
+    Merge pull request #81 from HulaHoopWhonix/patch-80
+    
+    Add serial port and console
+
+commit d367421881f17d36c338f28ce94589f3d619577e
+Merge: 945eff1 4f4d993
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat May 4 02:36:43 2019 -0400
+
+    Merge pull request #82 from HulaHoopWhonix/patch-81
+    
+    Add serial port and console
+
+commit 945eff1a99c36f9a520bc1237819b94fdffcc58e
+Merge: 435fc6e e3c6c1c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat May 4 02:36:31 2019 -0400
+
+    Merge pull request #83 from HulaHoopWhonix/patch-82
+    
+    Add serial port and console
+
+commit e3c6c1c0db82ecd0e26274985ba91549c3d93a38
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri May 3 16:29:28 2019 +0000
+
+    Add serial port and console
+
+commit 4f4d993f278e281a09b36a816571de88c96cc8ec
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri May 3 16:27:36 2019 +0000
+
+    Add serial port and console
+
+commit 0cc6fafcc45e8dfa37dd060b4a487d99e4df9697
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Fri May 3 16:24:14 2019 +0000
+
+    Add serial port and console
+
+commit 435fc6e7ff0533ef51a26a4a8935eea4e32352f1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 3 11:45:39 2019 +0000
+
+    bumped changelog version
+
 commit f9dd563d71e8e54136b5e72f2823da81c67c7140
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 3 10:56:59 2019 +0000

@@ -1,3 +1,9 @@
+whonix-libvirt (3:2.8-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 04 May 2019 11:28:30 +0000
+
 whonix-libvirt (3:2.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
