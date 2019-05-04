@@ -52,8 +52,16 @@
       <model type='virtio'/>
       <driver name='qemu'/>
     </interface>
+    <controller type='virtio-serial' index='0'/>
+    <serial type='pty'>
+      <target port='0'/>
+    </serial>
+    <console type='pty'>
+      <target type='serial' port='0'/>
+    </console>
     <channel type='spicevmc'>
       <target type='virtio' name='com.redhat.spice.0'/>
+      <address type='virtio-serial' controller='0' bus='0' port='1'/>
     </channel>
     <graphics type='spice' autoport='yes'>
       <clipboard copypaste='yes'/>
