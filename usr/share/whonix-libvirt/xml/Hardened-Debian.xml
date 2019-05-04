@@ -1,0 +1,75 @@
+<domain type='kvm'>
+  <name>Whonix-Workstation</name>
+  <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
+  <memory unit='KiB'>2097152</memory>
+  <currentMemory unit='KiB'>2097152</currentMemory>
+  <memoryBacking>
+    <nosharepages/>
+  </memoryBacking>
+  <blkiotune>
+    <weight>250</weight>
+  </blkiotune>
+  <vcpu placement='static' cpuset='1'>1</vcpu>
+  <os>
+    <type>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <features>
+    <acpi/>
+    <hap/>
+    <pvspinlock state='off'/>
+    <pmu state='off'/>
+    <vmport state='off'/>
+  </features>
+  <cpu mode='host-passthrough'/>
+  <clock offset='utc'>
+    <timer name='rtc' present='no'/>
+    <timer name='kvmclock' present='no'/>
+    <timer name='pit' present='no'/>
+    <timer name='hpet' present='no'/>
+    <timer name='hypervclock' present='no'/>
+  </clock>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <pm>
+    <suspend-to-mem enabled='no'/>
+    <suspend-to-disk enabled='no'/>
+  </pm>
+  <devices>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2'/>
+      <source file='/var/lib/libvirt/images/Hardened-Debian.qcow2'/>
+      <target dev='vda' bus='virtio'/>
+    </disk>
+    <interface type='network'>
+      <source network='default'/>
+      <model type='virtio'/>
+      <driver name='qemu'/>
+    </interface>
+    <controller type='virtio-serial' index='0'/>
+    <serial type='pty'>
+      <target port='0'/>
+    </serial>
+    <console type='pty'>
+      <target type='serial' port='0'/>
+    </console>
+    <channel type='spicevmc'>
+      <target type='virtio' name='com.redhat.spice.0'/>
+      <address type='virtio-serial' controller='0' bus='0' port='1'/>
+    </channel>
+    <graphics type='spice' autoport='yes'>
+      <clipboard copypaste='no'/>
+      <filetransfer enable='no'/>
+    </graphics>
+    <sound model='ich6'/>
+    <video>
+      <model type='qxl' ram='65536' vram='65536' heads='1'/>
+    </video>
+    <memballoon model='none'/>
+    <rng model='virtio'>
+      <rate bytes='1024' period='1000'/>
+      <backend model='random'>/dev/random</backend>
+    </rng>
+  </devices>
+</domain>
