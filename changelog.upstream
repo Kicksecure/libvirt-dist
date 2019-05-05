@@ -1,3 +1,37 @@
+commit ba2678f02ae1336b2d847242009bcf289e847672
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 5 02:50:56 2019 -0400
+
+    fix
+
+commit 53785ba9d334159500bea9e2ba1514b14c3fd5a2
+Merge: 141f719 6d60da5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 5 02:50:24 2019 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6d60da5ab751bfb70036562a6227095d32d9baf5
+Merge: 141f719 38bfac8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 5 02:49:59 2019 -0400
+
+    Merge pull request #84 from HulaHoopWhonix/patch-83
+    
+    Create Hardened-Debian.xml
+
+commit 38bfac8e8fd632228592f9d4401d51168486eb1b
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat May 4 18:25:42 2019 +0000
+
+    Create Hardened-Debian.xml
+
+commit 141f7198b7da7f94db5b054f39f84b2e5aa41a35
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat May 4 11:28:30 2019 +0000
+
+    bumped changelog version
+
 commit 692bd4b241d4ee0c8c0269d77c2ecd3ee744d32a
 Merge: 435fc6e 4f7541b
 Author: Patrick Schleizer <adrelanos@riseup.net>
