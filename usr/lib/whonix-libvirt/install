@@ -1,0 +1,199 @@
+#!/bin/bash
+
+## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+CHROOT_DIRECTORY="/home/user/whonix-desktop/chroot"
+RAW_DIRECTORY="/home/user/whonix-desktop"
+WHONIX_RAW_FILE="Hardened-Debian-XFCE-15.0.0.1.1-12-g51fee9cd24ced70e20244d6aea7e81f8c56eda99.raw"
+
+set -x
+
+mount-vm() {
+
+	## mounting the raw file to a newly created chroot directory then binding pseudo file systems
+
+	kpartx -a -s -v $RAW_DIRECTORY/$WHONIX_RAW_FILE
+	mkdir -p $RAW_DIRECTORY/chroot
+	mount /dev/mapper/loop0p1 $CHROOT_DIRECTORY
+	mount --bind /dev $CHROOT_DIRECTORY/dev
+	mount --bind /proc $CHROOT_DIRECTORY/proc
+	mount --bind /dev/pts $CHROOT_DIRECTORY/dev/pts
+
+}
+
+install-packages() {
+
+	## here we install the additional packages needed for the desktop installer system
+
+	cat << 'EOF' > $CHROOT_DIRECTORY/etc/apt/sources.list
+
+		deb http://deb.debian.org/debian buster main contrib non-free
+
+		deb http://deb.debian.org/debian buster-updates main contrib non-free
+
+		deb http://security.debian.org buster/updates main contrib non-free
+
+EOF
+
+
+  	chroot $CHROOT_DIRECTORY apt update
+
+    ## list of firmware packages found in Tails
+	chroot $CHROOT_DIRECTORY apt install -y --no-install-recommends firmware-amd-graphics firmware-atheros firmware-b43-installer firmware-b43legacy-installer firmware-brcm80211 firmware-intel-sound firmware-ipw2x00 firmware-iwlwifi firmware-libertas firmware-linux firmware-linux-free firmware-linux-nonfree firmware-misc-nonfree firmware-realtek firmware-ti-connectivity firmware-zd1211
+
+    ## packages for qemu/kvm and better desktop experience
+ 	chroot $CHROOT_DIRECTORY apt install -y iw network-manager-gnome qemu-kvm libvirt-daemon-system libvirt-clients virt-manager network-manager xfce4-xkb-plugin firefox-esr gnome-system-monitor gparted xfce4-screenshooter
+
+    ## calamares and live-config packages
+   chroot $CHROOT_DIRECTORY apt install -y calamares calamares-settings-debian live-config rsync
+
+   ## some theming
+   chroot $CHROOT_DIRECTORY apt install -y --no-install-recommends arc-theme
+}
+
+configure-kvm() {
+
+    ## in this function we configure and enable Whonix networks and domains in the host VM
+    ## here I use .xml files that I have previously extracted in the $RAW_DIRECTORY
+    ## a final, clean build step should also take care of building/extracting these files automatically
+
+  cp $RAW_DIRECTORY/*.xml $CHROOT_DIRECTORY/tmp/
+
+    ## workaround to replace the 'kvm' domain type with 'qemu' otherwise libvirtd service will fail to start in chroot
+	sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
+	sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
+
+    ## starting the libvirtd service so we can define Whonix networks and domain
+    ## of course a clean script would use variables instead of version numbers
+	chroot $CHROOT_DIRECTORY service libvirtd restart
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart default
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start default
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-define tmp/Whonix_external_network-15.0.0.0.9.xml
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-define tmp/Whonix_internal_network-15.0.0.0.9.xml
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart external
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start external
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart internal
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start internal
+	chroot $CHROOT_DIRECTORY virsh -c qemu:///system define tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
+  chroot $CHROOT_DIRECTORY virsh -c qemu:///system define tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
+
+    ## now we can replace back 'qemu' with 'kvm' domain type
+  sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Gateway.xml
+  sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Workstation.xml
+
+
+}
+
+copy-vm-files(){
+
+    ## here we copy the Gateway and Workstation .qcow2 files into the host VM
+	  ## previously I ran qemu-img convert -f qcow2 -O qcow2 on the host to reduce their size
+    ## a final, clean build step should also take care of building/extracting/shrinking these files automatically
+    ## of course it would also use variables instead of version numbers
+	  ## we also apply correct file permissions
+
+	cp --sparse=always $RAW_DIRECTORY/Whonix-Gateway.qcow2 $CHROOT_DIRECTORY/var/lib/libvirt/images/Whonix-Gateway.qcow2
+	cp --sparse=always $RAW_DIRECTORY/Whonix-Workstation.qcow2 $CHROOT_DIRECTORY/var/lib/libvirt/images/Whonix-Workstation.qcow2
+
+	chroot $CHROOT_DIRECTORY chmod -v -R 444  var/lib/libvirt/images/Whonix-Gateway.qcow2
+	chroot $CHROOT_DIRECTORY chmod -v -R 444  var/lib/libvirt/images/Whonix-Workstation.qcow2
+	chroot $CHROOT_DIRECTORY chown -v -R libvirt-qemu:libvirt-qemu  var/lib/libvirt/images/Whonix-Gateway.qcow2
+	chroot $CHROOT_DIRECTORY chown -v -R libvirt-qemu:libvirt-qemu  var/lib/libvirt/images/Whonix-Workstation.qcow2
+
+
+}
+
+
+config-calamares(){
+
+    ## some modifications to the default debian Calamares settings
+    ##  - only adding new users to libvirt and qemu groups by default
+    ##  - removing live-boot and calamares related packages (it seems necessary to remove live-boot to make the target
+    ##    system bootable - needs more testing)
+    ##  - we also enable the installer to set a password for the root account (? not sure about this one)
+    ## much more customization can be done, and may be necessary (for instance branding)
+
+cat <<'EOF'> $CHROOT_DIRECTORY/etc/calamares/modules/packages.conf
+
+backend: apt
+
+operations:
+  - remove:
+      - 'live-boot'
+      - 'live-boot-doc'
+      - 'live-config'
+      - 'live-config-doc'
+      - 'live-config-systemd'
+      - 'live-config-systemd'
+      - 'live-tools'
+      - 'live-task-localisation'
+      - 'calamares'
+      - 'calamares-settings-debian'
+EOF
+
+
+  cat <<'EOF'> $CHROOT_DIRECTORY/etc/calamares/modules/users.conf
+
+---
+userGroup:       users
+defaultGroups:
+    - libvirt
+    - qemu
+autologinGroup:  autologin
+sudoersGroup:    sudo
+setRootPassword: true
+
+EOF
+
+}
+
+clean-vm() {
+
+    ## some cleaning stuff
+    ## also completely deleting the user 'user' so the Calamares installer will not copy his files into the target
+    ## unmounting everything
+
+	chroot $CHROOT_DIRECTORY apt clean
+	rm $CHROOT_DIRECTORY/root/.bash_history
+	rm $CHROOT_DIRECTORY/root/.Xauthority
+	rm $CHROOT_DIRECTORY/home/user/.Xauthority
+	rm $CHROOT_DIRECTORY/home/user/.bash_history
+	chroot $CHROOT_DIRECTORY userdel -r user
+	## deleting vboxsf group as it seems to conflict with live-config Debian Live User GUID
+	chroot $CHROOT_DIRECTORY delgroup vboxsf
+	rm -r $CHROOT_DIRECTORY/var/log/*
+	rm -r $CHROOT_DIRECTORY/tmp/*
+	chroot $CHROOT_DIRECTORY mkdir /var/log/tor
+	chroot $CHROOT_DIRECTORY chown -R debian-tor:adm /var/log/tor
+
+}
+
+umount-vm() {
+
+	umount $CHROOT_DIRECTORY/mnt
+	umount $CHROOT_DIRECTORY/dev/pts
+	umount $CHROOT_DIRECTORY/dev
+	umount $CHROOT_DIRECTORY/proc
+	umount $CHROOT_DIRECTORY
+
+	sleep 2
+
+	kpartx -d -s -v $RAW_DIRECTORY/$WHONIX_RAW_FILE
+
+}
+
+
+main() {
+
+mount-vm
+install-packages
+configure-kvm
+copy-vm-files
+config-calamares
+clean-vm
+umount-vm
+
+}
+
+main "$@"
