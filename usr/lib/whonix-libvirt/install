@@ -29,7 +29,3 @@ virsh -c qemu:///system net-autostart internal
 virsh -c qemu:///system net-start internal
 virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml"
 virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml"
-
-## now we can replace back 'qemu' with 'kvm' domain type
-sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Gateway.xml
-sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Workstation.xml
