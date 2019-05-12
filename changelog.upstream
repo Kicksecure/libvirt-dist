@@ -1,3 +1,75 @@
+commit 062a399bcd156bb0dccec17fad0602e68c5086fc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 05:18:19 2019 -0400
+
+    make install script idempotent
+    
+    create done file /var/lib/whonix-libvirt/install.done
+    
+    run install script when done file does not exist
+    
+    https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/15?u=patrick
+
+commit c19243ac96169205c5e7a45c9aa0c5269754806a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 05:04:13 2019 -0400
+
+    quotes
+
+commit 873d6f6802d10b31aea37125ca2f1d2b9d497b4b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 05:03:15 2019 -0400
+
+    clean start/stop of libvirtd and update network names
+
+commit 3c15dda26942f72c4173706fe019064fff729147
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:52:40 2019 -0400
+
+    undo no longer required since done in temp dir
+
+commit 883442bc5f4b9e3160102f5064cfeab711316e30
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:52:17 2019 -0400
+
+    fix paths, use temp dir
+
+commit a7f1ebe99c90dae794f8dde8db38445e9e87bf78
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:46:42 2019 -0400
+
+    minor
+
+commit 40fda758fa695ab6f602a656412a5cb2cff3cef6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:46:18 2019 -0400
+
+    chroot not required since this will run inside chroot anyhow
+
+commit d8e16357357d6b2140ec86a672ef3c88be8271a1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:45:59 2019 -0400
+
+    initial work
+
+commit 69ea29376bd458c61f80a141bb584922de8e5eea
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:44:56 2019 -0400
+
+    remove all non-kvm config related
+
+commit eb50313bf730237c09b001a63d36a495d9b6efaa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 04:44:06 2019 -0400
+
+    initial import from https://github.com/onions-knight/whonix-stuff/blob/master/2900_configure_desktop_sketch
+
+commit da68b81d3b0a2dbe4b44e018686c3e2031a0f5a8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 5 09:21:58 2019 +0000
+
+    bumped changelog version
+
 commit ba2678f02ae1336b2d847242009bcf289e847672
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 5 02:50:56 2019 -0400
