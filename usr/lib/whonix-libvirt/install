@@ -6,9 +6,14 @@
 set -x
 set -e
 
+## Doing the following in a temporary directory to avoid modified files should
+## this be interrupted in the middle.
+temp_dir="$(mktemp --directory)"
+cp -r /usr/share/whonix-libvirt/xml "$temp_dir"
+
 ## workaround to replace the 'kvm' domain type with 'qemu' otherwise libvirtd service will fail to start in chroot
-sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
-sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
+sed -i "1 s/^.*$/<domain type='qemu'>/" "$temp_dir/xml/Whonix-Gateway.xml"
+sed -i "1 s/^.*$/<domain type='qemu'>/" "$temp_dir/xml/Whonix-Workstation.xml"
 
 ## starting the libvirtd service so we can define Whonix networks and domain
 ## of course a clean script would use variables instead of version numbers
@@ -16,14 +21,14 @@ service libvirtd restart
 
 virsh -c qemu:///system net-autostart default
 virsh -c qemu:///system net-start default
-virsh -c qemu:///system net-define tmp/Whonix_external_network-15.0.0.0.9.xml
-virsh -c qemu:///system net-define tmp/Whonix_internal_network-15.0.0.0.9.xml
+virsh -c qemu:///system net-define /usr/share/whonix-libvirt/xml/Whonix-External.xml
+virsh -c qemu:///system net-define /usr/share/whonix-libvirt/xml/Whonix-Internal.xml
 virsh -c qemu:///system net-autostart external
 virsh -c qemu:///system net-start external
 virsh -c qemu:///system net-autostart internal
 virsh -c qemu:///system net-start internal
-virsh -c qemu:///system define tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
-virsh -c qemu:///system define tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
+virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml"
+virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml"
 
 ## now we can replace back 'qemu' with 'kvm' domain type
 sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Gateway.xml
