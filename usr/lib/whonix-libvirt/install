@@ -13,6 +13,7 @@ sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Workstation
 ## starting the libvirtd service so we can define Whonix networks and domain
 ## of course a clean script would use variables instead of version numbers
 service libvirtd restart
+
 virsh -c qemu:///system net-autostart default
 virsh -c qemu:///system net-start default
 virsh -c qemu:///system net-define tmp/Whonix_external_network-15.0.0.0.9.xml
