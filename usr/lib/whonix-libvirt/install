@@ -28,18 +28,21 @@ else
    systemctl --no-pager start libvirtd
 fi
 
-virsh -c qemu:///system net-autostart "default"
-virsh -c qemu:///system net-start "default"
-virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-External.xml"
-virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-Internal.xml"
-virsh -c qemu:///system net-autostart "Whonix-External"
-virsh -c qemu:///system net-start "Whonix-External"
-virsh -c qemu:///system net-autostart "Whonix-Internal"
-virsh -c qemu:///system net-start "Whonix-Internal"
-virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml"
-virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml"
+virsh -c qemu:///system net-autostart "default" || true
+virsh -c qemu:///system net-start "default" || true
+virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-External.xml" || true
+virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-Internal.xml" || true
+virsh -c qemu:///system net-autostart "Whonix-External" || true
+virsh -c qemu:///system net-start "Whonix-External" || true
+virsh -c qemu:///system net-autostart "Whonix-Internal" || true
+virsh -c qemu:///system net-start "Whonix-Internal" || true
+virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml" || true
+virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
 
 if [ "$stop_libvirtd" = "true" ]; then
    true "libvirtd was not running before running this script, so stopping it now."
    systemctl --no-pager stop libvirtd
 fi
+
+mkdir --parents /var/lib/whonix-libvirt
+touch /var/lib/whonix-libvirt/install.done
