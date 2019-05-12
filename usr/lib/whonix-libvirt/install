@@ -3,35 +3,27 @@
 ## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
 ## See the file COPYING for copying conditions.
 
-configure-kvm() {
+set -x
+set -e
 
-    ## in this function we configure and enable Whonix networks and domains in the host VM
-    ## here I use .xml files that I have previously extracted in the $RAW_DIRECTORY
-    ## a final, clean build step should also take care of building/extracting these files automatically
+## workaround to replace the 'kvm' domain type with 'qemu' otherwise libvirtd service will fail to start in chroot
+sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
+sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
 
-  cp $RAW_DIRECTORY/*.xml $CHROOT_DIRECTORY/tmp/
+## starting the libvirtd service so we can define Whonix networks and domain
+## of course a clean script would use variables instead of version numbers
+chroot $CHROOT_DIRECTORY service libvirtd restart
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart default
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start default
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-define tmp/Whonix_external_network-15.0.0.0.9.xml
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-define tmp/Whonix_internal_network-15.0.0.0.9.xml
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart external
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start external
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart internal
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start internal
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system define tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
+chroot $CHROOT_DIRECTORY virsh -c qemu:///system define tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
 
-    ## workaround to replace the 'kvm' domain type with 'qemu' otherwise libvirtd service will fail to start in chroot
-	sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
-	sed -i "1 s/^.*$/<domain type='qemu'>/" $CHROOT_DIRECTORY/tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
-
-    ## starting the libvirtd service so we can define Whonix networks and domain
-    ## of course a clean script would use variables instead of version numbers
-	chroot $CHROOT_DIRECTORY service libvirtd restart
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart default
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start default
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-define tmp/Whonix_external_network-15.0.0.0.9.xml
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-define tmp/Whonix_internal_network-15.0.0.0.9.xml
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart external
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start external
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-autostart internal
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system net-start internal
-	chroot $CHROOT_DIRECTORY virsh -c qemu:///system define tmp/Whonix-Gateway-XFCE-15.0.0.0.9.xml
-  chroot $CHROOT_DIRECTORY virsh -c qemu:///system define tmp/Whonix-Workstation-XFCE-15.0.0.0.9.xml
-
-    ## now we can replace back 'qemu' with 'kvm' domain type
-  sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Gateway.xml
-  sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Workstation.xml
-
-
-}
+## now we can replace back 'qemu' with 'kvm' domain type
+sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Gateway.xml
+sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Workstation.xml
