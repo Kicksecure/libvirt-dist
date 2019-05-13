@@ -1,3 +1,15 @@
+commit 9596dd044de412874e612a066df5592d4ffa006c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 08:36:48 2019 +0000
+
+    add chroot support
+
+commit 27d82d33e4a6129dfccff3323c686c0403a3c8f2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun May 12 10:56:52 2019 +0000
+
+    bumped changelog version
+
 commit 062a399bcd156bb0dccec17fad0602e68c5086fc
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 12 05:18:19 2019 -0400
