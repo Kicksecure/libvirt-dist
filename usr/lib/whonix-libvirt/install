@@ -25,7 +25,8 @@ if ischroot ; then
       if test -e /var/run/libvirt/libvirt-sock ; then
          break
       fi
-      sleep 1
+      true "$0: pid: $$"
+      sleep 5
    done
    true "Waiting for libvirtd ready."
 else
