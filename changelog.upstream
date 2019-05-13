@@ -1,3 +1,27 @@
+commit ab0cfdde9dcf81c1bab461318e312163fcb505e5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 14:33:34 2019 +0000
+
+     initial import from https://github.com/onions-knight/whonix-stuff
+
+commit 419640124f98d683c3c4d093f95d11b2d5ab1223
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 14:30:47 2019 +0000
+
+     initial import from https://github.com/onions-knight/whonix-stuff
+
+commit a51d03f75534baa465b8cdc63c85873bd70aca1d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 14:20:50 2019 +0000
+
+    add dependencies
+
+commit 172568102b32a2de934ef3fedb3b20fc600c11b2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 11:11:34 2019 +0000
+
+    bumped changelog version
+
 commit 316895a03cb9eac2f084df1a07013fa52a104ef4
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon May 13 11:09:52 2019 +0000
