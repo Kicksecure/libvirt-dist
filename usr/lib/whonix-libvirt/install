@@ -15,17 +15,31 @@ cp -r /usr/share/whonix-libvirt/xml "$temp_dir"
 sed -i "1 s/^.*$/<domain type='qemu'>/" "$temp_dir/xml/Whonix-Gateway.xml"
 sed -i "1 s/^.*$/<domain type='qemu'>/" "$temp_dir/xml/Whonix-Workstation.xml"
 
-if systemctl --no-pager status libvirtd >/dev/null ; then
-   true "libvirtd is running."
+if ischroot ; then
+   true "chroot detected, starting libvirtd..."
+   kill_libvirtd="true"
+   libvirtd &
+   libvirtd_pid="$!"
+   true "Waiting for libvirtd to be ready..."
+   while true ; do
+      if test -e /var/run/libvirt/libvirt-sock ; then
+         break
+      fi
+      sleep 1
+   done
+   true "Waiting for libvirtd ready."
 else
-   if [ "$stop_libvirtd" = "" ]; then
-      stop_libvirtd="true"
-      true "libvirtd is not running, starting it now and stopping it at the end."
+   if systemctl --no-pager status libvirtd >/dev/null ; then
+      true "libvirtd is running."
+   else
+      if [ "$stop_libvirtd" = "" ]; then
+         stop_libvirtd="true"
+         true "libvirtd is not running, starting it now and stopping it at the end."
+      fi
+      ## starting the libvirtd service so we can define Whonix networks and domain
+      ## of course a clean script would use variables instead of version numbers
+      systemctl --no-pager start libvirtd
    fi
-
-   ## starting the libvirtd service so we can define Whonix networks and domain
-   ## of course a clean script would use variables instead of version numbers
-   systemctl --no-pager start libvirtd
 fi
 
 virsh -c qemu:///system net-autostart "default" || true
@@ -38,6 +52,15 @@ virsh -c qemu:///system net-autostart "Whonix-Internal" || true
 virsh -c qemu:///system net-start "Whonix-Internal" || true
 virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml" || true
 virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
+
+if [ "$kill_libvirtd" = "true" ]; then
+   kill -s sigterm "$libvirtd_pid"
+   true "Waiting for libvirtd to terminate..."
+   while kill -0 "$libvirtd_pid" 2> /dev/null; do
+      sleep 1
+   done
+   true "libvirtd to terminated."
+fi
 
 if [ "$stop_libvirtd" = "true" ]; then
    true "libvirtd was not running before running this script, so stopping it now."
