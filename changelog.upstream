@@ -1,3 +1,15 @@
+commit f7302034b1c5d6caee40766eb7fca150d6d6944e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 16:49:08 2019 +0000
+
+    config-package-dev displace files owned by package calamares-settings-debian
+
+commit e8c8457b70160dde86d20402adc56576d906242c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 14:54:40 2019 +0000
+
+    bumped changelog version
+
 commit ab0cfdde9dcf81c1bab461318e312163fcb505e5
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon May 13 14:33:34 2019 +0000
