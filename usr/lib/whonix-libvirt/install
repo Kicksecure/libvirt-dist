@@ -6,6 +6,23 @@
 set -x
 set -e
 
+## {{ Taken from qemu-system-common.postinst.
+# Add the kvm group unless it's already there
+if ! getent group kvm >/dev/null; then
+   addgroup --quiet --system kvm || true
+fi
+## }} Taken from qemu-system-common.postinst.
+
+## {{ Taken from libvirt-bin.postinst.
+if ! getent group libvirt >/dev/null; then
+   addgroup --system libvirt
+fi
+## }} Taken from libvirt-bin.postinst.
+
+## Existence of user "user" is not guaranteed at this point.
+addgroup user kvm >/dev/null || true
+addgroup user libvirt >/dev/null || true
+
 ## Doing the following in a temporary directory to avoid modified files should
 ## this be interrupted in the middle.
 temp_dir="$(mktemp --directory)"
