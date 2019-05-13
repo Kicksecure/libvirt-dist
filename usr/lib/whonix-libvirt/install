@@ -21,12 +21,18 @@ if ischroot ; then
    libvirtd &
    libvirtd_pid="$!"
    true "Waiting for libvirtd to be ready..."
+   counter=0
    while true ; do
       if test -e /var/run/libvirt/libvirt-sock ; then
          break
       fi
       true "$0: pid: $$"
       sleep 5
+      counter="$(( $counter + 1 ))"
+      if [ "$counter" -ge 12 ]; then
+         true "Failed to start libvirtd."
+         exit 1
+      fi
    done
    true "Waiting for libvirtd ready."
 else
