@@ -1,3 +1,27 @@
+commit 316895a03cb9eac2f084df1a07013fa52a104ef4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 11:09:52 2019 +0000
+
+    import from usability-misc package so libvirt group creation happens in time
+
+commit 5f1be47be7ec0d0fa58dbacf561bb6b41cd9eebb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 11:02:54 2019 +0000
+
+    add timeout
+
+commit 02bf609ad046da2759fee8ee41bb465fef7d2461
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 10:22:57 2019 +0000
+
+    debugging
+
+commit c226ed2be1de2224ea859fbf62824bae4bab0571
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon May 13 09:53:10 2019 +0000
+
+    bumped changelog version
+
 commit 9596dd044de412874e612a066df5592d4ffa006c
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon May 13 08:36:48 2019 +0000
