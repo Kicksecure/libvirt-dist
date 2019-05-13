@@ -13,7 +13,8 @@ Standards-Version: 4.3.0
 
 Package: whonix-libvirt
 Architecture: all
-Depends: ${misc:Depends}
+Depends: qemu-kvm, libvirt-daemon-system, libvirt-clients, virt-manager,
+ ${misc:Depends}
 Description: Whonix Libvirt XML Files for KVM and QEMU
  Libvirt XML files for Whonix-Gateway, Whonix-Workstation,
  Whonix-Custom-Workstation and Whonix's internal network.
