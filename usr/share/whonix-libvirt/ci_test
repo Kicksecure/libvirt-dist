@@ -34,10 +34,19 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix_network.xml
-virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix_network.xml
-virsh -c qemu:///system net-autostart Whonix
-virsh -c qemu:///system net-start Whonix || true
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+virsh -c qemu:///system net-autostart Whonix-External
+virsh -c qemu:///system net-start Whonix-External || true
+
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
+virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
+virsh -c qemu:///system net-autostart Whonix-Internal
+virsh -c qemu:///system net-start Whonix-Internal || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
