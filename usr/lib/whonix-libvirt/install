@@ -66,6 +66,11 @@ else
    fi
 fi
 
+## Create shared directory and adjust permissions
+
+mkdir --parents /mnt/shared
+chmod 777 /mnt/shared
+
 virsh -c qemu:///system net-autostart "default" || true
 virsh -c qemu:///system net-start "default" || true
 virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-External.xml" || true
