@@ -16,13 +16,13 @@ cd ..
 cd ..
 
 sudo --non-interactive apt-get update
-sudo --non-interactive apt-get install -y qemu-kvm libvirt-bin virt-manager
+sudo --non-interactive apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-dpkg-query --show --showformat='${Package} ${Version} \n' libvirt-bin qemu-kvm virt-manager || true
+dpkg-query --show --showformat='${Package} ${Version} \n' qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
