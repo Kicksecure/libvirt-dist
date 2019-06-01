@@ -17,8 +17,15 @@ cd ..
 
 ## Debugging.
 cat /etc/apt/sources.list || true
+ls -la /etc/apt/sources.list.d/* || true
+cat /etc/apt/sources.list.d/* || true
+ls -la /etc/apt/apt.conf.d/ || true
+cat /etc/apt/apt.conf.d/* || true
+ls -la cat /etc/apt/preferences.d/
+cat /etc/apt/preferences.d/* || true
 
 ## Version closer to Debian buster.
+rm -f /etc/apt/sources.list
 echo "deb http://us.archive.ubuntu.com/ubuntu/ disco main" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
 echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
 
@@ -26,7 +33,11 @@ echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main" | sudo --non
 cat /etc/apt/sources.list.d/disco.list
 
 sudo --non-interactive apt-get update
-sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
+
+## Debugging.
+sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
+sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager python-gi-cairo || true
+sudo --non-interactive apt-get install --no-install-recommends -y python-gi-cairo || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
