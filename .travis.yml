@@ -1,9 +1,2 @@
-before_install:
-  - echo "deb http://de.archive.ubuntu.com/ubuntu vivid main universe" | sudo --non-interactive tee -a /etc/apt/sources.list
-  - echo "deb http://de.archive.ubuntu.com/ubuntu vivid-updates main universe" | sudo --non-interactive tee -a /etc/apt/sources.list
-  - echo "deb http://de.archive.ubuntu.com/ubuntu vivid-security main universe" | sudo --non-interactive tee -a /etc/apt/sources.list
-  - sudo --non-interactive apt-key adv --keyserver keyserver.ubuntu.com --recv 3B4FE6ACC0B21F32
-  - sudo --non-interactive apt-get update -qq
-
 script:
 - ./usr/share/whonix-libvirt/ci_test
