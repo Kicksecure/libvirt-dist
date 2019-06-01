@@ -33,11 +33,7 @@ echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main universe" | s
 cat /etc/apt/sources.list.d/disco.list
 
 sudo --non-interactive apt-get update
-
-## Debugging.
-sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
-sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager python-gi-cairo || true
-sudo --non-interactive apt-get install --no-install-recommends -y python-gi-cairo || true
+sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
