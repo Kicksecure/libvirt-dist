@@ -1,3 +1,43 @@
+commit 4e52bf7530de12dcb1e00c5f008e090eac98490c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 31 21:26:04 2019 -0400
+
+    minor
+
+commit 0e2cc1cda7dad705fd9e29839c868b178857743f
+Merge: d125826 ae21b49
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 31 21:25:41 2019 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ae21b49bc248d4493cebcdbfcf6c4c4fa4635b0b
+Merge: d125826 735c6fa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 01:25:04 2019 +0000
+
+    Merge pull request #85 from HulaHoopWhonix/patch-84
+    
+    Add shared folder
+
+commit 735c6fa9639fffa7bcbf13fb5cdf7d9e0d378ea0
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Jun 1 01:21:05 2019 +0000
+
+    Adjust permissions and create shared mount point
+
+commit 25649bd7f16f8030a5c9d812146b53711c5e330f
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sat Jun 1 01:11:20 2019 +0000
+
+    Add share folder
+
+commit d125826accfb2336c63a18b3b66c667f3411d409
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 24 21:06:43 2019 +0000
+
+    bumped changelog version
+
 commit 0fe2f4686c17ec3133f1d1e5857cf233ed08f655
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 24 12:29:14 2019 -0400
