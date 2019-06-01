@@ -25,7 +25,7 @@ ls -la /etc/apt/preferences.d/ || true
 cat /etc/apt/preferences.d/* || true
 
 ## Version closer to Debian buster.
-rm -f /etc/apt/sources.list
+sudo --non-interactive rm -f /etc/apt/sources.list || true
 echo "deb http://us.archive.ubuntu.com/ubuntu/ disco main" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
 echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
 
