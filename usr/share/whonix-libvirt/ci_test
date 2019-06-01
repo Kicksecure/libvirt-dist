@@ -57,8 +57,11 @@ true "------------------------------------------------------------"
 virsh -c qemu:///system net-dumpxml default
 virsh -c qemu:///system net-dumpxml default --inactive
 
-virsh -c qemu:///system net-dumpxml Whonix
-virsh -c qemu:///system net-dumpxml Whonix --inactive
+virsh -c qemu:///system net-dumpxml Whonix-External
+virsh -c qemu:///system net-dumpxml Whonix-External --inactive
+
+virsh -c qemu:///system net-dumpxml Whonix-Internal
+virsh -c qemu:///system net-dumpxml Whonix-Internal --inactive
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
