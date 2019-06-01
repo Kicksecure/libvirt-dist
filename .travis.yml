@@ -1,2 +1,4 @@
+dist: xenial
+
 script:
 - ./usr/share/whonix-libvirt/ci_test
