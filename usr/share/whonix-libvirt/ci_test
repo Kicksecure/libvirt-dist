@@ -16,7 +16,7 @@ cd ..
 cd ..
 
 sudo --non-interactive apt-get update
-sudo --non-interactive apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
+sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
