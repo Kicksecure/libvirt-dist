@@ -21,7 +21,7 @@ ls -la /etc/apt/sources.list.d/* || true
 cat /etc/apt/sources.list.d/* || true
 ls -la /etc/apt/apt.conf.d/ || true
 cat /etc/apt/apt.conf.d/* || true
-ls -la cat /etc/apt/preferences.d/
+ls -la /etc/apt/preferences.d/ || true
 cat /etc/apt/preferences.d/* || true
 
 ## Version closer to Debian buster.
