@@ -73,6 +73,8 @@ virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstati
 true "-----"
 virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
 true "-----"
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
+true "-----"
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -81,6 +83,7 @@ true "------------------------------------------------------------"
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -94,6 +97,9 @@ virsh -c qemu:///system undefine Whonix-Workstation
 
 virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
 virsh -c qemu:///system undefine Whonix-Custom-Workstation
+
+virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
+virsh -c qemu:///system undefine Hardened-Debian
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
