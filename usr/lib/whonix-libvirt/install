@@ -66,6 +66,11 @@ else
    fi
 fi
 
+## Create shared directory and adjust permissions
+
+mkdir --parents /mnt/shared
+chmod 777 /mnt/shared
+
 virsh -c qemu:///system net-autostart "default" || true
 virsh -c qemu:///system net-start "default" || true
 virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-External.xml" || true
@@ -76,6 +81,7 @@ virsh -c qemu:///system net-autostart "Whonix-Internal" || true
 virsh -c qemu:///system net-start "Whonix-Internal" || true
 virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml" || true
 virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
+virt-xml "Whonix-Workstation" --add-device --filesystem source=/mnt/shared,target=shared,type=mount,accessmode=mapped` || true
 
 if [ "$kill_libvirtd" = "true" ]; then
    kill -s sigterm "$libvirtd_pid"
