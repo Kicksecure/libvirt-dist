@@ -15,6 +15,16 @@ cd ..
 cd ..
 cd ..
 
+## Debugging.
+cat /etc/apt/sources.list || true
+
+## Version closer to Debian buster.
+echo "deb http://us.archive.ubuntu.com/ubuntu/ disco main" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
+echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
+
+## Debugging.
+cat /etc/apt/sources.list.d/disco.list
+
 sudo --non-interactive apt-get update
 sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
 
