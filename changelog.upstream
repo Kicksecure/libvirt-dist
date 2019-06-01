@@ -1,3 +1,101 @@
+commit 3861389fd64670e08cba356432d98d0de268f011
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 10:59:41 2019 +0000
+
+    CI fix
+
+commit 06d2ab451f6eb6a321687d5b70102f77558b6939
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 10:29:20 2019 +0000
+
+    CI fix
+
+commit 91e30ea4fa6e4ecc4093d93c6402be3a18d14f9e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 10:24:32 2019 +0000
+
+    CI fix
+
+commit 9de721108f4f43105a93df8f40378c3f161f44c1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 10:14:56 2019 +0000
+
+    CI fix
+
+commit 345f968d4d89c885a85f20d5ac7fbf2447b52f70
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 10:08:25 2019 +0000
+
+    CI fix
+
+commit 144fd66f5a08ab4aeaf93ca9b3dbcaf08018562d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 10:02:24 2019 +0000
+
+    CI fix
+
+commit 1ab2bb79c0c9152d4cc84ec84be359981d1ecf21
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:54:14 2019 +0000
+
+    CI fix
+
+commit cf6305dafed06418338ef586de59df3a68b8c2cf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:42:32 2019 +0000
+
+    CI: try newer Ubuntu
+    
+    dist: xenial
+
+commit 6b684ade389f3f78a1d007cf2ec10fc13435c44e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:35:30 2019 +0000
+
+    CI apt: use --no-install-recommends (similar to real build)
+
+commit dceede0cede64660f7d5992ffbd2ebd15cc2db11
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:34:50 2019 +0000
+
+    CI: fix, same dependencies as debian/control
+
+commit d92623484b31f7315a69c8d116c52a410faf0243
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:30:56 2019 +0000
+
+    hardened debian CI support
+
+commit 46b69b91483f44c7437830c6004f910228cecd77
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:29:02 2019 +0000
+
+    CI fix
+
+commit b00dd7992b78eb71d5d088762424755e043d715d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:25:06 2019 +0000
+
+    CI fix
+
+commit a9309a6644c6bfc4b5d5f5780c6e1c16c98e8f05
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:20:38 2019 +0000
+
+    CI fix
+
+commit 826b128c4990982813051987ab9c5d4083dd2ea6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 09:16:33 2019 +0000
+
+    probably no longer need to upgrade libvirt
+
+commit cc5a054c5187744283408d1c4dd2c81b465e8802
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 08:30:01 2019 +0000
+
+    bumped changelog version
+
 commit e92e62b56459cc4924c126241508266bcf1b29ce
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 1 08:27:44 2019 +0000
