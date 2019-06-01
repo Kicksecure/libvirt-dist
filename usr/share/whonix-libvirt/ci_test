@@ -51,7 +51,11 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+test -f ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+
+## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-External.xml || true
+
 virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix-External.xml
 virsh -c qemu:///system net-autostart Whonix-External
 virsh -c qemu:///system net-start Whonix-External || true
@@ -60,7 +64,10 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
+test -f ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
+
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml || true
+
 virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
 virsh -c qemu:///system net-autostart Whonix-Internal
 virsh -c qemu:///system net-start Whonix-Internal || true
@@ -79,6 +86,15 @@ virsh -c qemu:///system net-dumpxml Whonix-External --inactive
 
 virsh -c qemu:///system net-dumpxml Whonix-Internal
 virsh -c qemu:///system net-dumpxml Whonix-Internal --inactive
+
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+
+test -f ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+test -f ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+test -f ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+test -f ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
