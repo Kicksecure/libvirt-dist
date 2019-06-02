@@ -111,13 +111,15 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## Not working in nested VM such as CI.
+## error: invalid argument: could not find capabilities for domaintype=kvm
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml || true
 true "-----"
 
 true "------------------------------------------------------------"
