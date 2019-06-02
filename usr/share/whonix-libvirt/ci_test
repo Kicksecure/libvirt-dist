@@ -102,6 +102,15 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
+
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+
 virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
 true "-----"
 virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
@@ -110,15 +119,6 @@ virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Wo
 true "-----"
 virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
 true "-----"
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
