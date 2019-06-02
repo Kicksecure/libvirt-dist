@@ -33,7 +33,9 @@ echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main universe" | s
 cat /etc/apt/sources.list.d/disco.list
 
 sudo --non-interactive apt-get update
-sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager
+
+## insserv: Service libvirtd has to be enabled to start service libvirt-guests
+sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
