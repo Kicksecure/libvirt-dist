@@ -1,3 +1,55 @@
+commit 76d091f4ce3fd8288b3d2b916ff4779db1e18856
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 8 00:05:39 2019 -0400
+
+    fix debian/watch lintian warning debian-watch-contains-dh_make-template
+
+commit d17a5d666e63aeb2689f588cb01d5122b67e6082
+Merge: 759ab1f ec67fa3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jun 2 05:16:55 2019 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ec67fa3afb371acb6e3900c163a827a02b25c341
+Merge: 759ab1f ef1a612
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jun 2 09:16:09 2019 +0000
+
+    Merge pull request #86 from HulaHoopWhonix/patch-85
+    
+    Added Whonix Gateway shared folder
+
+commit ef1a6124dccecbe1e098ea141caf91ab973568fc
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Sun Jun 2 02:30:48 2019 +0000
+
+    Added Whonix Gateway shared folder
+
+commit 759ab1fca6aa79730958dc3f26d7fd4d0327e0e8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 21:16:52 2019 -0400
+
+    CI fix
+
+commit ae21554d567610611fd109c5dd5815dc79301d80
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 21:11:57 2019 -0400
+
+    CI fix
+
+commit c73e751fd993a9b93df4058cda86e96e2b6b7a4d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 20:33:52 2019 -0400
+
+    CI fix
+
+commit 7b2079b1cf8dde896d16cb0eceb31714f1b7cd76
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 1 16:40:01 2019 +0000
+
+    bumped changelog version
+
 commit 3861389fd64670e08cba356432d98d0de268f011
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 1 10:59:41 2019 +0000
