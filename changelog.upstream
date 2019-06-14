@@ -1,3 +1,17 @@
+commit 1db9b42f6ea9279e3e5e43a08bf01ae39f78aef3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jun 14 12:41:14 2019 +0000
+
+    remove unneeded packages (which also break the build)
+    
+    https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/69
+
+commit b877f67499ec349ed1f85c6ff590ce85f4b0eaf5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jun 8 11:43:25 2019 +0000
+
+    bumped changelog version
+
 commit 76d091f4ce3fd8288b3d2b916ff4779db1e18856
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 8 00:05:39 2019 -0400
