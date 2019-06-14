@@ -3,13 +3,10 @@ backend: apt
 operations:
    - remove:
       - 'live-boot'
-      - 'live-boot-doc'
       - 'live-config'
-      - 'live-config-doc'
       - 'live-config-systemd'
       - 'live-config-systemd'
       - 'live-tools'
-      - 'live-task-localisation'
       - 'calamares'
       - 'calamares-settings-debian'
 EOF
