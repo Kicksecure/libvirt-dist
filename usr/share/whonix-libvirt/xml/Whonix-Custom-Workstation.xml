@@ -19,7 +19,7 @@
   <features>
     <acpi/>
     <hap/>
-    <pvspinlock state='off'/>
+    <pvspinlock state='on'/>
     <pmu state='off'/>
     <vmport state='off'/>
   </features>
