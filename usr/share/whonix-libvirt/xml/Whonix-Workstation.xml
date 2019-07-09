@@ -4,6 +4,8 @@
   <memory unit='KiB'>2097152</memory>
   <currentMemory unit='KiB'>2097152</currentMemory>
   <memoryBacking>
+    <allocation mode='ondemand'/>
+    <discard/>
     <nosharepages/>
   </memoryBacking>
   <blkiotune>
@@ -62,14 +64,15 @@
       <clipboard copypaste='no'/>
       <filetransfer enable='no'/>
     </graphics>
-    <sound model='ich6'/>
+    <sound model='ich6'>
+      <codec type='output'/>
+    </sound>
     <video>
       <model type='qxl' ram='65536' vram='65536' heads='1'/>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
-      <rate bytes='1024' period='1000'/>
-      <backend model='random'>/dev/random</backend>
+      <backend model='random'>/dev/urandom</backend>
     </rng>
   </devices>
 </domain>
