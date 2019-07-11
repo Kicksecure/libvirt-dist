@@ -1,9 +1,11 @@
 <domain type='kvm'>
   <name>Whonix-Gateway</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
-  <memory unit='KiB'>524288</memory>
+  <memory dumpCore='off' unit='KiB'>524288</memory>
   <currentMemory unit='KiB'>524288</currentMemory>
   <memoryBacking>
+    <allocation mode='ondemand'/>
+    <discard/>
     <nosharepages/>
   </memoryBacking>
   <blkiotune>
@@ -17,7 +19,7 @@
   <features>
     <acpi/>
     <hap/>
-    <pvspinlock state='off'/>
+    <pvspinlock state='on'/>
     <pmu state='off'/>
     <vmport state='off'/>
   </features>
@@ -72,8 +74,7 @@
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
-      <rate bytes='1024' period='1000'/>
-      <backend model='random'>/dev/random</backend>
+      <backend model='random'>/dev/urandom</backend>
     </rng>
   </devices>
 </domain>
