@@ -1,3 +1,126 @@
+commit 5c9045db23d7574a2540494987ae6838c625ce59
+Merge: f8834c9 46c96f7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:59:28 2019 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 46c96f7e5565ce7998ad0586d2d9555f15b6a0cf
+Merge: 3c7d90c 09c366c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:58:45 2019 +0000
+
+    Merge pull request #90 from HulaHoopWhonix/patch-89
+    
+     More security features on Buster
+
+commit 3c7d90cce4ff8941ae7b411f02c1bd60ce8adefa
+Merge: 9e130f5 d4b3937
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:58:37 2019 +0000
+
+    Merge pull request #88 from HulaHoopWhonix/patch-87
+    
+    More security features on Buster
+
+commit 9e130f5587ca96278abe5553f3629617aa42f48d
+Merge: dbb5506 312cfe5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:58:22 2019 +0000
+
+    Merge pull request #89 from HulaHoopWhonix/patch-88
+    
+    More security features on Buster
+
+commit dbb550631e532c55381cbdba9fff901310694285
+Merge: f8834c9 99bcda6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 06:58:11 2019 +0000
+
+    Merge pull request #87 from HulaHoopWhonix/patch-86
+    
+    More security features on Buster
+
+commit 99bcda6bc77aa831f3af75a93ae2706777f02db1
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 10 00:24:07 2019 +0000
+
+    disable dumpCore
+
+commit d4b3937bc79e05d065aa340de17242d033c3e0cb
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 10 00:23:01 2019 +0000
+
+    disable dumpCore
+
+commit 312cfe5ffc0d0232569736dfd84f059f5ae0574c
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 10 00:21:05 2019 +0000
+
+    disable dumpCore
+
+commit 09c366c428b1a7490336afb8e6d2f7d11513a69a
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Wed Jul 10 00:19:37 2019 +0000
+
+    disable dumpCore
+
+commit ed3d4164492f1644c0fd89e49c880c59ec081a74
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 18:06:49 2019 +0000
+
+    re-enable pvspinlock
+
+commit 2dab8cb6933207f4259a6a590dc559e6a5fcd644
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 18:05:47 2019 +0000
+
+    re-enable pvspinlock
+
+commit 0d241ccb560e9baa45a56f32b49c68251facce9f
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 18:04:34 2019 +0000
+
+    re-enable pvspinlock
+
+commit 4ed471e4236f4cc52b409b019d90c3a193103584
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 18:02:02 2019 +0000
+
+    re-enable pvspinlock
+    
+    Adds performance and reduces code-path use: https://lwn.net/Articles/556141/
+
+commit fb6a7143b4cdf2390e5547390f383458cb8eb590
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 16:21:10 2019 +0000
+
+     More security features on Buster
+
+commit 47503dae7161694627327eed3cc4a16e5ced7864
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 16:17:47 2019 +0000
+
+    More security features on Buster
+
+commit fd5e8cd3d8544e8e3c829a04174abf15509cbf51
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 16:15:18 2019 +0000
+
+    More security features on Buster
+
+commit 704972ae4654fa635703101929f575176ce7f4af
+Author: HulaHoopWhonix <bancfc@openmailbox.org>
+Date:   Tue Jul 9 16:12:00 2019 +0000
+
+    More features on Buster
+
+commit f8834c9fe661571a52f0230f5ddd91aab86fd727
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jun 14 13:36:07 2019 +0000
+
+    bumped changelog version
+
 commit 1db9b42f6ea9279e3e5e43a08bf01ae39f78aef3
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jun 14 12:41:14 2019 +0000
