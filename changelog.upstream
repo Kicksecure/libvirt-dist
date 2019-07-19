@@ -1,3 +1,17 @@
+commit 92d73f3ba9dd89529a32ac16e19515f713988660
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jul 19 05:01:15 2019 -0400
+
+    add dnsmasq-base to Depends:
+    
+    https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/96
+
+commit 2b527403a5f570464f504f360a02a37f2596d738
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 11 07:18:16 2019 +0000
+
+    bumped changelog version
+
 commit 5c9045db23d7574a2540494987ae6838c625ce59
 Merge: f8834c9 46c96f7
 Author: Patrick Schleizer <adrelanos@riseup.net>
