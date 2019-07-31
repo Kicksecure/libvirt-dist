@@ -40,7 +40,7 @@ if ischroot ; then
    true "Waiting for libvirtd to be ready..."
    counter=0
    while true ; do
-      if test -e /var/run/libvirt/libvirt-sock ; then
+      if test -e /run/libvirt/libvirt-sock ; then
          break
       fi
       true "$0: pid: $$"
