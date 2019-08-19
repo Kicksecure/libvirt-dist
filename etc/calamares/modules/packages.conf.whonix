@@ -2,6 +2,7 @@ backend: apt
 
 operations:
    - remove:
+      - 'live-config'
       - 'calamares'
       - 'calamares-settings-debian'
 EOF
