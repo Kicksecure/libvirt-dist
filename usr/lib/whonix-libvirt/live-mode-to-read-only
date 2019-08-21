@@ -1,0 +1,22 @@
+#!/bin/bash
+
+## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+set -x
+
+error_handler() {
+   exit_code="1"
+}
+
+trap error_handler ERR
+
+exit_code="0"
+
+vm_names_list="$(virsh list --all | awk '{print $2}'| grep -v Name)"
+
+for vm_name_item in $vm_names_list ; do
+   virt-xml "$vm_name_item" --edit --disk readonly=on
+done
+
+exit "$exit_code"

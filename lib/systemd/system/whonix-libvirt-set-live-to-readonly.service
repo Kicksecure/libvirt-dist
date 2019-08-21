@@ -1,0 +1,11 @@
+[Unit]
+Description=sets Whonix
+Documentation=https://github.com/Whonix/whonix-libvirt
+ConditionKernelCommandLine=|boot=live
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/whonix-libvirt/live-mode-to-read-only
+
+[Install]
+WantedBy=multi-user.target
