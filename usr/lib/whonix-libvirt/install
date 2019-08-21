@@ -101,8 +101,8 @@ if [ "$stop_libvirtd" = "true" ]; then
 fi
 
 ## now we can replace back 'qemu' with 'kvm' domain type
-sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Gateway.xml
-sed -i "8 s/^.*$/<domain type='kvm'>/" $CHROOT_DIRECTORY/etc/libvirt/qemu/Whonix-Workstation.xml
+sed -i "8 s/^.*$/<domain type='kvm'>/" /etc/libvirt/qemu/Whonix-Gateway.xml
+sed -i "8 s/^.*$/<domain type='kvm'>/" /etc/libvirt/qemu/Whonix-Workstation.xml
 
 mkdir --parents /var/lib/whonix-libvirt
 touch /var/lib/whonix-libvirt/install.done
