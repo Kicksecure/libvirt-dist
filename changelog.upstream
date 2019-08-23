@@ -1,3 +1,103 @@
+commit e3395ea7b63d16e2d7c42eea51f002f0b3b425ad
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 12:25:49 2019 -0400
+
+    config-package-dev hide /etc/lightdm/lightdm.conf.d/whonix-autologin.conf
+    
+    to disable autologin on Whonix-Host
+    
+    Thanks to @onion-knight for the suggestion!
+    
+    https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/120
+
+commit 978da522e9cdc16115459ff569773c4906d3a761
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 12:15:38 2019 -0400
+
+    add Depends: gir1.2-spiceclientgtk-3.0
+    
+    Thanks to @onions-knight for the bug report!
+    
+    https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/118
+
+commit bb7773e62850fdc76b794500e6bb0c282a55bb2b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 03:11:36 2019 -0400
+
+    enable readonly for KVM disks if kernel command line includes boot=live
+    
+    (for live mode)
+    
+    https://phabricator.whonix.org/T914
+
+commit 62a212bbfd52d0f5f82a55aa57d886ebfc76b166
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 02:30:45 2019 -0400
+
+    fix string replacement
+
+commit 1276206f81c72db83ea9e61e5294a6320df99d68
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 02:07:58 2019 -0400
+
+    remove $CHROOT_DIRECTORY since this is running inside chroot anyhow
+
+commit 83a66d99fbbf7f47b65c4acd82dc07d0341cfd12
+Merge: 2d6ed37 88bf11c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 01:57:31 2019 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 88bf11cda1fccfbd3858f56230a90d230220bc35
+Merge: 2706742 ffe464c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Aug 21 05:56:52 2019 +0000
+
+    Merge pull request #92 from onions-knight/patch-2
+    
+    Update install
+
+commit ffe464c9b23a6c579b040f195733b74188000f12
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Tue Aug 20 11:43:11 2019 +0000
+
+    Update install
+    
+    adding sed commands to replace back 'qemu' with 'kvm' domain type at the end of the task
+    see https://forums.whonix.org/t/vms-do-no-start-until-the-cpu-configuration-is-set-to-copy-host-cpu-configuration/7917/4
+
+commit 2706742063b889772122b374b5e1fdb189970bac
+Merge: 2d6ed37 e4b063b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 20 06:42:13 2019 +0000
+
+    Merge pull request #91 from onions-knight/patch-1
+    
+    Update packages.conf.whonix
+
+commit e4b063b6c4dd3009253946d16a677cc54bfadadc
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Mon Aug 19 16:08:33 2019 +0000
+
+    Update packages.conf.whonix
+    
+    live-config package should not be needed on the install target
+
+commit 5219a5d4c05b8e206cbee8cc9dad44a66088e28f
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Mon Aug 19 15:06:53 2019 +0000
+
+    Update packages.conf.whonix
+    
+    Removing live-boot packages from the list of deleted packages on the install target. Allows the install target to boot in live-mode (also: fixes the issue when "Debian-Live" grub entry results in a kernel panic).
+
+commit 2d6ed37237af6ae3553eeee307872d0c24615b9f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Aug 1 12:14:52 2019 +0000
+
+    bumped changelog version
+
 commit e42f078064a2cd44175060de9d633d1fa5daa5e3
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 1 11:13:49 2019 +0000
