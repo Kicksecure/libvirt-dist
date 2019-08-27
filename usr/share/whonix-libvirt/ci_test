@@ -96,7 +96,7 @@ true "------------------------------------------------------------"
 test -f ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
 test -f ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
 test -f ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
-test -f ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
+test -f ./usr/share/whonix-libvirt/xml/Kicksecure.xml
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -105,7 +105,7 @@ true "------------------------------------------------------------"
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
+virt-xml-validate ./usr/share/whonix-libvirt/xml/Kicksecure.xml
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -119,7 +119,7 @@ virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstati
 true "-----"
 virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml || true
+virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Kicksecure.xml || true
 true "-----"
 
 true "------------------------------------------------------------"
@@ -135,8 +135,8 @@ virsh -c qemu:///system undefine Whonix-Workstation
 virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
 virsh -c qemu:///system undefine Whonix-Custom-Workstation
 
-virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Hardened-Debian.xml
-virsh -c qemu:///system undefine Hardened-Debian
+virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Kicksecure.xml
+virsh -c qemu:///system undefine Kicksecure
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
