@@ -1,5 +1,5 @@
 <domain type='kvm'>
-  <name>Hardened-Debian</name>
+  <name>Kicksecure</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <memory dumpCore='off' unit='KiB'>2097152</memory>
   <currentMemory unit='KiB'>2097152</currentMemory>
@@ -41,7 +41,7 @@
   <devices>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/Hardened-Debian.qcow2'/>
+      <source file='/var/lib/libvirt/images/Kicksecure.qcow2'/>
       <target dev='vda' bus='virtio'/>
     </disk>
     <interface type='network'>
