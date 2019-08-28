@@ -1,3 +1,15 @@
+commit 48d214bfc673a5b6346bee73838379ee05d76885
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 27 14:43:23 2019 -0400
+
+    kicksecure
+
+commit 316bdbff29f514e94ad581bbcd1ae9860c0a6654
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 27 09:01:29 2019 -0400
+
+    bumped changelog version
+
 commit d24845eea6f8ab79455a1c75eaa19b5a38cab8e9
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 27 07:59:08 2019 -0400
