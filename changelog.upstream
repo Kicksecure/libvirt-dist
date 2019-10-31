@@ -1,3 +1,25 @@
+commit aa416fab458998f42329aae0a014c528f9bd4585
+Merge: 438c18c cc86138
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 31 16:12:50 2019 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit cc86138f98ae2502aaa671b5268f4401b58d4cf7
+Merge: 438c18c acb2669
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 31 16:10:20 2019 +0000
+
+    Merge pull request #94 from HulaHoop0/patch-2
+    
+    virtio gfx, genid, NIC rom bar off
+
+commit 438c18c17863ae5979c2d57692ae118d6879638a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Oct 5 09:43:58 2019 +0000
+
+    bumped changelog version
+
 commit a75589e6e0fa899de174ad1982f4851b6e96b787
 Merge: 46e9f79 7071e64
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -41,6 +63,12 @@ Date:   Tue Oct 1 21:00:44 2019 +0000
 commit 4c1039c10adb6dca84b1951a2b3d9c34c15a67b3
 Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
 Date:   Tue Oct 1 20:58:37 2019 +0000
+
+    virtio gfx, genid, NIC rom bar off
+
+commit acb266922355217134c601b74ba5223c7f69f98d
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Tue Oct 1 20:55:37 2019 +0000
 
     virtio gfx, genid, NIC rom bar off
 
