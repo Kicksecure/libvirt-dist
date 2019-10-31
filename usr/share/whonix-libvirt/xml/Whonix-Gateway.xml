@@ -1,6 +1,7 @@
 <domain type='kvm'>
   <name>Whonix-Gateway</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
+  <genid/>
   <memory dumpCore='off' unit='KiB'>524288</memory>
   <currentMemory unit='KiB'>524288</currentMemory>
   <memoryBacking>
@@ -48,11 +49,13 @@
       <source network='Whonix-External'/>
       <model type='virtio'/>
       <driver name='qemu'/>
+      <rom bar='off'/>
     </interface>
     <interface type='network'>
       <source network='Whonix-Internal'/>
       <model type='virtio'/>
       <driver name='qemu'/>
+      <rom bar='off'/>
     </interface>
     <controller type='virtio-serial' index='0'/>
     <serial type='pty'>
@@ -68,9 +71,10 @@
     <graphics type='spice' autoport='yes'>
       <clipboard copypaste='yes'/>
       <filetransfer enable='no'/>
+      <gl enable='no'/>
     </graphics>
     <video>
-      <model type='qxl' ram='65536' vram='65536' heads='1'/>
+      <model type='virtio' heads='1' primary='yes'>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
