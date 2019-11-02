@@ -49,7 +49,6 @@
       <source network='default'/>
       <model type='virtio'/>
       <driver name='qemu'/>
-      <rom bar='off'/>
     </interface>
     <controller type='virtio-serial' index='0'/>
     <serial type='pty'>
@@ -71,7 +70,7 @@
       <codec type='output'/>
     </sound>
     <video>
-      <model type='virtio' heads='1' primary='yes'>
+      <model type='virtio' heads='1' primary='yes'/>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
