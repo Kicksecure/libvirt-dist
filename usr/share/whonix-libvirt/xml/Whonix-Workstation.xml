@@ -49,7 +49,6 @@
       <source network='Whonix-Internal'/>
       <model type='virtio'/>
       <driver name='qemu'/>
-      <rom bar='off'/>
     </interface>
     <controller type='virtio-serial' index='0'/>
     <serial type='pty'>
