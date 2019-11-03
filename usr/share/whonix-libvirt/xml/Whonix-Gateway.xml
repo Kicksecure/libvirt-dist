@@ -49,13 +49,11 @@
       <source network='Whonix-External'/>
       <model type='virtio'/>
       <driver name='qemu'/>
-      <rom bar='off'/>
     </interface>
     <interface type='network'>
       <source network='Whonix-Internal'/>
       <model type='virtio'/>
       <driver name='qemu'/>
-      <rom bar='off'/>
     </interface>
     <controller type='virtio-serial' index='0'/>
     <serial type='pty'>
@@ -74,7 +72,7 @@
       <gl enable='no'/>
     </graphics>
     <video>
-      <model type='virtio' heads='1' primary='yes'>
+      <model type='virtio' heads='1' primary='yes'/>
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
