@@ -1,3 +1,76 @@
+commit 2152345a1ac9a11ae77126de8381e1f202449183
+Merge: 7b5b9b5 711f3e0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 3 02:28:52 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 711f3e0cf3fd534d6a2ff4df3a57462b1af03413
+Merge: c74d836 6f2f289
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 3 07:17:19 2019 +0000
+
+    Merge pull request #100 from HulaHoop0/patch-8
+    
+    Remove rom bar setting
+
+commit c74d8363827d2edd5d8f22fc4df3732329a04611
+Merge: f31096f 143388c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 3 07:17:01 2019 +0000
+
+    Merge pull request #99 from HulaHoop0/patch-7
+    
+    Fix video tag and remove rom bar setting
+
+commit f31096fc06d37dd6479f08c2005a773abe03441f
+Merge: 530d37b 216b244
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 3 07:16:47 2019 +0000
+
+    Merge pull request #98 from HulaHoop0/patch-6
+    
+    Fix video tag remove rom bar setting
+
+commit 530d37b05527a502f020a32f056226d27bf0fb0a
+Merge: 7b5b9b5 e2e63df
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 3 07:16:34 2019 +0000
+
+    Merge pull request #97 from HulaHoop0/patch-5
+    
+    Fix video tag remove rom bar setting
+
+commit 6f2f289acec90607d676835d7ff4af563c2c179f
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Nov 2 22:24:22 2019 +0000
+
+    Remove rom bar setting
+
+commit 143388cc6784cb25c448105d03cf17ca0f98cbd8
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Nov 2 22:23:06 2019 +0000
+
+    Fix video tag and remove rom bar setting
+
+commit 216b2448fe5e6aea4c6257d96b5850aa878ae218
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Nov 2 22:21:49 2019 +0000
+
+    Fix video tag remove rom bar setting
+
+commit e2e63dfee0ad3885b6fddeb3b8d4f993db3a53bb
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Nov 2 22:19:44 2019 +0000
+
+    Fix video tag remove rom bar setting
+
+commit 7b5b9b52f6a0047e3ec17b550f2f9070ad806d33
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 31 16:13:47 2019 +0000
+
+    bumped changelog version
+
 commit aa416fab458998f42329aae0a014c528f9bd4585
 Merge: 438c18c cc86138
 Author: Patrick Schleizer <adrelanos@riseup.net>
