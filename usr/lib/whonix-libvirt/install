@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## Copyright (C) 2019 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
 ## See the file COPYING for copying conditions.
 
 set -x
@@ -20,59 +20,17 @@ fi
 ## }} Taken from libvirt-bin.postinst.
 
 ## Existence of user "user" is not guaranteed at this point.
+## XXX: Or is it?
 addgroup user kvm >/dev/null || true
 addgroup user libvirt >/dev/null || true
-
-## Doing the following in a temporary directory to avoid modified files should
-## this be interrupted in the middle.
-temp_dir="$(mktemp --directory)"
-cp -r /usr/share/whonix-libvirt/xml "$temp_dir"
-
-## workaround to replace the 'kvm' domain type with 'qemu' otherwise libvirtd service will fail to start in chroot
-search="<domain type='kvm'>"
-replace="<domain type='qemu'>"
-str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Gateway.xml"
-str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Workstation.xml"
-
-if ischroot ; then
-   true "chroot detected, starting libvirtd..."
-   kill_libvirtd="true"
-   libvirtd &
-   libvirtd_pid="$!"
-   true "Waiting for libvirtd to be ready..."
-   counter=0
-   while true ; do
-      if test -e /run/libvirt/libvirt-sock ; then
-         break
-      fi
-      true "$0: pid: $$"
-      sleep 5
-      counter="$(( $counter + 1 ))"
-      if [ "$counter" -ge 12 ]; then
-         true "Failed to start libvirtd."
-         exit 1
-      fi
-   done
-   true "Waiting for libvirtd ready."
-else
-   if systemctl --no-pager status libvirtd >/dev/null ; then
-      true "libvirtd is running."
-   else
-      if [ "$stop_libvirtd" = "" ]; then
-         stop_libvirtd="true"
-         true "libvirtd is not running, starting it now and stopping it at the end."
-      fi
-      ## starting the libvirtd service so we can define Whonix networks and domain
-      ## of course a clean script would use variables instead of version numbers
-      systemctl --no-pager start libvirtd
-   fi
-fi
 
 ## Create shared directory and adjust permissions
 mkdir --parents /mnt/gateway-shared
 mkdir --parents /mnt/workstation-shared
 chmod 777 /mnt/gateway-shared
 chmod 777 /mnt/workstation-shared
+
+## TODO: proper error handling. '|| true' can probably be removed.
 
 virsh -c qemu:///system net-autostart "default" || true
 virsh -c qemu:///system net-start "default" || true
@@ -82,31 +40,11 @@ virsh -c qemu:///system net-autostart "Whonix-External" || true
 virsh -c qemu:///system net-start "Whonix-External" || true
 virsh -c qemu:///system net-autostart "Whonix-Internal" || true
 virsh -c qemu:///system net-start "Whonix-Internal" || true
-virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml" || true
-virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
+virsh -c qemu:///system define "/usr/share/whonix-libvirt/xml/Whonix-Gateway.xml" || true
+virsh -c qemu:///system define "/usr/share/whonix-libvirt/xml/Whonix-Workstation.xml" || true
 
 virt-xml "Whonix-Gateway" --add-device --filesystem source=/mnt/gateway-shared,target=shared,type=mount,accessmode=mapped || true
 virt-xml "Whonix-Workstation" --add-device --filesystem source=/mnt/workstation-shared,target=shared,type=mount,accessmode=mapped || true
-
-if [ "$kill_libvirtd" = "true" ]; then
-   kill -s sigterm "$libvirtd_pid"
-   true "Waiting for libvirtd to terminate..."
-   while kill -0 "$libvirtd_pid" 2> /dev/null; do
-      sleep 1
-   done
-   true "libvirtd to terminated."
-fi
-
-if [ "$stop_libvirtd" = "true" ]; then
-   true "libvirtd was not running before running this script, so stopping it now."
-   systemctl --no-pager stop libvirtd
-fi
-
-## now we can replace back 'qemu' with 'kvm' domain type
-search="<domain type='qemu'>"
-replace="<domain type='kvm'>"
-str_replace "$search" "$replace" /etc/libvirt/qemu/Whonix-Gateway.xml
-str_replace "$search" "$replace" /etc/libvirt/qemu/Whonix-Workstation.xml
 
 mkdir --parents /var/lib/whonix-libvirt
 touch /var/lib/whonix-libvirt/install.done

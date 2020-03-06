@@ -1,0 +1,22 @@
+## Copyright (C) 2020 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+[Unit]
+Description=Whonix initial libvirt settings
+Documentation=https://github.com/Whonix/whonix-libvirt
+
+ConditionPathExists=!/var/lib/whonix-libvirt/install.done
+
+After=libvirtd.service
+After=libvirt-guests.service
+After=virtlockd.socket
+After=virtlogd.socket
+After=virtlockd-admin.socket
+After=virtlogd-admin.socket
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/whonix-libvirt/install
+
+[Install]
+WantedBy=multi-user.target
