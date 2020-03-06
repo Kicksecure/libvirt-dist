@@ -1,3 +1,17 @@
+commit 9055fcace0f96d81efda41e6e461ddab4a59fc4a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 6 10:26:54 2020 -0500
+
+    run /usr/lib/whonix-libvirt/install during boot not inside build chroot
+    
+    https://forums.whonix.org/t/whonix-host-operating-system/3931/96
+
+commit 2fc6fc5318665db8bfb697d7d6b71495c7c8d229
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Nov 9 13:00:11 2019 +0000
+
+    bumped changelog version
+
 commit 2152345a1ac9a11ae77126de8381e1f202449183
 Merge: 7b5b9b5 711f3e0
 Author: Patrick Schleizer <adrelanos@riseup.net>
