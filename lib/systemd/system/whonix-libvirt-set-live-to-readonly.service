@@ -1,7 +1,15 @@
 [Unit]
 Description=sets Whonix
 Documentation=https://github.com/Whonix/whonix-libvirt
+
 ConditionKernelCommandLine=|boot=live
+
+After=libvirtd.service
+After=libvirt-guests.service
+After=virtlockd.socket
+After=virtlogd.socket
+After=virtlockd-admin.socket
+After=virtlogd-admin.socket
 
 [Service]
 Type=oneshot
