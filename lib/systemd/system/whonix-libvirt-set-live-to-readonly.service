@@ -2,7 +2,7 @@
 ## See the file COPYING for copying conditions.
 
 [Unit]
-Description=sets Whonix
+Description=sets all libvirt VM disks to read-only when Live Mode is detected
 Documentation=https://github.com/Whonix/whonix-libvirt
 
 ConditionKernelCommandLine=|boot=live
