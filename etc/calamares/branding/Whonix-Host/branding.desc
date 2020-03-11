@@ -1,0 +1,27 @@
+---
+componentName:   Whonix-Host
+welcomeStyleCalamares: true
+
+strings:
+    productName:         Whonix-Host GNU/Linux
+    shortProductName:    Whonix-Host
+    version:             15 (buster)
+    shortVersion:        15
+    versionedName:       Whonix-Host GNU/Linux 15
+    shortVersionedName:  Whonix-Host 15
+    bootloaderEntryName: Whonix-Host
+    productUrl:          https://whonix.org
+    supportUrl:          https://www.whonix.org/wiki/Support
+    releaseNotesUrl:     https://www.whonix.org/wiki/Whonix_Release_Notes
+
+images:
+    productLogo:         "whonix-logo.png"
+    productIcon:         "whonix-logo.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#2c3133"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#4d7079"
