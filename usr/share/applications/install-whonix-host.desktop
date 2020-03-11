@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Whonix Host
+GenericName=Calamares Installer
+Exec=install-whonix-host
+Comment=Calamares — Installer for Whonix-Host Live
+Keywords=calamares;system;install;whonix;installer
+Icon=install-whonix-host
+Terminal=false
+Categories=Qt;System;
+StartupWMClass=calamares
+StartupNotify=True
