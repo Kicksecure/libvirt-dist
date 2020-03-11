@@ -40,7 +40,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background1.horizontalCenter
             anchors.top: background1.bottom
-            text: "Welcome to Whonix Host GNU/Linux.<br/>"+
+            text: "Welcome to Whonix-Host GNU/Linux.<br/>"+
                   "The rest of the installation is automated and should complete in a few minutes."
             wrapMode: Text.WordWrap
             width: 600
