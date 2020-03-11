@@ -1,0 +1,25 @@
+#!/bin/sh
+# Creates an "Install Whonix" icon on the live session tested with:
+# Xfce, LXDE, LXqt, Gnome, KDE, Mate, Cinnamon
+
+
+# Create ~/Desktop just in case this runs before the xdg folder
+# creation script.
+mkdir -p ~/Desktop
+
+
+# Among the Debian desktop environments, LXDE is the only one
+# that behaves completely different.
+if [ -f /usr/bin/lxsession ]; then
+    echo "[Desktop Entry]" > ~/Desktop/install-whonix-host.desktop
+    echo "Type=Link" >> ~/Desktop/install-whonix-host.desktop
+    echo "Name=Install Whonix-Host" >> ~/Desktop/install-whonix-host.desktop
+    echo "Icon=install-Whonix-Host" >> ~/Desktop/install-whonix-host.desktop
+    echo "URL=/usr/share/applications/install-whonix-host.desktop" \
+          >> ~/Desktop/install-whonix.desktop
+else
+    cp /usr/share/applications/install-whonix-host.desktop ~/Desktop
+    # Xfce needs this executable otherwise it complains, everything
+    # else doesn't seem to care either way.
+    chmod +x ~/Desktop/install-whonix-host.desktop
+fi
