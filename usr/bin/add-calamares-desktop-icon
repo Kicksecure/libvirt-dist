@@ -16,7 +16,7 @@ if [ -f /usr/bin/lxsession ]; then
     echo "Name=Install Whonix-Host" >> ~/Desktop/install-whonix-host.desktop
     echo "Icon=install-Whonix-Host" >> ~/Desktop/install-whonix-host.desktop
     echo "URL=/usr/share/applications/install-whonix-host.desktop" \
-          >> ~/Desktop/install-whonix.desktop
+          >> ~/Desktop/install-whonix-host.desktop
 else
     cp /usr/share/applications/install-whonix-host.desktop ~/Desktop
     # Xfce needs this executable otherwise it complains, everything
