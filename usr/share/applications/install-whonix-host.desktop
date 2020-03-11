@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Install Whonix Host
+Name=Install Whonix-Host
 GenericName=Calamares Installer
 Exec=install-whonix-host
 Comment=Calamares — Installer for Whonix-Host Live
