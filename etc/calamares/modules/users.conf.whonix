@@ -5,4 +5,4 @@ defaultGroups:
 - qemu
 autologinGroup: autologin
 sudoersGroup: sudo
-setRootPassword: true
+setRootPassword: false
