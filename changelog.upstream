@@ -1,3 +1,277 @@
+commit 88ba2d5728f2877bb4f356ea797cd0c097f18c37
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 04:07:48 2020 -0400
+
+    config-package-dev hide /usr/share/glib-2.0/schemas/96_calamares-settings-debian.gschema.override
+    
+    Sets favorite apps and disabled screen lock. We don't want that.
+
+commit 0ea3fc5429d7a56ae92c800802e8c1df63fb17d0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 03:57:53 2020 -0400
+
+    add diff-helper
+
+commit 0d117eeb41742a77de5c4bd346eeee43e8e339a2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 03:49:35 2020 -0400
+
+    hide /usr/share/applications/install-debian.desktop from live iso
+
+commit 0f1703c22ee518949c9486cfb2a6afe3af0ac449
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 03:49:08 2020 -0400
+
+    remove extraneous EOF from config file
+
+commit 546e4bd02f6a17a89c888304d28673364224de3e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 03:07:57 2020 -0400
+
+    ignore missing man pages linitian warning
+
+commit 2e22e21e391d5bc83c497dacaca09c8075b6ba28
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 03:07:40 2020 -0400
+
+    config-package-dev displace
+
+commit 23676173fc7a852ed15c31db4e0014e853d7f389
+Merge: b36970a 8bc7d32
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 02:52:17 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 8bc7d32c861a8fd1123eb64ddaf80c34ea459544
+Merge: ed6618a 09abf83
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 06:50:09 2020 +0000
+
+    Merge pull request #107 from onions-knight/master
+    
+    Whonix-Host branding
+
+commit 09abf8327b622c9de94ed82fb52aff6e6ea4f098
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:58:15 2020 +0000
+
+    Create install-whonix-host
+
+commit afbfa34eeb663b9d29c39fd5f2347c457783798c
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:49:26 2020 +0000
+
+    Delete 1
+
+commit d3327c3438feee890685fda02ac0835fc8f88795
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:49:09 2020 +0000
+
+    Add files via upload
+
+commit 87dd9f16d9a6d25712b6855def2185741f2d241a
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:48:54 2020 +0000
+
+    Create 1
+
+commit c316c18fa72495014c52f7a755eb32c550d3e5ed
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:48:21 2020 +0000
+
+    Delete whonix-logo.png
+
+commit cea8146311ad807f9b8e4d79d52bd9d3f88802ff
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:47:53 2020 +0000
+
+    Update install-whonix-host.desktop
+
+commit 6ef42846a80aa8719d069e55910b79e712e4ec1d
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:47:21 2020 +0000
+
+    Update add-calamares-desktop-icon
+
+commit ff0d879b38afa31e3d846d115c51329e9964ee4f
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:45:30 2020 +0000
+
+    Update show.qml
+
+commit daf2432a63831d05d4103e06ecc9b4aefc6fbea1
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:42:42 2020 +0000
+
+    Delete install-whonix-host.png
+
+commit 97a023a48ae054a41de22a2d5d1e2ba82c1fd0cb
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:42:30 2020 +0000
+
+    Delete 1
+
+commit edd1d82cc5f9abab6f6c76f3f63436a3417e0fc6
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:42:11 2020 +0000
+
+    Add files via upload
+
+commit 2c919365d8f4a69af8ab83649813c97acbe5c709
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:41:56 2020 +0000
+
+    Create 1
+
+commit 10bfc9e411d42c9e307b2b5dea31ab9098608c07
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:40:10 2020 +0000
+
+    Add files via upload
+
+commit 23e678077273f8ebcefd33da8ec0f01fa1cae1ef
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:37:52 2020 +0000
+
+    Create install-whonix-host.desktop
+
+commit 5f8375232f2987db0cf8b361aa8406a7bb42e36e
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:35:53 2020 +0000
+
+    Delete calamares-desktop-icon.desktop
+
+commit dec18be290fd163e9ae570649cc52d1306cf24ab
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:34:58 2020 +0000
+
+    Create add-calamares-desktop-icon
+
+commit c3b8d0321306656ae01991336b52dc5073d7270c
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:33:56 2020 +0000
+
+    Create calamares-desktop-icon.desktop
+
+commit 89786bd187494a80e7e5cf27f1464a22336aecbc
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:32:11 2020 +0000
+
+    Add files via upload
+
+commit bf99c5cdea1db11f2e7b5536de4738c9549eced6
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:31:51 2020 +0000
+
+    Add files via upload
+
+commit 990ebb5a637e5da47d255fef0735a1c76d47f4e7
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:31:15 2020 +0000
+
+    Add files via upload
+
+commit f163c19439830169a511ef3430573845a77f333e
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:30:33 2020 +0000
+
+    Create show.qml
+
+commit 1c2c9c0d348fe0299f53e196b51800bac8cb8041
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 22:30:18 2020 +0000
+
+    Create branding.desc
+
+commit ed6618ad689620a4fe0460720c3fd5da6b8e9baa
+Merge: 5f67b0c fa8f58c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Mar 11 20:38:02 2020 +0000
+
+    Merge pull request #104 from onions-knight/patch-7
+    
+    Update settings.conf
+
+commit fa8f58c033f6c5d6a1adc170c85f1494b9dc8504
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Wed Mar 11 18:28:30 2020 +0000
+
+    Update settings.conf
+    
+    Change branding: debian -> Whonix-Host
+
+commit b36970a3c5afc47267aa5dcb2484db442afbf277
+Merge: 63c798b 5f67b0c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 08:01:57 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5f67b0c5d605681efe27582422f35105cac965cb
+Merge: de05c91 d877cbc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 10 11:01:56 2020 +0000
+
+    Merge pull request #103 from onions-knight/patch-5
+    
+    Update settings.conf
+
+commit d877cbce81b1400f195f68eb1a97a0c92996b805
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Tue Mar 10 10:50:39 2020 +0000
+
+    Update settings.conf
+    
+    Removing unnecessary modules from Calamares install sequence, we keep only the minimum. See https://forums.whonix.org/t/whonix-host-operating-system/3931/141
+
+commit 63c798bbc12e98fdaa83967074a289ca96594de4
+Merge: c3640b4 de05c91
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 9 13:43:17 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit de05c91549efaecf154e5abf503728c574680a96
+Merge: e37ed97 f2feb63
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 9 17:41:55 2020 +0000
+
+    Merge pull request #102 from onions-knight/patch-4
+    
+    Create settings.conf
+
+commit e37ed97bbe434c0c9bf82500b34574e28c697468
+Merge: c3640b4 c108f46
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 9 17:41:41 2020 +0000
+
+    Merge pull request #101 from onions-knight/patch-3
+    
+    Update packages.conf.whonix
+
+commit f2feb63f7ca48b48ef3e375d4761194e67b038f5
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Mon Mar 9 13:49:29 2020 +0000
+
+    Create settings.conf
+    
+    Modified settings.conf for Calamares removing the 'users' modules from the Calamares install sequence. Reason: we do not want to install a user, user 'user' is the default user. See https://forums.whonix.org/t/whonix-host-operating-system/3931/134
+
+commit c108f46cb31ed2338f011e350ad04310129fd266
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Mon Mar 9 13:43:57 2020 +0000
+
+    Update packages.conf.whonix
+    
+    Remove 'live-config' as it is no longer installed in the iso file. Breaks Calamares install otherwise.
+
+commit c3640b4478b857ba36317a51eb08e834e75d7670
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 8 09:44:19 2020 -0400
+
+    bumped changelog version
+
 commit 57946f43b35c23f0e6c529929205a29b5a73cc96
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 7 11:32:48 2020 -0500
