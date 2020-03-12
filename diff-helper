@@ -1,0 +1,34 @@
+#!/bin/bash
+
+## Copyright (C) 2020 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+## Compare calamares-settings-debian with Whonix calamares settings.
+
+#set -x
+
+if [ "$difftool" = "" ]; then
+   difftool=diff
+fi
+
+if test -f /etc/calamares/modules/packages.conf.whonix-orig ; then
+   orig_maybe=".whonix-orig"
+fi
+
+$difftool /etc/calamares/modules/packages.conf${orig_maybe} etc/calamares/modules/packages.conf.whonix
+
+$difftool /etc/calamares/modules/users.conf${orig_maybe} etc/calamares/modules/users.conf.whonix
+
+$difftool /etc/calamares/branding/debian/branding.desc etc/calamares/branding/Whonix-Host/branding.desc
+
+$difftool /etc/calamares/branding/debian/show.qml etc/calamares/branding/Whonix-Host/show.qml
+
+$difftool /etc/calamares/settings.conf${orig_maybe} etc/calamares/settings.conf.whonix
+
+$difftool /usr/bin/add-calamares-desktop-icon${orig_maybe} usr/bin/add-calamares-desktop-icon.whonix
+
+$difftool /usr/bin/install-debian usr/bin/install-whonix-host
+
+$difftool /usr/share/applications/install-debian.desktop usr/share/applications/install-whonix-host.desktop
+
+true
