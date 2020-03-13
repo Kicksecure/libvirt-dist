@@ -1,7 +1,0 @@
-## Copyright (C) 2019 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
-## See the file COPYING for copying conditions.
-
-/etc/calamares/modules/packages.conf.whonix
-/etc/calamares/modules/users.conf.whonix
-/etc/calamares/settings.conf.whonix
-/usr/bin/add-calamares-desktop-icon.whonix

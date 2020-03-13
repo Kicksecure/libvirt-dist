@@ -1,8 +1,0 @@
----
-userGroup: users
-defaultGroups:
-- libvirt
-- qemu
-autologinGroup: autologin
-sudoersGroup: sudo
-setRootPassword: false

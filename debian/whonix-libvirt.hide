@@ -1,8 +1,0 @@
-## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
-## See the file COPYING for copying conditions.
-
-/etc/lightdm/lightdm.conf.d/whonix-autologin.conf
-/usr/share/applications/install-debian.desktop
-
-## Sets favorite apps and disabled screen lock. We don't want that.
-/usr/share/glib-2.0/schemas/96_calamares-settings-debian.gschema.override
