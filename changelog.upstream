@@ -1,3 +1,49 @@
+commit c9043e2438885d2e7e6d88545910035f35a2783f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 10:30:21 2020 -0400
+
+    config-package-dev hide /etc/lightdm/lightdm.conf.d/whonix-autologin.conf
+    
+    because we do not want autologin for Whonix-Host installed
+
+commit fc3e9e0d7546c4705b1e83a29b19b7fce73eebf4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 10:18:22 2020 -0400
+
+    move calamares settings for Whonix to live-config-dist package
+    
+    https://forums.whonix.org/t/whonix-host-operating-system/3931/166
+
+commit 67d93fc2c7b5dd3eeadf3552692e375ae38ba77f
+Merge: cdfdb75 5638580
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 10:08:18 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5638580cdc268d0e119f79ddb3073ffb2a7ecc05
+Merge: cdfdb75 dd10849
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 06:00:11 2020 +0000
+
+    Merge pull request #108 from onions-knight/patch-1
+    
+    Update users.conf.whonix
+
+commit dd108497e0a67af61e0410e74250e592e8d236df
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Thu Mar 12 21:52:41 2020 +0000
+
+    Update users.conf.whonix
+    
+    set RootPassword to false, see https://forums.whonix.org/t/whonix-host-operating-system/3931/158
+
+commit cdfdb750a1b434631128b9dd16d77969271c1673
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Mar 12 04:44:10 2020 -0400
+
+    bumped changelog version
+
 commit 88ba2d5728f2877bb4f356ea797cd0c097f18c37
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 12 04:07:48 2020 -0400
