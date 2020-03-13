@@ -5,7 +5,7 @@ Source: whonix-libvirt
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 12), genmkfile, config-package-dev
+Build-Depends: debhelper (>= 12), config-package-dev
 Homepage: https://github.com/Whonix/whonix-libvirt
 Vcs-Browser: https://github.com/Whonix/whonix-libvirt
 Vcs-Git: https://github.com/Whonix/whonix-libvirt.git
