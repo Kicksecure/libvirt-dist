@@ -27,17 +27,23 @@ ls -la /etc/apt/preferences.d/ || true
 cat /etc/apt/preferences.d/* || true
 
 ## Version closer to Debian buster.
-sudo --non-interactive rm -f /etc/apt/sources.list || true
-echo "deb http://us.archive.ubuntu.com/ubuntu/ disco main universe" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
-echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main universe" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
+# sudo --non-interactive rm -f /etc/apt/sources.list || true
+# echo "deb http://us.archive.ubuntu.com/ubuntu/ disco main universe" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
+# echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main universe" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
 
 ## Debugging.
-cat /etc/apt/sources.list.d/disco.list
+# cat /etc/apt/sources.list.d/disco.list
 
-sudo --non-interactive apt-get update
+apt-get update
+
+## Sanity tests.
+apt-get --yes dist-upgrade
+dpkg --configure -a
+
+apt-get --yes install sudo virt-what lintian
 
 ## insserv: Service libvirtd has to be enabled to start service libvirt-guests
-sudo --non-interactive apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
+apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
