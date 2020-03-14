@@ -1,3 +1,27 @@
+commit 68656b612d2959014f6d8bb6e5b192144774b101
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 14 05:57:51 2020 -0400
+
+    CI
+
+commit a27417a7f27915a799680ab048866e4cb9a247df
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 13:02:46 2020 -0400
+
+    no longer build depend on genmkfile to fix CI
+
+commit 7e7140533f21bc7015577fea6ea05a48fcc88677
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 12:20:48 2020 -0400
+
+    CI
+
+commit eee85be9a964bf436c9a72aab7df2b3c2063e506
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 13 12:13:06 2020 -0400
+
+    bumped changelog version
+
 commit c9043e2438885d2e7e6d88545910035f35a2783f
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 13 10:30:21 2020 -0400
