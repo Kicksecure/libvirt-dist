@@ -1,3 +1,15 @@
+commit 51656a91f72e1d88e919cb2d2274642a7d065910
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 14 06:18:47 2020 -0400
+
+    CI
+
+commit a1ca04de3973fa617cdc5fc617de04e96abfa1f5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 14 06:03:50 2020 -0400
+
+    bumped changelog version
+
 commit 68656b612d2959014f6d8bb6e5b192144774b101
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 14 05:57:51 2020 -0400
