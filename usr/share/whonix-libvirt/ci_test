@@ -45,11 +45,11 @@ apt-get --yes install sudo virt-what lintian
 ## insserv: Service libvirtd has to be enabled to start service libvirt-guests
 apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
 
-systemctl start libvirtd.service || true
-systemctl start virtlockd.socket || true
-systemctl start virtlogd.socket || true
-systemctl start virtlockd-admin.socket || true
-systemctl start virtlogd-admin.socket || true
+service libvirtd.service start || true
+service virtlockd.socket start || true
+service virtlogd.socket start || true
+service virtlockd-admin.socket start || true
+service virtlogd-admin.socket start || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
