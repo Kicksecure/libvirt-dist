@@ -1,3 +1,63 @@
+commit 0bce69ecb46be8ef525b73a6e5268f2258eea5ce
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 15:43:55 2020 -0400
+
+    CI
+
+commit aed5aebb06c63a73b419405d2306998f1c89ca8d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 15:40:50 2020 -0400
+
+    CI
+
+commit e561eb3a4c464c5dc79126f3f79d78df40f9e757
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 15:36:08 2020 -0400
+
+    CI
+
+commit 2030fc9443e53b4a75e78d7c82093d9784be609f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 15:06:47 2020 -0400
+
+    CI
+
+commit 60d9a5c5a6b6e7f360fcec89ac3ec3602a2c706d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 14:57:15 2020 -0400
+
+    minor
+
+commit 7806b3651956eaa76ac68dacb8c610fe3bc52a95
+Merge: 7803f46 2456b75
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 14:56:54 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2456b75e1816d51eae83c64a47c45ea29b286593
+Merge: 7803f46 2dd2162
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 18:56:39 2020 +0000
+
+    Merge pull request #109 from onions-knight/patch-2
+    
+    Update whonix-libvirt-set-live-to-readonly.service
+
+commit 2dd21626e304912a5e65e2fda4bec593a8f07fde
+Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
+Date:   Sun Mar 15 16:21:38 2020 +0000
+
+    Update whonix-libvirt-set-live-to-readonly.service
+    
+    Adding After=whonix-libvirt-install.service to fix ensure VM domains are defined before setting disks to readonly. See https://phabricator.whonix.org/T914
+
+commit 7803f46e4f5420a85a67a0b443b63e80cf83a64b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 14 07:06:08 2020 -0400
+
+    bumped changelog version
+
 commit 51656a91f72e1d88e919cb2d2274642a7d065910
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 14 06:18:47 2020 -0400
