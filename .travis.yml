@@ -18,8 +18,7 @@ env:
   - TRAVIS_DEBIAN_SECURITY_UPDATES=true
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/whonix-libvirt/ci_test
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE_OPTIONS=" "
-  #- TRAVIS_DEBIAN_AUTOPKGTEST=true
   - TRAVIS_DEBIAN_NETWORK_ENABLED=true
   - TRAVIS_DEBIAN_EXTRA_PACKAGES="lintian sudo"
-  - TRAVIS_DEBIAN_BUILD_DIR=/home/travis/build
-  - TRAVIS_DEBIAN_TARGET_DIR=/home/travis/kernel-build-result
+  - TRAVIS_DEBIAN_BUILD_DIR=/home/travis/build-dir
+  - TRAVIS_DEBIAN_TARGET_DIR=/home/travis/build-result
