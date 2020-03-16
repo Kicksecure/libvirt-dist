@@ -21,4 +21,7 @@ for vm_name_item in $vm_names_list ; do
    virt-xml "$vm_name_item" --edit --disk readonly=off
 done
 
+chmod --verbose --recursive ug+w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
+chmod --verbose --recursive ug+w "/var/lib/libvirt/images/Whonix-Workstation.qcow2"
+
 exit "$exit_code"
