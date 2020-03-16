@@ -116,6 +116,18 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
+search="<domain type='kvm'>"
+replace="<domain type='qemu'>"
+
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Kicksecure.xml
+
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+true "------------------------------------------------------------"
+
 ## TODO: virt-xml-validate does not work in Travis CI.
 ## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
 virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml || true
