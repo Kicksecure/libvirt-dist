@@ -1,3 +1,86 @@
+commit 95ceacba6ab4afb847c5afdaef253e67272fef30
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 05:26:54 2020 -0400
+
+    CI
+
+commit acb643c1fbe9a24d58145a30ad2c0ca7da20633f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:56:32 2020 -0400
+
+    CI
+
+commit 239ae8863c2d861ec4d2579083779b2205da5e61
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:50:26 2020 -0400
+
+    CI
+
+commit 58853867843c0e86f079dce22bd81a93661f35e6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:49:09 2020 -0400
+
+    CI
+
+commit 0063bbdc479fddb244a125a00cd0065fc650b17c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:45:15 2020 -0400
+
+    CI
+
+commit 3a2d10e8afc73d2428f9373fc5b719a872f8cd38
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:44:43 2020 -0400
+
+    CI
+
+commit e72dcf600375a475e821d81d90209b068ff55d1d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:32:32 2020 -0400
+
+    CI
+
+commit 620db6440f363053b9ff5ce5d058b42e5245971e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:16:00 2020 -0400
+
+    comment
+
+commit aa62bf8d92364222df26f841e1bd01aa9c4ea6b8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 03:14:18 2020 -0400
+
+    usr/lib/whonix-libvirt/persistent-mode-to-read-write:
+    
+    chmod --verbose --recursive ug+w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
+    chmod --verbose --recursive ug+w "/var/lib/libvirt/images/Whonix-Workstation.qcow2"
+
+commit 30690ee3c57bdb0c99f417964b4665eddb04d06e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 02:44:25 2020 -0400
+
+    comments
+
+commit 1dad66e75105bcfed8d67e124ba89f693be1c1b8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 02:43:03 2020 -0400
+
+    add usr/lib/whonix-libvirt/persistent-mode-to-read-write
+    
+    based on usr/lib/whonix-libvirt/live-mode-to-ready-only
+
+commit 92a475a6bb3776fbc74ff5dd681aab1cee58d2bd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 16:14:53 2020 -0400
+
+    CI
+
+commit 0cb24c2d426a8b0da1f3163ede5109ea17673cec
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 15 15:48:17 2020 -0400
+
+    bumped changelog version
+
 commit 0bce69ecb46be8ef525b73a6e5268f2258eea5ce
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Mar 15 15:43:55 2020 -0400
