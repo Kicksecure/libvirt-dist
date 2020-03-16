@@ -116,9 +116,21 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
+## Travis CI issue:
+## + virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## error: invalid argument: could not find capabilities for domaintype=kvm
 search="<domain type='kvm'>"
 replace="<domain type='qemu'>"
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Kicksecure.xml
 
+## Travis CI issue:
+## + virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## error: unsupported configuration: CPU mode 'host-passthrough' for x86_64 qemu domain on x86_64 host is not supported by hypervisor
+search="<cpu mode='host-passthrough'/>"
+replace=""
 sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
 sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
 sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
