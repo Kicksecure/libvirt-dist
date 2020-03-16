@@ -13,6 +13,7 @@ if:
 
 env:
   global:
+  - TRAVIS_DEBIAN_NO_BUILD=true
   - TRAVIS_DEBIAN_DISTRIBUTION=buster
   - TRAVIS_DEBIAN_SECURITY_UPDATES=true
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/whonix-libvirt/ci_test
