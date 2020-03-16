@@ -136,6 +136,11 @@ sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Whonix-Workstati
 sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
 sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Kicksecure.xml
 
+## Travis CI issue:
+## + virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## error: Unable to open /dev/net/tun, is tun module loaded?: No such file or directory
+modprobe tun || true
+
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
