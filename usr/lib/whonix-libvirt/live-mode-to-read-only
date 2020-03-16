@@ -21,4 +21,7 @@ for vm_name_item in $vm_names_list ; do
    virt-xml "$vm_name_item" --edit --disk readonly=on
 done
 
+## "chmod ugo-r" is set during build in chroot:
+## https://github.com/Whonix/Whonix/blob/master/build-steps.d/1800_copy_vms_into_raw
+
 exit "$exit_code"
