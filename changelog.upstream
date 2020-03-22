@@ -1,3 +1,15 @@
+commit 477864547b45b2394a8b923b87675c123a249c04
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Mar 21 15:23:30 2020 -0400
+
+    add usr/share/whonix-libvirt/marker
+
+commit 73b4d99edfc8ebf3c396d8d3f47b2d58ff740e4f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 16 09:35:48 2020 -0400
+
+    bumped changelog version
+
 commit 95ceacba6ab4afb847c5afdaef253e67272fef30
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 16 05:26:54 2020 -0400
