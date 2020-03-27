@@ -1,3 +1,21 @@
+commit 4a5f5a9bb1f8c28685312a73446aff05658143e8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 27 07:19:07 2020 -0400
+
+    readme
+
+commit 95723c94ef0861f8ebdbb6390e958d8417572060
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 27 07:13:32 2020 -0400
+
+    add Whonix-Host grub, motd, issue branding
+
+commit 2eb88771031a80372e92b034770bbeba548dd5d5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Mar 22 06:16:21 2020 -0400
+
+    bumped changelog version
+
 commit 477864547b45b2394a8b923b87675c123a249c04
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 21 15:23:30 2020 -0400
