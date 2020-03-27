@@ -3,6 +3,8 @@
 Libvirt XML files for Whonix-Gateway, Whonix-Workstation,
 Whonix-Custom-Workstation and Whonix's internal network.
 
+Whonix-Host grub branding, motd and issue banner.
+
 See also:
 - https://www.whonix.org/wiki/KVM
 - https://www.whonix.org/wiki/QEMU
