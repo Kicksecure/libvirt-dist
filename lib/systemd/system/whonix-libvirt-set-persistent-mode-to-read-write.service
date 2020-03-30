@@ -1,0 +1,24 @@
+## Copyright (C) 2019 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+[Unit]
+Description=sets all libvirt VM disks to read-write when Persistent Mode is detected
+Documentation=https://github.com/Whonix/whonix-libvirt
+
+ConditionKernelCommandLine=!boot=live
+
+After=libvirtd.service
+After=libvirt-guests.service
+After=virtlockd.socket
+After=virtlogd.socket
+After=virtlockd-admin.socket
+After=virtlogd-admin.socket
+
+After=whonix-libvirt-install.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/whonix-libvirt/persistent-mode-to-read-write
+
+[Install]
+WantedBy=multi-user.target
