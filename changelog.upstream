@@ -1,3 +1,19 @@
+commit c4c65c8cbf8def23f444cb03d11475302a26441a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 30 11:05:37 2020 -0400
+
+    add whonix-libvirt-set-persistent-mode-to-read-write.service
+    
+    thanks to @onions-knight for the bug report!
+    
+    https://phabricator.whonix.org/T914#19674
+
+commit a75c73e5294f5bcd71ebc2b155dc4485b3a9ee44
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Mar 27 07:40:13 2020 -0400
+
+    bumped changelog version
+
 commit 4a5f5a9bb1f8c28685312a73446aff05658143e8
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 27 07:19:07 2020 -0400
