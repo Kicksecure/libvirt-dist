@@ -1,3 +1,15 @@
+commit 44efe882d7e8adb31d9a4bfdb9ea7ca0c23a6dd0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 9 09:58:22 2020 +0000
+
+    remove usr/lib/motd.d/30_whonix-host.motd as replaced by anon-base-files
+
+commit 34fabd2b9fbf430f424c6b68aa65e224448e4767
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 08:11:30 2020 -0400
+
+    bumped changelog version
+
 commit 84e1db6ab75029f5888fd4c27da34257c7bf8b6a
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:23:06 2020 -0400
