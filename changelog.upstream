@@ -1,3 +1,23 @@
+commit e6c11d4b5bcfa32f089be35d2f727789ee2b2ef6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 15:23:37 2020 -0400
+
+    readme
+
+commit 2d15c399935ffed4e56d821e60c255a9c436b094
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 15:13:53 2020 -0400
+
+    notify at boot that Whonix-Host at time of writing is a developers-only preview
+    
+    https://forums.whonix.org/t/whonix-host-operating-system/3931/236
+
+commit 9f40fdcca0f266fb18a79b33a361dbaf2f5e4fb2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 9 10:18:31 2020 +0000
+
+    bumped changelog version
+
 commit 44efe882d7e8adb31d9a4bfdb9ea7ca0c23a6dd0
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 9 09:58:22 2020 +0000
