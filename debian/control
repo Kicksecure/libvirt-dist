@@ -15,12 +15,14 @@ Package: whonix-libvirt
 Architecture: all
 Depends: adduser, qemu-kvm, libvirt-daemon-system, libvirt-clients,
  virt-manager, gir1.2-spiceclientgtk-3.0, dnsmasq-base, helper-scripts,
- ${misc:Depends}
+ msgcollector, ${misc:Depends}
 Description: Whonix Libvirt XML Files for KVM and QEMU
  Libvirt XML files for Whonix-Gateway, Whonix-Workstation,
  Whonix-Custom-Workstation and Whonix's internal network.
  .
  Whonix-Host grub branding, motd and issue banner.
+ .
+ Whonix-Host boot popup.
  .
  See also:
  - https://www.whonix.org/wiki/KVM
