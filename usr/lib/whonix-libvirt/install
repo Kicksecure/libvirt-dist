@@ -40,8 +40,27 @@ virsh -c qemu:///system net-autostart "Whonix-External" || true
 virsh -c qemu:///system net-start "Whonix-External" || true
 virsh -c qemu:///system net-autostart "Whonix-Internal" || true
 virsh -c qemu:///system net-start "Whonix-Internal" || true
-virsh -c qemu:///system define "/usr/share/whonix-libvirt/xml/Whonix-Gateway.xml" || true
-virsh -c qemu:///system define "/usr/share/whonix-libvirt/xml/Whonix-Workstation.xml" || true
+
+## Doing the following in a temporary directory to avoid modified files should
+## this be interrupted in the middle.
+temp_dir="$(mktemp --directory)"
+cp -r /usr/share/whonix-libvirt/xml "$temp_dir"
+
+if virsh capabilities | grep "<domain type='kvm'>" ; then
+   true "OK: found KVM"
+else
+   ## replace the 'kvm' domain type with 'qemu'
+   search="<domain type='kvm'>"
+   replace="<domain type='qemu'>"
+   str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Gateway.xml"
+   str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Workstation.xml"
+fi
+
+test -f "$temp_dir/xml/Whonix-Gateway.xml"
+test -f "$temp_dir/xml/Whonix-Workstation.xml"
+
+virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml" || true
+virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
 
 virt-xml "Whonix-Gateway" --add-device --filesystem source=/mnt/gateway-shared,target=shared,type=mount,accessmode=mapped || true
 virt-xml "Whonix-Workstation" --add-device --filesystem source=/mnt/workstation-shared,target=shared,type=mount,accessmode=mapped || true
