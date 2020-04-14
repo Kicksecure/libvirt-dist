@@ -1,3 +1,15 @@
+commit 7adb2f479172222e89510604019e4d8140af473f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 14 14:20:41 2020 -0400
+
+    stronger warning
+
+commit 8cc3db52e02a33790e0ee07a238fee1bb5990867
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 15:23:38 2020 -0400
+
+    bumped changelog version
+
 commit e6c11d4b5bcfa32f089be35d2f727789ee2b2ef6
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 13 15:23:37 2020 -0400
