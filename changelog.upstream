@@ -1,3 +1,15 @@
+commit 4c82d74698fda65f98646323dac29cdd0490a035
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 14 19:08:11 2020 -0400
+
+    remove `<cpu mode='host-passthrough'/>` for qemu
+
+commit a2a77619a7a12569dc4872fded0261e197d26e98
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 14 19:03:04 2020 -0400
+
+    bumped changelog version
+
 commit b77262fd318432745cc12b4da8f0f08915726771
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 14 19:02:00 2020 -0400
