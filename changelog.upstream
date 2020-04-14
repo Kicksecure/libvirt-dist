@@ -1,3 +1,15 @@
+commit b77262fd318432745cc12b4da8f0f08915726771
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 14 19:02:00 2020 -0400
+
+    use qemu if kvm is unavailable for easier Whonix development using nested virtualization
+
+commit 27d30ffb3b2e83a645cbfdf7a5764f2565c3fc1c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Apr 14 14:20:55 2020 -0400
+
+    bumped changelog version
+
 commit 7adb2f479172222e89510604019e4d8140af473f
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 14 14:20:41 2020 -0400
