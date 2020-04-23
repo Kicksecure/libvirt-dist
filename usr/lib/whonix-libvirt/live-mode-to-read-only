@@ -21,6 +21,14 @@ for vm_name_item in $vm_names_list ; do
    virt-xml "$vm_name_item" --edit --disk readonly=on
 done
 
+## https://phabricator.whonix.org/T914
+if test -f "/var/lib/libvirt/images/Whonix-Gateway.qcow2" ; then
+   chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
+fi
+if test -f "/var/lib/libvirt/images/Whonix-Workstation.qcow2" ; then
+   chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Workstation.qcow2"
+fi
+
 ## "chmod ugo-r" is set during build in chroot:
 ## https://github.com/Whonix/Whonix/blob/master/build-steps.d/1800_copy_vms_into_raw
 
