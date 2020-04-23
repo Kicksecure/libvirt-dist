@@ -1,3 +1,25 @@
+commit f2b6e5be86c20b1b060f385bde907a208be8750e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 23 10:05:00 2020 -0400
+
+    qemu support,
+    
+    remove
+    
+    <vcpu placement='static' cpuset='0'>1</vcpu>
+    
+    <vcpu placement='static' cpuset='1'>1</vcpu>
+    
+    when qemu is detected
+    
+    https://forums.whonix.org/t/whonix-host-operating-system/3931/284
+
+commit 68665f731c6964124c51a7286e80f2739251a9c1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 23 06:55:52 2020 -0400
+
+    bumped changelog version
+
 commit 4680b30c634af3eaaa40db85eb47a034fb0fb957
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 06:53:14 2020 -0400
