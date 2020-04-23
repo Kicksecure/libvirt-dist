@@ -65,6 +65,16 @@ else
    replace=""
    str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Gateway.xml"
    str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Workstation.xml"
+
+   ## https://forums.whonix.org/t/whonix-host-operating-system/3931/284
+   search="<vcpu placement='static' cpuset='0'>1</vcpu>"
+   replace=""
+   str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Gateway.xml"
+
+   ## https://forums.whonix.org/t/whonix-host-operating-system/3931/284
+   search="<vcpu placement='static' cpuset='1'>1</vcpu>"
+   replace=""
+   str_replace "$search" "$replace" "$temp_dir/xml/Whonix-Workstation.xml"
 fi
 
 test -f "$temp_dir/xml/Whonix-Gateway.xml"
