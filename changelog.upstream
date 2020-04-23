@@ -1,3 +1,20 @@
+commit 4680b30c634af3eaaa40db85eb47a034fb0fb957
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 23 06:53:14 2020 -0400
+
+    live mode to read only:
+    
+    chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
+    chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Workstation.qcow2"
+    
+    https://phabricator.whonix.org/T914
+
+commit 21e6373b9a35fb1c1ee83776766d0f4bcb5afca2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Apr 19 14:26:03 2020 -0400
+
+    bumped changelog version
+
 commit 5293d705a7ea109e8d0bf4f0c24a607581192636
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Apr 19 14:23:58 2020 -0400
