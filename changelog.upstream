@@ -1,3 +1,27 @@
+commit 4b827db5496553d7f71d0ebf003fdfe3ceb1df87
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu May 14 18:47:41 2020 -0400
+
+    enable "Metadata only copy up"
+    do not copy whole file to overlay, when only a metadata specific
+    operation like chown/chmod is performed
+    https://www.kernel.org/doc/Documentation/filesystems/overlayfs.txt
+    https://phabricator.whonix.org/T914#19876
+    
+    `options overlay metacopy=on`
+    
+    Should be installed on Whonix-Host installed too.
+    
+    Thanks to @onions-knight for the bug report!
+    
+    https://phabricator.whonix.org/T914#20025
+
+commit 7fad0762391a1caba1f2d531f76e410a2d8c46e0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 23 10:13:40 2020 -0400
+
+    bumped changelog version
+
 commit f2b6e5be86c20b1b060f385bde907a208be8750e
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 10:05:00 2020 -0400
