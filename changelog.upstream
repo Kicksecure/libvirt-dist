@@ -1,3 +1,19 @@
+commit 71300f122c1b5e8f77ea353f1635c32852a2139f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Sep 15 05:04:24 2020 -0400
+
+    no longer need to config-package-dev hide /etc/lightdm/lightdm.conf.d/whonix-autologin.conf
+    
+    because that file is no longer shipped with Whonix
+    
+    autologin config snippet is now in VM specific package vm-config-dist
+
+commit 93d001a5bbd73f186682ff2835d7dd6330208fb4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu May 14 18:51:38 2020 -0400
+
+    bumped changelog version
+
 commit 4b827db5496553d7f71d0ebf003fdfe3ceb1df87
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu May 14 18:47:41 2020 -0400
