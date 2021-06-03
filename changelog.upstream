@@ -1,3 +1,22 @@
+commit 3b5de7e6a1b37a20135788438babdb8c20b1bc61
+Merge: 07a3a2a f88e3b3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jun 3 11:54:55 2021 -0400
+
+    Merge remote-tracking branch 'gavin/master'
+
+commit f88e3b3876e5ed11b998fd7502ccaade4a57789f
+Author: GavinPacini <gavin.pacini@gmail.com>
+Date:   Wed Jun 2 12:18:44 2021 +0100
+
+    add UTM configs
+
+commit 07a3a2a849edaf9ec4ca2812f19405814654a49b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 17 12:50:45 2021 -0400
+
+    bumped changelog version
+
 commit 975f08418775ee91a4a4d6b80fe3b1644a8c0d01
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 17 12:50:44 2021 -0400
