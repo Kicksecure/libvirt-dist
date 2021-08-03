@@ -5,11 +5,12 @@ Source: whonix-libvirt
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@whonix.org>
-Build-Depends: debhelper (>= 12), config-package-dev
+Build-Depends: debhelper (>= 13), debhelper-compat (= 13), config-package-dev
 Homepage: https://github.com/Whonix/whonix-libvirt
 Vcs-Browser: https://github.com/Whonix/whonix-libvirt
 Vcs-Git: https://github.com/Whonix/whonix-libvirt.git
-Standards-Version: 4.3.0
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
 
 Package: whonix-libvirt
 Architecture: all
