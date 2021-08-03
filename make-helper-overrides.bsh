@@ -3,6 +3,6 @@
 ## Copyright (C) 2020 - 2021 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
-#W: whonix-libvirt: binary-without-manpage usr/bin/install-whonix-host
-#W: whonix-libvirt: binary-without-manpage usr/bin/install-whonix-host
-genmkfile_lintian_post_opts+=" --suppress-tags binary-without-manpage"
+#W: whonix-libvirt: no-manual-page usr/bin/install-whonix-host
+#W: whonix-libvirt: no-manual-page usr/bin/install-whonix-host
+genmkfile_lintian_post_opts+=" --suppress-tags no-manual-page"
