@@ -28,4 +28,4 @@ Help welcome!
 "
 
 mkdir -p ~/.config/whonix/host-boot-popup
-/usr/lib/msgcollector/one-time-popup ~/.config/whonix/host-boot-popup/dismissed_version_1 "$title" "$text"
+/usr/libexec/msgcollector/one-time-popup ~/.config/whonix/host-boot-popup/dismissed_version_1 "$title" "$text"
