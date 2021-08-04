@@ -18,7 +18,7 @@ After=whonix-libvirt-install.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/lib/whonix-libvirt/live-mode-to-read-only
+ExecStart=/usr/libexec/whonix-libvirt/live-mode-to-read-only
 
 [Install]
 WantedBy=multi-user.target

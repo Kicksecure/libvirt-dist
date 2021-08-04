@@ -16,7 +16,7 @@ After=virtlogd-admin.socket
 
 [Service]
 Type=oneshot
-ExecStart=/usr/lib/whonix-libvirt/install
+ExecStart=/usr/libexec/whonix-libvirt/install
 
 [Install]
 WantedBy=multi-user.target

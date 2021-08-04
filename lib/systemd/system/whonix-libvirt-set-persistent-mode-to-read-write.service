@@ -18,7 +18,7 @@ After=whonix-libvirt-install.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/lib/whonix-libvirt/persistent-mode-to-read-write
+ExecStart=/usr/libexec/whonix-libvirt/persistent-mode-to-read-write
 
 [Install]
 WantedBy=multi-user.target

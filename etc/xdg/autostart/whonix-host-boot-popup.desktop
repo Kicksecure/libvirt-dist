@@ -6,5 +6,5 @@ Name=Whonix-Host Boot Popup
 Comment=dismissible popup
 Type=Application
 Terminal=false
-Exec=/usr/lib/whonix-libvirt/host-boot-popup
+Exec=/usr/libexec/whonix-libvirt/host-boot-popup
 #NotShowIn=QUBES;
