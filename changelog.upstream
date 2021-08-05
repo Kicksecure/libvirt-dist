@@ -1,3 +1,51 @@
+commit ef5fcc1f2d4c458c431f2cc9306502cb4bf2fa16
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 14:44:43 2021 -0400
+
+    lintian FHS
+
+commit 4332e6c594498a8dc5f654d67ca463b1368789ba
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 14:44:29 2021 -0400
+
+    lintian FHS
+
+commit 176a173e62ce565392cb43ba6b5b5a41ee3e9681
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 06:42:13 2021 -0400
+
+    move /usr/lib/msgcollector to /usr/libexec/msgcollector as per lintian FHS
+
+commit 8f1e0c6ffa7f310bf6c7cfcc6cc6ab1616a38a5e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 11:51:32 2021 -0400
+
+    update lintian tag name
+
+commit ddf53e1a8436edd2f432fe5f5c60d5f3e9f25e45
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 05:48:30 2021 -0400
+
+    bullseye
+
+commit 3d7e4e56eaf1e5f2e38c1b67a2eae969d8031ef7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 1 16:38:44 2021 -0400
+
+    comment
+
+commit b1f3099021c2d062a96fb1e6599985fef2ed507a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 1 16:24:53 2021 -0400
+
+    readme
+
+commit 294729f306e30f468ed724ec7b80867cf905cce7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jun 3 11:55:25 2021 -0400
+
+    bumped changelog version
+
 commit 3b5de7e6a1b37a20135788438babdb8c20b1bc61
 Merge: 07a3a2a f88e3b3
 Author: Patrick Schleizer <adrelanos@whonix.org>
