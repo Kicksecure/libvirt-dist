@@ -1,3 +1,42 @@
+commit e44e6fe388468c30c2d00f3d9729f468e9496ccd
+Merge: a0dfce0 c2962f7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Oct 14 08:22:43 2021 -0400
+
+    Merge remote-tracking branch 'github-whonix/master'
+
+commit c2962f7e9fdafa5486b0998110c18976d0410780
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Thu Sep 30 16:28:11 2021 +0000
+
+    RAM reduced to 1.5GB
+
+commit 68249c4f7af9aae47444d51ee0d5b6e6d7480ed8
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Thu Sep 30 16:27:59 2021 +0000
+
+    RAM reduced to 1.5GB
+
+commit a38adbfe7c087919959e0c0331a7a0d1fd36a551
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Thu Sep 30 16:27:37 2021 +0000
+
+    RAM reduced to 1.5GB
+
+commit 039cf62f31784193158711321964375b8cf0bff8
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Thu Sep 30 16:18:32 2021 +0000
+
+    Decreased RAM. Updated descriptionp.
+    
+    Decreased RAM to 256MB. Updated description for activating desktop.
+
+commit a0dfce0cd764ee5e5d416059e8d77d935851e560
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 12 12:07:56 2021 -0400
+
+    bumped changelog version
+
 commit 00df4c58352bab668eefc8a794aa009b2b733be3
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 11 16:31:48 2021 -0400
