@@ -2,7 +2,7 @@
 ## See the file COPYING for copying conditions.
 
 [Desktop Entry]
-Name=Whonix-Host Boot Popup
+Name=Distribution Host Boot Popup
 Comment=dismissible popup
 Type=Application
 Terminal=false
