@@ -1,0 +1,7 @@
+## Copyright (C) 2022 - 2022 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+rm_conffile /etc/default/grub.d/30_whonix-host.cfg
+rm_conffile /etc/issue.d/30_whonix-host.issue
+rm_conffile /etc/xdg/autostart/whonix-host-boot-popup.desktop
+rm_conffile /etc/modprobe.d/30_whonix-libvirt.conf
