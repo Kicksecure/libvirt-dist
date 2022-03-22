@@ -10,7 +10,7 @@ Whonix-Host boot popup.
 See also:
 - https://www.whonix.org/wiki/KVM
 - https://www.whonix.org/wiki/QEMU
-## How to install `whonix-libvirt` using apt-get ##
+## How to install `libvirt-dist` using apt-get ##
 
 1\. Download the APT Signing Key.
 
@@ -38,10 +38,10 @@ echo "deb [signed-by=/usr/share/keyrings/derivative.asc] https://deb.whonix.org 
 sudo apt-get update
 ```
 
-5\. Install `whonix-libvirt`.
+5\. Install `libvirt-dist`.
 
 ```
-sudo apt-get install whonix-libvirt
+sudo apt-get install libvirt-dist
 ```
 
 ## How to Build deb Package from Source Code ##
@@ -52,7 +52,7 @@ Can be build using standard Debian package build tools such as:
 dpkg-buildpackage -b
 ```
 
-See instructions. (Replace `generic-package` with the actual name of this package `whonix-libvirt`.)
+See instructions. (Replace `generic-package` with the actual name of this package `libvirt-dist`.)
 
 * **A)** [easy](https://www.whonix.org/wiki/Dev/Build_Documentation/generic-package/easy), _OR_
 * **B)** [including verifying software signatures](https://www.whonix.org/wiki/Dev/Build_Documentation/generic-package)
@@ -64,4 +64,4 @@ See instructions. (Replace `generic-package` with the actual name of this packag
 
 ## Donate ##
 
-`whonix-libvirt` requires [donations](https://www.whonix.org/wiki/Donate) to stay alive!
+`libvirt-dist` requires [donations](https://www.whonix.org/wiki/Donate) to stay alive!

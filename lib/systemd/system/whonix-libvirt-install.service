@@ -3,9 +3,12 @@
 
 [Unit]
 Description=Whonix initial libvirt settings
-Documentation=https://github.com/Whonix/whonix-libvirt
+Documentation=https://github.com/Whonix/libvirt-dist
 
+## legacy
 ConditionPathExists=!/var/lib/whonix-libvirt/install.done
+## new
+ConditionPathExists=!/var/lib/libvirt-dist/install.done
 
 After=libvirtd.service
 After=libvirt-guests.service
@@ -16,7 +19,7 @@ After=virtlogd-admin.socket
 
 [Service]
 Type=oneshot
-ExecStart=/usr/libexec/whonix-libvirt/install
+ExecStart=/usr/libexec/libvirt-dist/install
 
 [Install]
 WantedBy=multi-user.target

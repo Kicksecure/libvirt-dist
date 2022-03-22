@@ -34,8 +34,8 @@ chmod 777 /mnt/workstation-shared
 
 virsh -c qemu:///system net-autostart "default" || true
 virsh -c qemu:///system net-start "default" || true
-virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-External.xml" || true
-virsh -c qemu:///system net-define "/usr/share/whonix-libvirt/xml/Whonix-Internal.xml" || true
+virsh -c qemu:///system net-define "/usr/share/libvirt-dist/xml/Whonix-External.xml" || true
+virsh -c qemu:///system net-define "/usr/share/libvirt-dist/xml/Whonix-Internal.xml" || true
 virsh -c qemu:///system net-autostart "Whonix-External" || true
 virsh -c qemu:///system net-start "Whonix-External" || true
 virsh -c qemu:///system net-autostart "Whonix-Internal" || true
@@ -44,7 +44,7 @@ virsh -c qemu:///system net-start "Whonix-Internal" || true
 ## Doing the following in a temporary directory to avoid modified files should
 ## this be interrupted in the middle.
 temp_dir="$(mktemp --directory)"
-cp -r /usr/share/whonix-libvirt/xml "$temp_dir"
+cp -r /usr/share/libvirt-dist/xml "$temp_dir"
 
 if virsh capabilities | grep "<domain type='kvm'>" ; then
    true "OK: found KVM"
@@ -86,5 +86,5 @@ virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
 virt-xml "Whonix-Gateway" --add-device --filesystem source=/mnt/gateway-shared,target=shared,type=mount,accessmode=mapped || true
 virt-xml "Whonix-Workstation" --add-device --filesystem source=/mnt/workstation-shared,target=shared,type=mount,accessmode=mapped || true
 
-mkdir --parents /var/lib/whonix-libvirt
-touch /var/lib/whonix-libvirt/install.done
+mkdir --parents /var/lib/libvirt-dist
+touch /var/lib/libvirt-dist/install.done

@@ -69,12 +69,12 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-test -f ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+test -f ./usr/share/libvirt-dist/xml/Whonix-External.xml
 
-## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/whonix-libvirt/xml/Whonix-External.xml
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-External.xml || true
+## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/libvirt-dist/xml/Whonix-External.xml
+virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-External.xml || true
 
-virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix-External.xml
+virsh -c qemu:///system net-define ./usr/share/libvirt-dist/xml/Whonix-External.xml
 virsh -c qemu:///system net-autostart Whonix-External
 virsh -c qemu:///system net-start Whonix-External || true
 
@@ -82,11 +82,11 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-test -f ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
+test -f ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
 
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml || true
+virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Internal.xml || true
 
-virsh -c qemu:///system net-define ./usr/share/whonix-libvirt/xml/Whonix-Internal.xml
+virsh -c qemu:///system net-define ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
 virsh -c qemu:///system net-autostart Whonix-Internal
 virsh -c qemu:///system net-start Whonix-Internal || true
 
@@ -109,37 +109,37 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-test -f ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
-test -f ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
-test -f ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
-test -f ./usr/share/whonix-libvirt/xml/Kicksecure.xml
+test -f ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
+test -f ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
+test -f ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
+test -f ./usr/share/libvirt-dist/xml/Kicksecure.xml
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
 ## Travis CI issue:
-## + virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: invalid argument: could not find capabilities for domaintype=kvm
 search="<domain type='kvm'>"
 replace="<domain type='qemu'>"
-sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
-sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
-sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
-sed -i -e "s/$search/$replace/g" ./usr/share/whonix-libvirt/xml/Kicksecure.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
+sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Kicksecure.xml
 
 ## Travis CI issue:
-## + virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: unsupported configuration: CPU mode 'host-passthrough' for x86_64 qemu domain on x86_64 host is not supported by hypervisor
 search="<cpu mode='host-passthrough'/>"
 replace=""
-sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
-sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
-sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
-sed -i -e "s#$search#$replace#g" ./usr/share/whonix-libvirt/xml/Kicksecure.xml
+sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
+sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
+sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
+sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Kicksecure.xml
 
 ## Travis CI issue:
-## + virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: Unable to open /dev/net/tun, is tun module loaded?: No such file or directory
 modprobe tun || true
 
@@ -148,11 +148,11 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
 ## TODO: virt-xml-validate does not work in Travis CI.
-## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml || true
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml || true
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml || true
-virt-xml-validate ./usr/share/whonix-libvirt/xml/Kicksecure.xml || true
+## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
+virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml || true
+virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml || true
+virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml || true
+virt-xml-validate ./usr/share/libvirt-dist/xml/Kicksecure.xml || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -160,29 +160,29 @@ true "------------------------------------------------------------"
 
 ## Not working in nested VM such as CI.
 ## error: invalid argument: could not find capabilities for domaintype=kvm
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml || true
+virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml || true
+virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml || true
+virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml || true
 true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/whonix-libvirt/xml/Kicksecure.xml || true
+virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Kicksecure.xml || true
 true "-----"
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Gateway.xml
+virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 virsh -c qemu:///system undefine Whonix-Gateway
 
-virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Workstation.xml
+virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
 virsh -c qemu:///system undefine Whonix-Workstation
 
-virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Whonix-Custom-Workstation.xml
+virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
 virsh -c qemu:///system undefine Whonix-Custom-Workstation
 
-virsh -c qemu:///system define ./usr/share/whonix-libvirt/xml/Kicksecure.xml
+virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Kicksecure.xml
 virsh -c qemu:///system undefine Kicksecure
 
 true "------------------------------------------------------------"
