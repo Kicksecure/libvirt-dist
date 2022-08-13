@@ -21,8 +21,8 @@ fi
 
 ## Existence of user "user" is not guaranteed at this point.
 ## XXX: Or is it?
-addgroup user kvm >/dev/null || true
-addgroup user libvirt >/dev/null || true
+adduser user kvm >/dev/null || true
+adduser user libvirt >/dev/null || true
 
 ## Create shared directory and adjust permissions
 mkdir --parents /mnt/gateway-shared
