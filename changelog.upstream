@@ -1,3 +1,15 @@
+commit 25df51da0156601d46c9ae286db6b3d1c84bed54
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 13 11:34:43 2022 -0400
+
+    addgroup -> adduser fix
+
+commit 3ea1373fd80277d3e35ba6c1439375cd8154d426
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 25 06:06:36 2022 -0400
+
+    bumped changelog version
+
 commit 67dab5e3049582c7aa1e5053ddc9fadda7717741
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri May 20 15:27:07 2022 -0400
