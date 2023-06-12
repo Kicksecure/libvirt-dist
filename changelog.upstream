@@ -1,3 +1,27 @@
+commit d586b61d228de2d2f322acb5bc4848f2a3b5dc05
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 12 14:51:59 2023 +0000
+
+    update copyright year
+
+commit b9b3c5e354554d82d1bade5b5e2e3587f475608d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 12 14:27:03 2023 +0000
+
+    comment
+
+commit df0f6285000691aea4b1f60fbdde92a3717eee39
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 12 14:26:28 2023 +0000
+
+    removed outdated .travis.yml file
+
+commit 500d39aa98b14bfdcddc7e29734db54de8f2b379
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 13 11:39:23 2022 -0400
+
+    bumped changelog version
+
 commit 25df51da0156601d46c9ae286db6b3d1c84bed54
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Aug 13 11:34:43 2022 -0400
