@@ -30,7 +30,7 @@
 			<key>DriveName</key>
 			<string>drive0</string>
 			<key>ImagePath</key>
-			<string>Whonix-Gateway-XFCE.raw</string>
+			<string>Whonix-Gateway-Xfce.raw</string>
 			<key>ImageType</key>
 			<string>disk</string>
 			<key>InterfaceType</key>
