@@ -30,6 +30,6 @@ if test -f "/var/lib/libvirt/images/Whonix-Workstation.qcow2" ; then
 fi
 
 ## "chmod ugo-r" is set during build in chroot:
-## https://github.com/Whonix/Whonix/blob/master/build-steps.d/1800_copy_vms_into_raw
+## https://github.com/Whonix/Whonix/blob/master/build-steps.d/*_copy_vms_into_raw
 
 exit "$exit_code"
