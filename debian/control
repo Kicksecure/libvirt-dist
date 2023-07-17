@@ -6,9 +6,9 @@ Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@whonix.org>
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13), config-package-dev
-Homepage: https://github.com/Whonix/libvirt-dist
-Vcs-Browser: https://github.com/Whonix/libvirt-dist
-Vcs-Git: https://github.com/Whonix/libvirt-dist.git
+Homepage: https://github.com/Kicksecure/libvirt-dist
+Vcs-Browser: https://github.com/Kicksecure/libvirt-dist
+Vcs-Git: https://github.com/Kicksecure/libvirt-dist.git
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
@@ -29,5 +29,5 @@ Description: Whonix Libvirt XML Files for KVM and QEMU
  Whonix-Host boot popup.
  .
  See also:
- - https://www.whonix.org/wiki/KVM
- - https://www.whonix.org/wiki/QEMU
+ - https://www.kicksecure.com/wiki/KVM
+ - https://www.kicksecure.com/wiki/QEMU
