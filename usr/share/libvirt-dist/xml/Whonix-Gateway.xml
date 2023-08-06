@@ -2,7 +2,7 @@
   <name>Whonix-Gateway</name>
   <description>Bump up the RAM to 1GB for the desktop to run.</description>
   <genid/>
-  <memory dumpCore='off' unit='KiB'>262144</memory>
+  <memory dumpCore='off' unit='KiB'>524288</memory>
   <currentMemory unit='KiB'>524288</currentMemory>
   <memoryBacking>
     <allocation mode='ondemand'/>
