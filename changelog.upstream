@@ -1,3 +1,16 @@
+commit 29d361f54e1d7d8b40a959d5a4ea455d125c0783
+Merge: d1a25dc da9506d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 15:34:44 2023 -0500
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit d1a25dcef4738c8bccd54b30ec25bfc90c3bcf85
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 20:18:00 2023 +0000
+
+    bumped changelog version
+
 commit e5e5c084655175765752cec1fb9bc73a3cd1dd8a
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 11 13:41:32 2023 -0500
@@ -5,6 +18,12 @@ Date:   Sat Nov 11 13:41:32 2023 -0500
     change license to AGPL-3+
     
     https://forums.whonix.org/t/license-change-to-agplv3/17455
+
+commit da9506d53e14658d420e5bc386aebc84622754c9
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sun Aug 6 00:18:47 2023 +0000
+
+    Bump up RAM to 512MB
 
 commit ce1d402bb2067e4c86e4b516258d4625e0a8646a
 Author: Patrick Schleizer <adrelanos@whonix.org>
