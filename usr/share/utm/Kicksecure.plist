@@ -49,7 +49,7 @@
 		<key>NetworkCard</key>
 		<string>virtio-net-pci</string>
 		<key>NetworkCardMAC</key>
-		<string>42:C1:1A:2D:64:D4</string>
+		<string>AC:D4:EA:A6:0D:C2</string>
 		<key>NetworkEnabled</key>
 		<false/>
 	</dict>
