@@ -1,3 +1,53 @@
+commit c01b2961823813255ae6e421a33995a92a2a28ba
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:15:52 2023 -0500
+
+    MAC
+
+commit 9a1e0865ceeb288729aca71b8fafbc5cab96e4b3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:14:43 2023 -0500
+
+    UUID
+
+commit 3d6b634c546ff1a6f55e28c6c2a366b25fdcb095
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:13:14 2023 -0500
+
+    RAM
+
+commit f7147c3dc732c81db4d1f5460730e84a2346ea3a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:12:49 2023 -0500
+
+    CPUCount 3
+
+commit 99b42583caeadf7fd9b9055e0d4470b5a498ef13
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:10:38 2023 -0500
+
+    remove `<key>InputInvertScroll</key>`
+    
+    for consistency with other plist files
+
+commit e2472f781ee74d7e12c16d4e4c99becebde5c58a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:08:29 2023 -0500
+
+    Kicksecure.plist
+
+commit 28e5d2348b8c30e5d7154358fe51ebab7958739d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Dec 9 13:04:02 2023 -0500
+
+    rename
+
+commit 3f8f90c8629ebcecb3ba8531e9fc1dd264459eeb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 11 20:35:57 2023 +0000
+
+    bumped changelog version
+
 commit 29d361f54e1d7d8b40a959d5a4ea455d125c0783
 Merge: d1a25dc da9506d
 Author: Patrick Schleizer <adrelanos@whonix.org>
