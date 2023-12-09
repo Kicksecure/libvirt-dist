@@ -86,7 +86,7 @@
 		<key>MachineProperties</key>
 		<string>highmem=off</string>
 		<key>Memory</key>
-		<integer>2048</integer>
+		<integer>4096</integer>
 		<key>SystemUUID</key>
 		<string>2C279BF0-E968-4EF1-B93E-61BABD03A7B7</string>
 		<key>Target</key>
