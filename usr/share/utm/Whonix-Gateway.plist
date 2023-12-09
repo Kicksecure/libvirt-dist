@@ -80,7 +80,7 @@
 		<key>CPU</key>
 		<string>cortex-a72</string>
 		<key>CPUCount</key>
-		<integer>4</integer>
+		<integer>3</integer>
 		<key>JITCacheSize</key>
 		<integer>0</integer>
 		<key>MachineProperties</key>
