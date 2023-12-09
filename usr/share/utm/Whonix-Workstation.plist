@@ -41,8 +41,6 @@
 	<dict/>
 	<key>Input</key>
 	<dict>
-		<key>InputInvertScroll</key>
-		<true/>
 		<key>InputLegacy</key>
 		<false/>
 	</dict>
