@@ -8,8 +8,8 @@ Whonix-Host grub branding, motd and issue banner.
 Whonix-Host boot popup.
 
 See also:
-- https://www.whonix.org/wiki/KVM
-- https://www.whonix.org/wiki/QEMU
+- https://www.kicksecure.com/wiki/KVM
+- https://www.kicksecure.com/wiki/QEMU
 
 ## How to install `libvirt-dist` using apt-get ##
 
