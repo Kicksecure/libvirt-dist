@@ -1,3 +1,15 @@
+commit 28eb38e9f50c504b00deca90fdb6d706e9b276ce
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Feb 2 07:32:27 2024 -0500
+
+    usrmerge debhelper systemd Debian package maintainer scripts fix
+
+commit 8ea0a85aacd987ac922229770d4d0240e94298c8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 22 12:42:36 2024 +0000
+
+    bumped changelog version
+
 commit bac3c8e85698b0afca3b02696ab33a6469d89043
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jan 22 07:20:35 2024 -0500
