@@ -27,7 +27,7 @@
 			<key>Identifier</key>
 			<string>0</string>
 			<key>ImageName</key>
-			<string>Whonix-Workstation-Xfce.raw</string>
+			<string>Kicksecure-Xfce.raw</string>
 			<key>ImageType</key>
 			<string>Disk</string>
 			<key>Interface</key>
@@ -43,9 +43,9 @@
 		<key>IconCustom</key>
 		<false/>
 		<key>Name</key>
-		<string>Whonix-Workstation-Xfce</string>
+		<string>Kicksecure-Xfce</string>
 		<key>UUID</key>
-		<string>4EEAAA33-F158-42C4-A0A0-9959BC6C894E</string>
+		<string>9297E0AB-7C4F-4C9D-80F9-B99E88E7C469</string>
 	</dict>
 	<key>Input</key>
 	<dict>
@@ -57,12 +57,23 @@
 		<false/>
 	</dict>
 	<key>Network</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Hardware</key>
+			<string>virtio-net-pci</string>
+			<key>IsolateFromHost</key>
+			<false/>
+			<key>MacAddress</key>
+			<string>AC:D4:EA:A6:0D:C2</string>
+			<key>Mode</key>
+			<string>Shared</string>
+			<key>PortForward</key>
+			<array/>
+		</dict>
+	</array>
 	<key>QEMU</key>
 	<dict>
 		<key>AdditionalArguments</key>
-		<array>
-			<string>-device virtio-net-pci,netdev=internal -netdev socket,id=internal,connect=127.0.0.1:8010</string>
 		</array>
 		<key>BalloonDevice</key>
 		<false/>
@@ -104,7 +115,7 @@
 	<key>System</key>
 	<dict>
 		<key>Architecture</key>
-		<string>aarch64</string>
+		<string>x86_64</string>
 		<key>CPU</key>
 		<string>default</string>
 		<key>CPUCount</key>
