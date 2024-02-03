@@ -1,8 +1,45 @@
+commit b86756e320fdf61b6287e4b03a0cc4d2a3c3ba3a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Feb 3 13:18:05 2024 -0500
+
+    signed commit
+
+commit e01f47d1c07eb125057531dfe435875c8595c172
+Author: GavinPacini <gavin.pacini@gmail.com>
+Date:   Sat Feb 3 15:24:50 2024 +0000
+
+    use template files for utm configs with _ARCH_ and _TARGET_
+
+commit 84537a4bf5e0c2647a2077c5be86eab7eeb4641a
+Merge: 9e1172e dbeee37
+Author: GavinPacini <gavin.pacini@gmail.com>
+Date:   Sat Feb 3 02:49:46 2024 +0000
+
+    Merge branch 'master' into feat/utm-intel-amd64
+
+commit 9e1172e1867e61e4408cbd2b7a221561c41d591a
+Author: GavinPacini <gavin.pacini@gmail.com>
+Date:   Sat Feb 3 02:46:07 2024 +0000
+
+    fix GPU usage and Kicksecure UTM configs
+
+commit dbeee37dceed62f30c0c0121e448e754909b4f07
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Feb 2 12:35:41 2024 +0000
+
+    bumped changelog version
+
 commit 28eb38e9f50c504b00deca90fdb6d706e9b276ce
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Feb 2 07:32:27 2024 -0500
 
     usrmerge debhelper systemd Debian package maintainer scripts fix
+
+commit c14b042213b5eae999d14523567724ac0f9ee4c7
+Author: GavinPacini <gavin.pacini@gmail.com>
+Date:   Fri Feb 2 00:58:53 2024 +0100
+
+    upgrade UTM configs and add configs for Intel_AMD64
 
 commit 8ea0a85aacd987ac922229770d4d0240e94298c8
 Author: Patrick Schleizer <adrelanos@whonix.org>
