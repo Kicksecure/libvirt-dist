@@ -1,3 +1,17 @@
+commit 09a7fb1349876883cacccd1e2e027640010e7c10
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jun 18 12:03:01 2024 -0400
+
+    Whonix KVM: Increase Whonix-Gateway RAM to `1280` MB and Whonix-Workstation RAM to `2048` MB to be on par with Whonix for VirtualBox for simplified maintenance effort
+    
+    https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/554
+
+commit 5633580b3be344f0c31eb65371bb0c592cd7ba7b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Feb 3 18:28:04 2024 +0000
+
+    bumped changelog version
+
 commit b86756e320fdf61b6287e4b03a0cc4d2a3c3ba3a
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Feb 3 13:18:05 2024 -0500
