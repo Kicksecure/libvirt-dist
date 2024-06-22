@@ -14,7 +14,7 @@
   </blkiotune>
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <os>
-    <type>hvm</type>
+    <type machine='q35'>hvm</type>
     <boot dev='hd'/>
   </os>
   <features>
@@ -66,7 +66,7 @@
       <filetransfer enable='no'/>
       <gl enable='no'/>
     </graphics>
-    <sound model='ich6'>
+    <sound model='ich9'>
       <codec type='output'/>
     </sound>
     <video>
