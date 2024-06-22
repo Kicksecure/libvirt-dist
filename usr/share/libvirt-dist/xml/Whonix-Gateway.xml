@@ -14,7 +14,7 @@
   </blkiotune>
   <vcpu placement='static' cpuset='0'>1</vcpu>
   <os>
-    <type>hvm</type>
+    <type machine='q35'>hvm</type>
     <boot dev='hd'/>
   </os>
   <features>
