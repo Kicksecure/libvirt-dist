@@ -76,7 +76,7 @@
     </video>
     <memballoon model='none'/>
     <rng model='virtio'>
-      <backend model='random'>/dev/urandom</backend>
+      <backend model='random'>/dev/random</backend>
     </rng>
   </devices>
 </domain>
