@@ -1,3 +1,50 @@
+commit b3d07e78a1d53e75d1d37a61ebf0eb3b883d3b03
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 29 07:31:28 2024 -0400
+
+    `/dev/urandom` -> `/dev/random`
+    
+    `<backend model='random'>/dev/urandom</backend>` -> `<backend model='random'>/dev/random</backend>`
+    
+    https://www.kicksecure.com/wiki/Dev/Entropy
+
+commit 9ef129ff6d6714c0803038bc227e24ccfa7429fe
+Merge: ff83793 0772bdb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 29 06:54:12 2024 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 0772bdb725a2a2a4d654d0a9cb6522d372bea4cf
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Jun 22 07:16:28 2024 +0000
+
+    Upgraded machine to q35 chipset
+
+commit 02430eefdcaa5dabd21ba02a6eb0abd1a0a2eae3
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Jun 22 07:14:14 2024 +0000
+
+    Upgraded machine to q35 chipset
+
+commit d07933241b88f8b3b8f294f4c47e3b331bb9f109
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Jun 22 07:12:29 2024 +0000
+
+    Upgraded machine to q35 chipset
+
+commit 58438b31503456ae88832f5a10b425b4fc6f11d4
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sat Jun 22 07:07:35 2024 +0000
+
+    Upgraded machine to q35 chipset
+
+commit ff837938443112c9c6a0d9695d6cf5370b6c25d9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jun 18 16:04:39 2024 +0000
+
+    bumped changelog version
+
 commit 09a7fb1349876883cacccd1e2e027640010e7c10
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Jun 18 12:03:01 2024 -0400
