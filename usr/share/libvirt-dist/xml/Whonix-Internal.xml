@@ -1,4 +1,5 @@
 <network>
   <name>Whonix-Internal</name>
   <bridge name='virbr2' stp='on' delay='0'/>
+  <dns enable="no"/>
 </network>
