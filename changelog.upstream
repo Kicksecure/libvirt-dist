@@ -1,3 +1,46 @@
+commit 69b35f14cb258f1a0553cde35838824ab7f5c9d6
+Merge: 5752881 da5378c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 15 06:19:35 2024 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit da5378c1d465e4fc9d14e0f2fee7f6c4cbadc2db
+Merge: 9da7e14 5b9607e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 15 05:50:48 2024 -0400
+
+    Merge pull request #111 from TNTBOMBOM/patch-2
+    
+    Update Whonix-Internal.xml with <dns enable="no"/>
+
+commit 9da7e14152e783dbb87c34326f041cab3b11a942
+Merge: 5752881 090e600
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 15 05:50:37 2024 -0400
+
+    Merge pull request #112 from TNTBOMBOM/patch-1
+    
+    Update Whonix-External.xml with <dns enable="no"/>
+
+commit 5b9607eef0beff13696748c1baaf3e8a9fb06db8
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Thu Aug 15 05:44:11 2024 +0000
+
+    Update Whonix-Internal.xml with <dns enable="no"/>
+
+commit 090e600617d5bb6d9a54267a4b12d15ba5c0f79c
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Thu Aug 15 05:43:00 2024 +0000
+
+    Update Whonix-External.xml with <dns enable="no"/>
+
+commit 5752881dcc3444ce6bc777e9e6196f1fe6228263
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jul 4 12:20:50 2024 +0000
+
+    bumped changelog version
+
 commit b3d07e78a1d53e75d1d37a61ebf0eb3b883d3b03
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jun 29 07:31:28 2024 -0400
