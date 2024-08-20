@@ -1,3 +1,19 @@
+commit 4514d4888d754cab1c6c3887d15b4d7c9b4e669b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 20 05:32:54 2024 -0400
+
+    rate limit RNG /dev/random
+    
+    <rate bytes='1024' period='1000'/>
+    
+    https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/566
+
+commit f848badbee69b0657f8fdf94a005aa9cb387b24d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 15 17:50:47 2024 +0000
+
+    bumped changelog version
+
 commit 69b35f14cb258f1a0553cde35838824ab7f5c9d6
 Merge: 5752881 da5378c
 Author: Patrick Schleizer <adrelanos@whonix.org>
