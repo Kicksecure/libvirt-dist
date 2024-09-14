@@ -2,8 +2,8 @@
   <name>Whonix-Gateway</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <genid/>
-  <memory dumpCore='off' unit='KiB'>1250000</memory>
-  <currentMemory unit='KiB'>1250000</currentMemory>
+  <memory dumpCore='off' unit='KiB'>1310720</memory>
+  <currentMemory unit='KiB'>1310720</currentMemory>
   <memoryBacking>
     <allocation mode='ondemand'/>
     <discard/>
