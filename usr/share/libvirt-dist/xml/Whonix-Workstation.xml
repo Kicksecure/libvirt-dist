@@ -2,8 +2,8 @@
   <name>Whonix-Workstation</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <genid/>
-  <memory dumpCore='off' unit='KiB'>2097152</memory>
-  <currentMemory unit='KiB'>2097152</currentMemory>
+  <memory dumpCore='off' unit='GB'>2</memory>
+  <currentMemory unit='GB'>2</currentMemory>
   <memoryBacking>
     <allocation mode='ondemand'/>
     <discard/>
