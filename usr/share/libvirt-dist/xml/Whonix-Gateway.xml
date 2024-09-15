@@ -2,8 +2,8 @@
   <name>Whonix-Gateway</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
   <genid/>
-  <memory dumpCore='off' unit='KiB'>1310720</memory>
-  <currentMemory unit='KiB'>1310720</currentMemory>
+  <memory dumpCore='off' unit='GB'>2</memory>
+  <currentMemory unit='GB'>2</currentMemory>
   <memoryBacking>
     <allocation mode='ondemand'/>
     <discard/>
@@ -16,6 +16,7 @@
   <os>
     <type machine='q35'>hvm</type>
     <boot dev='hd'/>
+    <bootmenu enable='yes'/>
   </os>
   <features>
     <acpi/>
@@ -66,14 +67,25 @@
       <target type='virtio' name='com.redhat.spice.0'/>
       <address type='virtio-serial' controller='0' bus='0' port='1'/>
     </channel>
+    
+    <!-- Graphics settings -->
     <graphics type='spice' autoport='yes'>
-      <clipboard copypaste='yes'/>
+      <listen type='none'/>
+      <clipboard copypaste='no'/>
       <filetransfer enable='no'/>
       <gl enable='no'/>
     </graphics>
+
+    <!-- Video settings -->
     <video>
-      <model type='virtio' heads='1' primary='yes'/>
+      <model type='virtio' heads='1' primary='yes'>
+        <acceleration accel3d='no'/>
+      </model>
     </video>
+    
+    <sound model='ich9'>
+      <codec type='output'/>
+    </sound>
     <memballoon model='none'/>
     <rng model='virtio'>
       <rate bytes='1024' period='1000'/>
