@@ -1,3 +1,167 @@
+commit 7047b910c06fcc121e0ad2b4e1899aee71865b0d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 16 08:23:46 2024 -0400
+
+    shuffle
+
+commit 4883685addec724605da96ce8c2663fcb21171e6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 16 08:21:53 2024 -0400
+
+    newlines
+
+commit 7e772cb1730ea13451cbeb57efde7df9b4581330
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 16 08:18:01 2024 -0400
+
+    newlines
+
+commit 78614c164cb2ebf874f7a1ceefd73753000e2153
+Merge: 114fa64 e2f2443
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 16 07:07:55 2024 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit e2f244313705d72e3f204d85864538ca044b9e82
+Merge: 114fa64 ab5bfc1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 16 07:06:54 2024 -0400
+
+    Merge pull request #117 from TNTBOMBOM/patch-7
+    
+    Update Whonix-Gateway.xml 3D Acceleration
+
+commit ab5bfc100485d9e833cfb19f6ef52c2d4e315668
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Mon Sep 16 03:11:06 2024 +0000
+
+    switching  clipboard copypaste to yes
+
+commit 17ea2c8772e95235d037eb6e02e4a1e13b2f1f34
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sun Sep 15 13:36:43 2024 +0000
+
+    Update Whonix-Gateway.xml 3D Acceleration
+    
+    - SPICE set to none (locally)
+    - Added 3D acceleration (disabled)
+    - Added OpenGL (disabled)
+    - Switched KiB to GB for RAM
+    - Added human readed comments
+
+commit 114fa649812b15bc75209063ca0c5d539dcb7123
+Merge: d0ff01b 452fc98
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 14 14:32:07 2024 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 452fc98d993274fb7e0d681759e6c51f11c99d05
+Merge: 8912d51 cc4a225
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 14 14:28:26 2024 -0400
+
+    Merge pull request #116 from TNTBOMBOM/patch-6
+    
+    Update Whonix-Custom-Workstation.xml with 3D acceleration edits
+
+commit 8912d51b35fe7ef0acad240add9301406e46df51
+Merge: 22614ee b6ccd65
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 14 14:28:09 2024 -0400
+
+    Merge pull request #115 from TNTBOMBOM/patch-5
+    
+    Update Whonix-Workstation.xml to use GB
+
+commit 22614ee5d843e7c26e665b2f21ec66947aada231
+Merge: bf73720 558e521
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 14 14:26:06 2024 -0400
+
+    Merge pull request #114 from TNTBOMBOM/patch-4
+    
+    Update Kicksecure.xml with 3D acceleration
+
+commit cc4a225402f92afac699c5a96e8cd7852d82f065
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 17:29:15 2024 +0000
+
+    Update Whonix-Custom-Workstation.xml with 3D acceleration edits
+
+commit 558e5211d9c421b4bbce86786a1a5e794100ad0b
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 15:48:11 2024 +0000
+
+    Update Kicksecure.xml switch memory to GB
+    
+    - Using memory in GB instead of KiB
+
+commit b6ccd6562867c4a8aee02d4c2cea817b9047a3dd
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 15:45:02 2024 +0000
+
+    Update Whonix-Workstation.xml to use GB
+    
+    - Using GB by default instead of MB
+
+commit 6bbd5aab214f304313b4af47c733e524c0431e18
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 15:30:00 2024 +0000
+
+    Update Kicksecure.xml with 3D acceleration
+    
+    - Added 3D acceleration (disabled by default)
+    - Added OpenGL (disabled by default)
+    - Adjusted RAM to represent 2GB
+    - SPICE listen to none (mean only listen locally)
+
+commit bf737208ee5ba4364e0777e488173fd3397273f0
+Merge: d0ff01b 910c877
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Sep 14 03:01:24 2024 -0400
+
+    Merge pull request #113 from TNTBOMBOM/patch-3
+    
+    Whonix-Workstation KVM 3D acceleration configs
+
+commit 910c877ec925767f96600b7869944c5dcdb58be4
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 05:24:29 2024 +0000
+
+    Adjusting RAM KiB to represent 1.25 GB
+
+commit c485ae1ae46e56beb401c072b59ad481e9c28c48
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 05:20:01 2024 +0000
+
+    Update Whonix-Workstation.xml
+    
+    Adjust memory KB to represent exactly 2GB
+
+commit 0859f08b644df3b4e5c9acec3911f49d08a77df9
+Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
+Date:   Sat Sep 14 04:27:40 2024 +0000
+
+    Whonix-Workstation KVM 3D acceleration configs
+    
+    Whonix-Workstation KVM 3D acceleration configs
+    
+    - SPICE video: listen to none (which mean locally only) by default
+    
+    - Added 3d acceleration but disabled
+    
+    - Added OpenGL but disabled
+    
+    - Added user readable commits
+
+commit d0ff01bd160419938aa633cc431cfd98fc9aa0f8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 20 12:11:26 2024 +0000
+
+    bumped changelog version
+
 commit 4514d4888d754cab1c6c3887d15b4d7c9b4e669b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 20 05:32:54 2024 -0400
