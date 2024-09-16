@@ -3,6 +3,7 @@
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
 
   <genid/>
+
   <memory dumpCore='off' unit='GB'>2</memory>
   <currentMemory unit='GB'>2</currentMemory>
   <memoryBacking>
@@ -14,6 +15,7 @@
   <blkiotune>
     <weight>250</weight>
   </blkiotune>
+
   <vcpu placement='static' cpuset='0'>1</vcpu>
 
   <os>
