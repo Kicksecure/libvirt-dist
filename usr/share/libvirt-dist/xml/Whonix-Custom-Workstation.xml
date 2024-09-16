@@ -17,6 +17,7 @@
   </blkiotune>
 
   <vcpu placement='static' cpuset='1'>1</vcpu>
+  <cpu mode='host-passthrough'/>
 
   <os>
     <type machine='q35'>hvm</type>
@@ -31,8 +32,6 @@
     <pmu state='off'/>
     <vmport state='off'/>
   </features>
-
-  <cpu mode='host-passthrough'/>
 
   <clock offset='utc'>
     <timer name='rtc' present='no'/>
