@@ -1,3 +1,33 @@
+commit 261d0a15ea122bcf4042740536b0b536cd1c8fd0
+Merge: 3f00bed 0e88719
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 28 13:26:19 2024 -0500
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 0e8871917917ceb037494feaa360656ea4152211
+Merge: 3f00bed 21756cb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 28 13:24:29 2024 -0500
+
+    Merge pull request #118 from coquizen/patch-1
+    
+    Update Whonix-Gateway.plist.template
+
+commit 21756cb83f510b76f16180e3929cc98178635f9a
+Author: Ian C <16412897+coquizen@users.noreply.github.com>
+Date:   Wed Nov 27 13:25:36 2024 -0500
+
+    Update Whonix-Gateway.plist.template
+    
+    Should the user decide to build Whonix-Gateway-CLI instead of Whonix-Gateway-Xfce, this template wouldn't work. I propose using `_FLAVOR_` to account for user choice. I made a pull request [here](https://github.com/Whonix/derivative-maker/pull/11) as well. NOTE: should this be approved, this should be synchronous with the other PR.
+
+commit 3f00beda3189a91900967a263cc217486c5489c1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 16 18:04:29 2024 +0000
+
+    bumped changelog version
+
 commit 7047b910c06fcc121e0ad2b4e1899aee71865b0d
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 16 08:23:46 2024 -0400
