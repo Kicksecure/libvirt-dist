@@ -27,7 +27,7 @@
 			<key>Identifier</key>
 			<string>0</string>
 			<key>ImageName</key>
-			<string>Whonix-Gateway-Xfce.raw</string>
+			<string>_FLAVOR_.raw</string>
 			<key>ImageType</key>
 			<string>Disk</string>
 			<key>Interface</key>
@@ -43,7 +43,7 @@
 		<key>IconCustom</key>
 		<false/>
 		<key>Name</key>
-		<string>Whonix-Gateway-Xfce</string>
+		<string>_FLAVOR_</string>
 		<key>UUID</key>
 		<string>2C279BF0-E968-4EF1-B93E-61BABD03A7B7</string>
 	</dict>
