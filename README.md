@@ -8,7 +8,6 @@ Whonix-Host grub branding, motd and issue banner.
 Whonix-Host boot popup.
 
 See also:
-
 - https://www.kicksecure.com/wiki/KVM
 - https://www.kicksecure.com/wiki/QEMU
 
