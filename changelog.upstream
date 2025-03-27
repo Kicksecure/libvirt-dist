@@ -1,3 +1,21 @@
+commit 34e79d59cfd07db7f60b3f94637737e8c9d72489
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 27 05:55:14 2025 -0400
+
+    output
+
+commit 96098d0c7f99ccd3895a648ee05d0018bf183950
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 27 05:50:56 2025 -0400
+
+    improve live mode detection
+
+commit 65dbf1d62de0380908671c86e06038153cd7c330
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 30 12:57:06 2025 +0000
+
+    bumped changelog version
+
 commit b5e213d6d6aeafc0d284d543b9dd60d4db6cdb7c
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 30 07:44:29 2025 -0500
