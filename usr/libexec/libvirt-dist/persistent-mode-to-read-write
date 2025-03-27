@@ -15,6 +15,15 @@ trap error_handler ERR
 
 exit_code="0"
 
+source /usr/libexec/helper-scripts/live-mode.sh
+
+if [ "$live_status_detected" = "true" ]; then
+   ## Live mode.
+   true "$0: INFO: Live mode detected. Doing nothing. Exiting."
+   exit 0
+fi
+## Persistent mode.
+
 vm_names_list="$(virsh list --all | awk '{print $2}'| grep -v Name)"
 
 for vm_name_item in $vm_names_list ; do

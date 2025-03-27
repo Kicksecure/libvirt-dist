@@ -5,8 +5,6 @@
 Description=sets all libvirt VM disks to read-only when Live Mode is detected
 Documentation=https://github.com/Whonix/libvirt-dist
 
-ConditionKernelCommandLine=|boot=live
-
 After=libvirtd.service
 After=libvirt-guests.service
 After=virtlockd.socket

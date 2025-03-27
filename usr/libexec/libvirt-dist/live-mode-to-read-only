@@ -15,13 +15,22 @@ trap error_handler ERR
 
 exit_code="0"
 
+source /usr/libexec/helper-scripts/live-mode.sh
+
+if [ "$live_status_detected" = "false" ]; then
+   ## Persistent mode.
+   true "$0: INFO: Persistent mode detected. Doing nothing. Exiting."
+   exit 0
+fi
+## Live mode.
+
 vm_names_list="$(virsh list --all | awk '{print $2}'| grep -v Name)"
 
 for vm_name_item in $vm_names_list ; do
    virt-xml "$vm_name_item" --edit --disk readonly=on
 done
 
-## https://phabricator.whonix.org/T914
+## https://forums.whonix.org/t/whonix-host-live-enable-kvm-readonly-mode-virt-xml-vm-name-edit-disk-readonly-on/18525
 if test -f "/var/lib/libvirt/images/Whonix-Gateway.qcow2" ; then
    chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
 fi
