@@ -16,12 +16,11 @@ Whonix-Host is unreleased. Not even available for testers. This version is a pre
 Missing features the the initial release include
 
 <ul>
-  <li><a href=https://phabricator.whonix.org/T978>Whonix-Host EFI booting support</a></li>
-  <li><a href=https://phabricator.whonix.org/T942>Whonix Host Firewall for Whonix Host</a></li>
-  <li><a href=https://phabricator.whonix.org/T981>Whonix-Host Tor configuration and anon-connection-wizard (ACW)</a></p></li>
+  <li><a href=https://forums.whonix.org/t/whonix-host-firewall-for-whonix-host/18498>Whonix Host Firewall for Whonix Host</a></li>
+  <li><a href=https://forums.whonix.org/t/whonix-host-tor-configuration-and-anon-connection-wizard-acw-ipv6-disable-ipv4-forward-disable/18452>Whonix-Host Tor configuration and anon-connection-wizard (ACW)</a></p></li>
 </ul>
 
-See <a href=https://phabricator.whonix.org/maniphest/query/_Obk7yld9FTN/#R>full task list for first release of Whonix-Host</a>.<br />
+See <a href=https://forums.whonix.org/search?q=tags%3Astatus_open_issue_todo%2Bcomponent_whonix-host>full task list for first release of Whonix-Host</a>.<br />
 <br />
 Help welcome!
 </p>
