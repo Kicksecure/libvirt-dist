@@ -1,3 +1,9 @@
+libvirt-dist (3:11.0-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 25 Apr 2025 09:53:45 +0000
+
 libvirt-dist (3:10.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
