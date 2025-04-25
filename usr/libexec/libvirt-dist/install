@@ -19,7 +19,7 @@ if ! getent group libvirt >/dev/null; then
 fi
 ## }} Taken from libvirt-bin.postinst.
 
-## Existence of user "user" is not guaranteed at this point.
+## Existence of account "user" is not guaranteed at this point.
 ## XXX: Or is it?
 adduser user kvm >/dev/null || true
 adduser user libvirt >/dev/null || true
