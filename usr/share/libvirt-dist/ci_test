@@ -3,7 +3,7 @@
 set -x
 set -e
 
-if echo "$PWD" | grep -q travis ; then
+if printf '%s\n' "$PWD" | grep -- travis >/dev/null 2>/dev/null; then
    true "travis detected, ok."
 elif [ ! "$CI" = "true" ]; then
    true "ERROR: You probably do not want to run this outside of a CI \
