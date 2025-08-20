@@ -81,7 +81,7 @@
     <!-- Graphics settings -->
     <graphics type='spice' autoport='yes'>
       <listen type='none'/>
-      <clipboard copypaste='no'/>
+      <clipboard copypaste='yes'/>
       <filetransfer enable='no'/>
       <gl enable='no'/>
     </graphics>
