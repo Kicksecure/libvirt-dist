@@ -27,7 +27,7 @@
 			<key>Identifier</key>
 			<string>0</string>
 			<key>ImageName</key>
-			<string>Whonix-Workstation-Xfce.raw</string>
+			<string>Whonix-Workstation-LXQt.raw</string>
 			<key>ImageType</key>
 			<string>Disk</string>
 			<key>Interface</key>
@@ -43,7 +43,7 @@
 		<key>IconCustom</key>
 		<false/>
 		<key>Name</key>
-		<string>Whonix-Workstation-Xfce</string>
+		<string>Whonix-Workstation-LXQt</string>
 		<key>UUID</key>
 		<string>4EEAAA33-F158-42C4-A0A0-9959BC6C894E</string>
 	</dict>
