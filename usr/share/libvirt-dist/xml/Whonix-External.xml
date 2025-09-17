@@ -1,7 +1,10 @@
 <network>
   <name>Whonix-External</name>
-  <forward mode='nat'/>
+  <forward mode='nat'>
+    <nat ipv6='yes'/>
+  </forward>
   <bridge name='virbr1' stp='on' delay='0'/>
   <dns enable="no"/>
   <ip address='10.0.2.2' netmask='255.255.255.0'/>
+  <ip family="ipv6" address="fd19:c33d:98bc::" prefix="64"/>
 </network>
