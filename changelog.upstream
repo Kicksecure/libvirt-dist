@@ -1,3 +1,22 @@
+commit 617bf7d6994b76cd1c0a5fb1d0824f0f4a85a2a7
+Merge: c849d76 e22de17
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 16:59:45 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit e22de1762229b0279c08344f96f26b8cad54d146
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Sep 28 11:10:46 2025 -0500
+
+    Disable clipboard sharing
+
+commit c849d762da4033f0c5fafd31eb189dbaf351a84b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 19 16:14:34 2025 +0000
+
+    bumped changelog version
+
 commit 929e1880d4d77642d0afd24f5f785373c01e88ca
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Sep 18 10:07:46 2025 -0400
