@@ -27,7 +27,7 @@
 			<key>Identifier</key>
 			<string>0</string>
 			<key>ImageName</key>
-			<string>Kicksecure-LXQt.raw</string>
+			<string>_FLAVOR_.raw</string>
 			<key>ImageType</key>
 			<string>Disk</string>
 			<key>Interface</key>
@@ -43,7 +43,7 @@
 		<key>IconCustom</key>
 		<false/>
 		<key>Name</key>
-		<string>Kicksecure-LXQt</string>
+		<string>_FLAVOR_</string>
 		<key>UUID</key>
 		<string>9297E0AB-7C4F-4C9D-80F9-B99E88E7C469</string>
 	</dict>
