@@ -1,3 +1,22 @@
+commit 2ae45feac73474f213881ac56526c7f9aac1253e
+Merge: b50717c 88d2e51
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 1 11:59:35 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 88d2e5179bcc735326fa00e0a02f449062e9b8d8
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Dec 30 19:19:24 2025 -0600
+
+    Use _FLAVOR_ consistently in UTM files
+
+commit b50717c525536f9fe9d22c90fd90f733a8d95886
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 21:09:23 2025 +0000
+
+    bumped changelog version
+
 commit 617bf7d6994b76cd1c0a5fb1d0824f0f4a85a2a7
 Merge: c849d76 e22de17
 Author: Patrick Schleizer <adrelanos@whonix.org>
