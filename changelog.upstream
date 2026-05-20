@@ -1,3 +1,9 @@
+commit 26c24b999b5a7dd30c21f4531f6f75b29b80b17a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 28 09:47:10 2026 +0000
+
+    bumped changelog version
+
 commit b17b7f909ffcc537b334c6658b568c45bc03a9a2
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Mar 28 05:30:31 2026 -0400
@@ -258,7 +264,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Nov 28 13:24:29 2024 -0500
 
     Merge pull request #118 from coquizen/patch-1
-    
+
     Update Whonix-Gateway.plist.template
 
 commit 21756cb83f510b76f16180e3929cc98178635f9a
@@ -266,7 +272,7 @@ Author: Ian C <16412897+coquizen@users.noreply.github.com>
 Date:   Wed Nov 27 13:25:36 2024 -0500
 
     Update Whonix-Gateway.plist.template
-    
+
     Should the user decide to build Whonix-Gateway-CLI instead of Whonix-Gateway-Xfce, this template wouldn't work. I propose using `_FLAVOR_` to account for user choice. I made a pull request [here](https://github.com/Whonix/derivative-maker/pull/11) as well. NOTE: should this be approved, this should be synchronous with the other PR.
 
 commit 3f00beda3189a91900967a263cc217486c5489c1
@@ -306,7 +312,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 16 07:06:54 2024 -0400
 
     Merge pull request #117 from TNTBOMBOM/patch-7
-    
+
     Update Whonix-Gateway.xml 3D Acceleration
 
 commit ab5bfc100485d9e833cfb19f6ef52c2d4e315668
@@ -320,7 +326,7 @@ Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
 Date:   Sun Sep 15 13:36:43 2024 +0000
 
     Update Whonix-Gateway.xml 3D Acceleration
-    
+
     - SPICE set to none (locally)
     - Added 3D acceleration (disabled)
     - Added OpenGL (disabled)
@@ -340,7 +346,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 14 14:28:26 2024 -0400
 
     Merge pull request #116 from TNTBOMBOM/patch-6
-    
+
     Update Whonix-Custom-Workstation.xml with 3D acceleration edits
 
 commit 8912d51b35fe7ef0acad240add9301406e46df51
@@ -349,7 +355,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 14 14:28:09 2024 -0400
 
     Merge pull request #115 from TNTBOMBOM/patch-5
-    
+
     Update Whonix-Workstation.xml to use GB
 
 commit 22614ee5d843e7c26e665b2f21ec66947aada231
@@ -358,7 +364,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 14 14:26:06 2024 -0400
 
     Merge pull request #114 from TNTBOMBOM/patch-4
-    
+
     Update Kicksecure.xml with 3D acceleration
 
 commit cc4a225402f92afac699c5a96e8cd7852d82f065
@@ -372,7 +378,7 @@ Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
 Date:   Sat Sep 14 15:48:11 2024 +0000
 
     Update Kicksecure.xml switch memory to GB
-    
+
     - Using memory in GB instead of KiB
 
 commit b6ccd6562867c4a8aee02d4c2cea817b9047a3dd
@@ -380,7 +386,7 @@ Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
 Date:   Sat Sep 14 15:45:02 2024 +0000
 
     Update Whonix-Workstation.xml to use GB
-    
+
     - Using GB by default instead of MB
 
 commit 6bbd5aab214f304313b4af47c733e524c0431e18
@@ -388,7 +394,7 @@ Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
 Date:   Sat Sep 14 15:30:00 2024 +0000
 
     Update Kicksecure.xml with 3D acceleration
-    
+
     - Added 3D acceleration (disabled by default)
     - Added OpenGL (disabled by default)
     - Adjusted RAM to represent 2GB
@@ -400,7 +406,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Sep 14 03:01:24 2024 -0400
 
     Merge pull request #113 from TNTBOMBOM/patch-3
-    
+
     Whonix-Workstation KVM 3D acceleration configs
 
 commit 910c877ec925767f96600b7869944c5dcdb58be4
@@ -414,7 +420,7 @@ Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
 Date:   Sat Sep 14 05:20:01 2024 +0000
 
     Update Whonix-Workstation.xml
-    
+
     Adjust memory KB to represent exactly 2GB
 
 commit 0859f08b644df3b4e5c9acec3911f49d08a77df9
@@ -422,15 +428,15 @@ Author: TNT BOM BOM <TNTBOMBOM@users.noreply.github.com>
 Date:   Sat Sep 14 04:27:40 2024 +0000
 
     Whonix-Workstation KVM 3D acceleration configs
-    
+
     Whonix-Workstation KVM 3D acceleration configs
-    
+
     - SPICE video: listen to none (which mean locally only) by default
-    
+
     - Added 3d acceleration but disabled
-    
+
     - Added OpenGL but disabled
-    
+
     - Added user readable commits
 
 commit d0ff01bd160419938aa633cc431cfd98fc9aa0f8
@@ -444,9 +450,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 20 05:32:54 2024 -0400
 
     rate limit RNG /dev/random
-    
+
     <rate bytes='1024' period='1000'/>
-    
+
     https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/566
 
 commit f848badbee69b0657f8fdf94a005aa9cb387b24d
@@ -468,7 +474,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Aug 15 05:50:48 2024 -0400
 
     Merge pull request #111 from TNTBOMBOM/patch-2
-    
+
     Update Whonix-Internal.xml with <dns enable="no"/>
 
 commit 9da7e14152e783dbb87c34326f041cab3b11a942
@@ -477,7 +483,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Aug 15 05:50:37 2024 -0400
 
     Merge pull request #112 from TNTBOMBOM/patch-1
-    
+
     Update Whonix-External.xml with <dns enable="no"/>
 
 commit 5b9607eef0beff13696748c1baaf3e8a9fb06db8
@@ -503,9 +509,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jun 29 07:31:28 2024 -0400
 
     `/dev/urandom` -> `/dev/random`
-    
+
     `<backend model='random'>/dev/urandom</backend>` -> `<backend model='random'>/dev/random</backend>`
-    
+
     https://www.kicksecure.com/wiki/Dev/Entropy
 
 commit 9ef129ff6d6714c0803038bc227e24ccfa7429fe
@@ -550,7 +556,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Jun 18 12:03:01 2024 -0400
 
     Whonix KVM: Increase Whonix-Gateway RAM to `1280` MB and Whonix-Workstation RAM to `2048` MB to be on par with Whonix for VirtualBox for simplified maintenance effort
-    
+
     https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/554
 
 commit 5633580b3be344f0c31eb65371bb0c592cd7ba7b
@@ -661,7 +667,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Dec 9 13:10:38 2023 -0500
 
     remove `<key>InputInvertScroll</key>`
-    
+
     for consistency with other plist files
 
 commit e2472f781ee74d7e12c16d4e4c99becebde5c58a
@@ -700,7 +706,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 11 13:41:32 2023 -0500
 
     change license to AGPL-3+
-    
+
     https://forums.whonix.org/t/license-change-to-agplv3/17455
 
 commit da9506d53e14658d420e5bc386aebc84622754c9
@@ -919,7 +925,7 @@ Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
 Date:   Thu Sep 30 16:18:32 2021 +0000
 
     Decreased RAM. Updated descriptionp.
-    
+
     Decreased RAM to 256MB. Updated description for activating desktop.
 
 commit a0dfce0cd764ee5e5d416059e8d77d935851e560
@@ -1042,9 +1048,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Sep 15 05:04:24 2020 -0400
 
     no longer need to config-package-dev hide /etc/lightdm/lightdm.conf.d/whonix-autologin.conf
-    
+
     because that file is no longer shipped with Whonix
-    
+
     autologin config snippet is now in VM specific package vm-config-dist
 
 commit 93d001a5bbd73f186682ff2835d7dd6330208fb4
@@ -1062,13 +1068,13 @@ Date:   Thu May 14 18:47:41 2020 -0400
     operation like chown/chmod is performed
     https://www.kernel.org/doc/Documentation/filesystems/overlayfs.txt
     https://phabricator.whonix.org/T914#19876
-    
+
     `options overlay metacopy=on`
-    
+
     Should be installed on Whonix-Host installed too.
-    
+
     Thanks to @onions-knight for the bug report!
-    
+
     https://phabricator.whonix.org/T914#20025
 
 commit 7fad0762391a1caba1f2d531f76e410a2d8c46e0
@@ -1082,15 +1088,15 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 10:05:00 2020 -0400
 
     qemu support,
-    
+
     remove
-    
+
     <vcpu placement='static' cpuset='0'>1</vcpu>
-    
+
     <vcpu placement='static' cpuset='1'>1</vcpu>
-    
+
     when qemu is detected
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/284
 
 commit 68665f731c6964124c51a7286e80f2739251a9c1
@@ -1104,10 +1110,10 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 06:53:14 2020 -0400
 
     live mode to read only:
-    
+
     chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
     chmod --verbose --recursive ugo-w "/var/lib/libvirt/images/Whonix-Workstation.qcow2"
-    
+
     https://phabricator.whonix.org/T914
 
 commit 21e6373b9a35fb1c1ee83776766d0f4bcb5afca2
@@ -1121,7 +1127,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Apr 19 14:23:58 2020 -0400
 
     remove <pvspinlock state='on'/> for Qemu
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/250
 
 commit 5966490b61c23881651f4ed767b8a68efd037ec9
@@ -1189,7 +1195,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 13 15:13:53 2020 -0400
 
     notify at boot that Whonix-Host at time of writing is a developers-only preview
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/236
 
 commit 9f40fdcca0f266fb18a79b33a361dbaf2f5e4fb2
@@ -1257,9 +1263,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 30 11:05:37 2020 -0400
 
     add whonix-libvirt-set-persistent-mode-to-read-write.service
-    
+
     thanks to @onions-knight for the bug report!
-    
+
     https://phabricator.whonix.org/T914#19674
 
 commit a75c73e5294f5bcd71ebc2b155dc4485b3a9ee44
@@ -1351,7 +1357,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 16 03:14:18 2020 -0400
 
     usr/lib/whonix-libvirt/persistent-mode-to-read-write:
-    
+
     chmod --verbose --recursive ug+w "/var/lib/libvirt/images/Whonix-Gateway.qcow2"
     chmod --verbose --recursive ug+w "/var/lib/libvirt/images/Whonix-Workstation.qcow2"
 
@@ -1366,7 +1372,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 16 02:43:03 2020 -0400
 
     add usr/lib/whonix-libvirt/persistent-mode-to-read-write
-    
+
     based on usr/lib/whonix-libvirt/live-mode-to-ready-only
 
 commit 92a475a6bb3776fbc74ff5dd681aab1cee58d2bd
@@ -1424,7 +1430,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Mar 15 18:56:39 2020 +0000
 
     Merge pull request #109 from onions-knight/patch-2
-    
+
     Update whonix-libvirt-set-live-to-readonly.service
 
 commit 2dd21626e304912a5e65e2fda4bec593a8f07fde
@@ -1432,7 +1438,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Sun Mar 15 16:21:38 2020 +0000
 
     Update whonix-libvirt-set-live-to-readonly.service
-    
+
     Adding After=whonix-libvirt-install.service to fix ensure VM domains are defined before setting disks to readonly. See https://phabricator.whonix.org/T914
 
 commit 7803f46e4f5420a85a67a0b443b63e80cf83a64b
@@ -1482,7 +1488,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 13 10:30:21 2020 -0400
 
     config-package-dev hide /etc/lightdm/lightdm.conf.d/whonix-autologin.conf
-    
+
     because we do not want autologin for Whonix-Host installed
 
 commit fc3e9e0d7546c4705b1e83a29b19b7fce73eebf4
@@ -1490,7 +1496,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 13 10:18:22 2020 -0400
 
     move calamares settings for Whonix to live-config-dist package
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/166
 
 commit 67d93fc2c7b5dd3eeadf3552692e375ae38ba77f
@@ -1506,7 +1512,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 13 06:00:11 2020 +0000
 
     Merge pull request #108 from onions-knight/patch-1
-    
+
     Update users.conf.whonix
 
 commit dd108497e0a67af61e0410e74250e592e8d236df
@@ -1514,7 +1520,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Thu Mar 12 21:52:41 2020 +0000
 
     Update users.conf.whonix
-    
+
     set RootPassword to false, see https://forums.whonix.org/t/whonix-host-operating-system/3931/158
 
 commit cdfdb750a1b434631128b9dd16d77969271c1673
@@ -1528,7 +1534,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 12 04:07:48 2020 -0400
 
     config-package-dev hide /usr/share/glib-2.0/schemas/96_calamares-settings-debian.gschema.override
-    
+
     Sets favorite apps and disabled screen lock. We don't want that.
 
 commit 0ea3fc5429d7a56ae92c800802e8c1df63fb17d0
@@ -1574,7 +1580,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 12 06:50:09 2020 +0000
 
     Merge pull request #107 from onions-knight/master
-    
+
     Whonix-Host branding
 
 commit 09abf8327b622c9de94ed82fb52aff6e6ea4f098
@@ -1715,7 +1721,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Mar 11 20:38:02 2020 +0000
 
     Merge pull request #104 from onions-knight/patch-7
-    
+
     Update settings.conf
 
 commit fa8f58c033f6c5d6a1adc170c85f1494b9dc8504
@@ -1723,7 +1729,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Wed Mar 11 18:28:30 2020 +0000
 
     Update settings.conf
-    
+
     Change branding: debian -> Whonix-Host
 
 commit b36970a3c5afc47267aa5dcb2484db442afbf277
@@ -1739,7 +1745,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 11:01:56 2020 +0000
 
     Merge pull request #103 from onions-knight/patch-5
-    
+
     Update settings.conf
 
 commit d877cbce81b1400f195f68eb1a97a0c92996b805
@@ -1747,7 +1753,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Tue Mar 10 10:50:39 2020 +0000
 
     Update settings.conf
-    
+
     Removing unnecessary modules from Calamares install sequence, we keep only the minimum. See https://forums.whonix.org/t/whonix-host-operating-system/3931/141
 
 commit 63c798bbc12e98fdaa83967074a289ca96594de4
@@ -1763,7 +1769,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 9 17:41:55 2020 +0000
 
     Merge pull request #102 from onions-knight/patch-4
-    
+
     Create settings.conf
 
 commit e37ed97bbe434c0c9bf82500b34574e28c697468
@@ -1772,7 +1778,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 9 17:41:41 2020 +0000
 
     Merge pull request #101 from onions-knight/patch-3
-    
+
     Update packages.conf.whonix
 
 commit f2feb63f7ca48b48ef3e375d4761194e67b038f5
@@ -1780,7 +1786,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Mon Mar 9 13:49:29 2020 +0000
 
     Create settings.conf
-    
+
     Modified settings.conf for Calamares removing the 'users' modules from the Calamares install sequence. Reason: we do not want to install a user, user 'user' is the default user. See https://forums.whonix.org/t/whonix-host-operating-system/3931/134
 
 commit c108f46cb31ed2338f011e350ad04310129fd266
@@ -1788,7 +1794,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Mon Mar 9 13:43:57 2020 +0000
 
     Update packages.conf.whonix
-    
+
     Remove 'live-config' as it is no longer installed in the iso file. Breaks Calamares install otherwise.
 
 commit c3640b4478b857ba36317a51eb08e834e75d7670
@@ -1826,7 +1832,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 6 10:26:54 2020 -0500
 
     run /usr/lib/whonix-libvirt/install during boot not inside build chroot
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/96
 
 commit 2fc6fc5318665db8bfb697d7d6b71495c7c8d229
@@ -1848,7 +1854,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Nov 3 07:17:19 2019 +0000
 
     Merge pull request #100 from HulaHoop0/patch-8
-    
+
     Remove rom bar setting
 
 commit c74d8363827d2edd5d8f22fc4df3732329a04611
@@ -1857,7 +1863,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Nov 3 07:17:01 2019 +0000
 
     Merge pull request #99 from HulaHoop0/patch-7
-    
+
     Fix video tag and remove rom bar setting
 
 commit f31096fc06d37dd6479f08c2005a773abe03441f
@@ -1866,7 +1872,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Nov 3 07:16:47 2019 +0000
 
     Merge pull request #98 from HulaHoop0/patch-6
-    
+
     Fix video tag remove rom bar setting
 
 commit 530d37b05527a502f020a32f056226d27bf0fb0a
@@ -1875,7 +1881,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Nov 3 07:16:34 2019 +0000
 
     Merge pull request #97 from HulaHoop0/patch-5
-    
+
     Fix video tag remove rom bar setting
 
 commit 6f2f289acec90607d676835d7ff4af563c2c179f
@@ -1921,7 +1927,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Oct 31 16:10:20 2019 +0000
 
     Merge pull request #94 from HulaHoop0/patch-2
-    
+
     virtio gfx, genid, NIC rom bar off
 
 commit 438c18c17863ae5979c2d57692ae118d6879638a
@@ -1943,7 +1949,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Oct 2 08:31:40 2019 +0000
 
     Merge pull request #95 from HulaHoop0/patch-3
-    
+
     virtio gfx, genid, NIC rom bar off
 
 commit b23fab4ae43891abf9eb6098946abf03bda7b847
@@ -1952,7 +1958,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Oct 2 08:31:27 2019 +0000
 
     Merge pull request #96 from HulaHoop0/patch-4
-    
+
     virtio gfx, genid, NIC rom bar off
 
 commit 66141af7d24be2ec0722b7fc444ce49737b39b0c
@@ -1961,7 +1967,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Oct 2 08:31:03 2019 +0000
 
     Merge pull request #93 from HulaHoop0/patch-1
-    
+
     virtio gfx, genid, NIC rom bar off
 
 commit 2bca58416d817aaca2db85254e5ec03e6eb24e43
@@ -2041,11 +2047,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Aug 21 12:25:49 2019 -0400
 
     config-package-dev hide /etc/lightdm/lightdm.conf.d/whonix-autologin.conf
-    
+
     to disable autologin on Whonix-Host
-    
+
     Thanks to @onion-knight for the suggestion!
-    
+
     https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/120
 
 commit 978da522e9cdc16115459ff569773c4906d3a761
@@ -2053,9 +2059,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Aug 21 12:15:38 2019 -0400
 
     add Depends: gir1.2-spiceclientgtk-3.0
-    
+
     Thanks to @onions-knight for the bug report!
-    
+
     https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/118
 
 commit bb7773e62850fdc76b794500e6bb0c282a55bb2b
@@ -2063,9 +2069,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Aug 21 03:11:36 2019 -0400
 
     enable readonly for KVM disks if kernel command line includes boot=live
-    
+
     (for live mode)
-    
+
     https://phabricator.whonix.org/T914
 
 commit 62a212bbfd52d0f5f82a55aa57d886ebfc76b166
@@ -2093,7 +2099,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Aug 21 05:56:52 2019 +0000
 
     Merge pull request #92 from onions-knight/patch-2
-    
+
     Update install
 
 commit ffe464c9b23a6c579b040f195733b74188000f12
@@ -2101,7 +2107,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Tue Aug 20 11:43:11 2019 +0000
 
     Update install
-    
+
     adding sed commands to replace back 'qemu' with 'kvm' domain type at the end of the task
     see https://forums.whonix.org/t/vms-do-no-start-until-the-cpu-configuration-is-set-to-copy-host-cpu-configuration/7917/4
 
@@ -2111,7 +2117,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 20 06:42:13 2019 +0000
 
     Merge pull request #91 from onions-knight/patch-1
-    
+
     Update packages.conf.whonix
 
 commit e4b063b6c4dd3009253946d16a677cc54bfadadc
@@ -2119,7 +2125,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Mon Aug 19 16:08:33 2019 +0000
 
     Update packages.conf.whonix
-    
+
     live-config package should not be needed on the install target
 
 commit 5219a5d4c05b8e206cbee8cc9dad44a66088e28f
@@ -2127,7 +2133,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Mon Aug 19 15:06:53 2019 +0000
 
     Update packages.conf.whonix
-    
+
     Removing live-boot packages from the list of deleted packages on the install target. Allows the install target to boot in live-mode (also: fixes the issue when "Debian-Live" grub entry results in a kernel panic).
 
 commit 2d6ed37237af6ae3553eeee307872d0c24615b9f
@@ -2165,7 +2171,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jul 19 05:01:15 2019 -0400
 
     add dnsmasq-base to Depends:
-    
+
     https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/96
 
 commit 2b527403a5f570464f504f360a02a37f2596d738
@@ -2187,7 +2193,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 11 06:58:45 2019 +0000
 
     Merge pull request #90 from HulaHoopWhonix/patch-89
-    
+
      More security features on Buster
 
 commit 3c7d90cce4ff8941ae7b411f02c1bd60ce8adefa
@@ -2196,7 +2202,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 11 06:58:37 2019 +0000
 
     Merge pull request #88 from HulaHoopWhonix/patch-87
-    
+
     More security features on Buster
 
 commit 9e130f5587ca96278abe5553f3629617aa42f48d
@@ -2205,7 +2211,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 11 06:58:22 2019 +0000
 
     Merge pull request #89 from HulaHoopWhonix/patch-88
-    
+
     More security features on Buster
 
 commit dbb550631e532c55381cbdba9fff901310694285
@@ -2214,7 +2220,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 11 06:58:11 2019 +0000
 
     Merge pull request #87 from HulaHoopWhonix/patch-86
-    
+
     More security features on Buster
 
 commit 99bcda6bc77aa831f3af75a93ae2706777f02db1
@@ -2264,7 +2270,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Tue Jul 9 18:02:02 2019 +0000
 
     re-enable pvspinlock
-    
+
     Adds performance and reduces code-path use: https://lwn.net/Articles/556141/
 
 commit fb6a7143b4cdf2390e5547390f383458cb8eb590
@@ -2302,7 +2308,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jun 14 12:41:14 2019 +0000
 
     remove unneeded packages (which also break the build)
-    
+
     https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/69
 
 commit b877f67499ec349ed1f85c6ff590ce85f4b0eaf5
@@ -2330,7 +2336,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jun 2 09:16:09 2019 +0000
 
     Merge pull request #86 from HulaHoopWhonix/patch-85
-    
+
     Added Whonix Gateway shared folder
 
 commit ef1a6124dccecbe1e098ea141caf91ab973568fc
@@ -2410,7 +2416,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 1 09:42:32 2019 +0000
 
     CI: try newer Ubuntu
-    
+
     dist: xenial
 
 commit 6b684ade389f3f78a1d007cf2ec10fc13435c44e
@@ -2492,7 +2498,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 1 01:25:04 2019 +0000
 
     Merge pull request #85 from HulaHoopWhonix/patch-84
-    
+
     Add shared folder
 
 commit 735c6fa9639fffa7bcbf13fb5cdf7d9e0d378ea0
@@ -2602,11 +2608,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 12 05:18:19 2019 -0400
 
     make install script idempotent
-    
+
     create done file /var/lib/whonix-libvirt/install.done
-    
+
     run install script when done file does not exist
-    
+
     https://forums.whonix.org/t/whonix-desktop-installer-with-calamares-field-report/7350/15?u=patrick
 
 commit c19243ac96169205c5e7a45c9aa0c5269754806a
@@ -2688,7 +2694,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 5 02:49:59 2019 -0400
 
     Merge pull request #84 from HulaHoopWhonix/patch-83
-    
+
     Create Hardened-Debian.xml
 
 commit 38bfac8e8fd632228592f9d4401d51168486eb1b
@@ -2716,7 +2722,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 4 02:36:54 2019 -0400
 
     Merge pull request #81 from HulaHoopWhonix/patch-80
-    
+
     Add serial port and console
 
 commit d367421881f17d36c338f28ce94589f3d619577e
@@ -2725,7 +2731,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 4 02:36:43 2019 -0400
 
     Merge pull request #82 from HulaHoopWhonix/patch-81
-    
+
     Add serial port and console
 
 commit 945eff1a99c36f9a520bc1237819b94fdffcc58e
@@ -2734,7 +2740,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 4 02:36:31 2019 -0400
 
     Merge pull request #83 from HulaHoopWhonix/patch-82
-    
+
     Add serial port and console
 
 commit e3c6c1c0db82ecd0e26274985ba91549c3d93a38
@@ -2786,7 +2792,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 30 21:29:58 2019 -0400
 
     Merge pull request #80 from HulaHoopWhonix/patch-79
-    
+
     Updated network name
 
 commit dd80d9092a3a43a41d9495d0f7af25e826794485
@@ -2795,7 +2801,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 30 21:29:45 2019 -0400
 
     Merge pull request #79 from HulaHoopWhonix/patch-78
-    
+
     Updated network names
 
 commit ab6627b84e9dab660bf9082c31d22b896019aa7c
@@ -2804,7 +2810,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 30 21:29:27 2019 -0400
 
     Merge pull request #78 from HulaHoopWhonix/patch-77
-    
+
     Updated network name
 
 commit b13539c5d9564ece13b5c3d51ece2528915d0f82
@@ -2813,7 +2819,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 30 21:29:11 2019 -0400
 
     Merge pull request #77 from HulaHoopWhonix/patch-76
-    
+
     Update and rename external_network.xml to Whonix-External.xml
 
 commit af2cf83ca2f2622fe6db2d77bef989a49012a599
@@ -2822,7 +2828,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Apr 30 21:28:57 2019 -0400
 
     Merge pull request #76 from HulaHoopWhonix/patch-75
-    
+
     Update and rename internal_network.xml to Whonix-Internal.xml
 
 commit 020c7caa60b428641d8b4647cf0aed3465343453
@@ -2896,18 +2902,18 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 1 14:32:44 2019 +0000
 
     add improved legal protections clauses
-    
+
     The license for software created by Whonix is the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7.
-    
+
     The additional terms are based on the Doom 3 license which is Debian refers to as `GPL-3+-with-id-software-additional-terms`, which is Debian DFSG [1] (The Debian Free Software Guidelines) approved and which is therefore suitable for Debian `main`. Whonix made applied minimal changes to it:
-    
+
     * Rewrite `The Doom 3 BFG Edition GPL Source Code` to the more common `this program` which is used throughout the GPL.
     * Added a "trump clause" [2], in other words, any conflicts or disputes between the additional terms and the GPLv3 shall be resolved in favor of the GPLv3 by adding `Notwithstanding any other provision of this License` (as mentioned in GPL FAQ [3]) at the beginning of the additional terms.
-    
+
     [1] https://www.debian.org/social_contract#guidelines
     [2] https://www.fsf.org/news/canonical-updated-licensing-terms
     [3] https://www.gnu.org/licenses/gpl-faq.html#v3Notwithstanding
-    
+
     For more considerations, see also:
     https://www.whonix.org/wiki/Dev/Licensing
 
@@ -2930,7 +2936,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 12 01:28:19 2019 -0500
 
     Merge pull request #75 from leed0s/patch-2
-    
+
     Bump RAM to 2048MiB
 
 commit fc6e6ed92cf0a25ec9d3c760d461c547a438f667
@@ -2939,7 +2945,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 12 01:28:00 2019 -0500
 
     Merge pull request #74 from leed0s/patch-1
-    
+
     Bump RAM to 2048MiB
 
 commit aa3593bb3072a6f58a00d67e9bf577539a7e6e3d
@@ -2973,7 +2979,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Sep 8 09:30:43 2018 +0000
 
     Merge pull request #73 from HulaHoopWhonix/patch-74
-    
+
     removed virtio input devices
 
 commit 12147c9a44a9edf5a00c4a168ab4b650928fb95d
@@ -2982,7 +2988,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Sep 8 09:30:32 2018 +0000
 
     Merge pull request #72 from HulaHoopWhonix/patch-73
-    
+
     removed virtio input devices
 
 commit cd0cc8f976f591ca02f827a85e35fc72be8336fe
@@ -2991,7 +2997,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Sep 8 09:29:59 2018 +0000
 
     Merge pull request #71 from HulaHoopWhonix/patch-72
-    
+
     removed virtio mouse
 
 commit 8e8259d4fdf87f44bce3ec929d70919279a7fa1f
@@ -3049,7 +3055,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 19 21:20:15 2018 +0800
 
     Merge pull request #68 from HulaHoopWhonix/patch-70
-    
+
     Enabled cpu passthrough for CPU bug fixes
 
 commit 383dc9655dda7c9caf634ee610418398f2db8196
@@ -3058,7 +3064,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 19 13:47:27 2018 +0800
 
     Merge pull request #67 from HulaHoopWhonix/patch-69
-    
+
     removed cache setting. supported later versions.
 
 commit 7d0f43f63914381304365041b15e8656ecaaefbb
@@ -3067,7 +3073,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 19 13:47:06 2018 +0800
 
     Merge pull request #69 from HulaHoopWhonix/patch-71
-    
+
     Enabled cpu passthrough for CPU bug fixes
 
 commit 4c623d2fec553fa4fb63851ca80fcf8e24bf4c83
@@ -3107,7 +3113,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 2 14:19:46 2018 +0200
 
     Merge pull request #65 from HulaHoopWhonix/patch-67
-    
+
     acpi and clflush reinstated for future features
 
 commit 7aa920ccedba3db0c379b7bed5758a555ed273ef
@@ -3116,7 +3122,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 2 14:19:23 2018 +0200
 
     Merge pull request #66 from HulaHoopWhonix/patch-68
-    
+
      acpi and clflush reinstated for future features
 
 commit c65906339d118672cd51f5e9e1a06afe07e55350
@@ -3180,7 +3186,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 24 22:36:16 2018 +0100
 
     Merge pull request #64 from HulaHoopWhonix/patch-66
-    
+
     fix cpu settings typo
 
 commit 76385ce55bf32364f7132079106f75e6dca556f3
@@ -3208,7 +3214,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jun 19 14:55:19 2017 +0000
 
     Merge pull request #63 from HulaHoopWhonix/patch-65
-    
+
     Pass thru host CPU and cache info for perf
 
 commit 5e8f50fccc1d209653c48491ad4a46640a663dd9
@@ -3216,7 +3222,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sat May 20 14:32:43 2017 +0000
 
     Pass thru host CPU and cache info for perf
-    
+
     GW is part of the TCB so it shouldn't harm privacy.
 
 commit 6e29da650373f76cf850f21e3b6c2fc50e1d1907
@@ -3225,7 +3231,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 29 23:58:10 2017 +0200
 
     Merge pull request #62 from HulaHoopWhonix/patch-63
-    
+
     switched input devices to virtio
 
 commit 3d41c7800d256935979e7b055de62bbb9932448a
@@ -3234,7 +3240,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 29 23:58:04 2017 +0200
 
     Merge pull request #61 from HulaHoopWhonix/patch-62
-    
+
     switched input devices to virtio
 
 commit c4c2255bb54cc28247d810d5c7df7a4d30e4bf91
@@ -3243,7 +3249,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 29 23:57:56 2017 +0200
 
     Merge pull request #60 from HulaHoopWhonix/patch-61
-    
+
     switched input devices to virtio
 
 commit 14da48bd744808c9188c1878699f8df366463f4b
@@ -3275,7 +3281,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 10 15:47:56 2017 +0000
 
     remove faketime from Build-Depends:
-    
+
     since no longer used for reproducible builds
 
 commit 02fb335e88864b3dca8635692b7e948cc50951b7
@@ -3309,7 +3315,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 20 09:08:10 2017 +0100
 
     Merge pull request #59 from HulaHoopWhonix/patch-60
-    
+
     Disable vmport and pmu
 
 commit e904fd672ae562a249bdbca12ec48c0fe31b80ac
@@ -3318,7 +3324,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 20 09:07:50 2017 +0100
 
     Merge pull request #58 from HulaHoopWhonix/patch-59
-    
+
     Disable vmport, pmu and pvspinlock
 
 commit 780aaea385e5c0aa4043f45ec4bb092931b678da
@@ -3327,7 +3333,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 20 09:07:33 2017 +0100
 
     Merge pull request #57 from HulaHoopWhonix/patch-58
-    
+
     Disable vmport and pmu
 
 commit 44712698be823bf44549d8f2019332498e16d0ae
@@ -3373,7 +3379,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:43:05 2017 +0000
 
     Merge pull request #53 from HulaHoopWhonix/patch-54
-    
+
     Create external_network.xml
 
 commit d76577f9f18a0aa48c3f9536cfedd3b3a666b3f5
@@ -3382,7 +3388,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:42:46 2017 +0000
 
     Merge pull request #56 from HulaHoopWhonix/patch-57
-    
+
     Restored default vram values
 
 commit 91b3565d624ff224965d638bc8f46568160599b9
@@ -3391,7 +3397,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:42:17 2017 +0000
 
     Merge pull request #55 from HulaHoopWhonix/patch-56
-    
+
     Restored default vram values
 
 commit 8da80072ef37e2dd7ae63d0b78d867401051946f
@@ -3400,7 +3406,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:41:35 2017 +0000
 
     Merge pull request #54 from HulaHoopWhonix/patch-55
-    
+
     Restored default vram values
 
 commit 3c778e5eb874cda9d1fc85a1cc5c90e0c6f172a7
@@ -3409,7 +3415,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 10:40:11 2017 +0000
 
     Merge pull request #52 from HulaHoopWhonix/patch-53
-    
+
     Update and rename Whonix_network.xml to internal_network.xml
 
 commit 28f2aaff1ac09edfa6eb9e1e6f74e6d06620fbfd
@@ -3501,7 +3507,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Oct 13 11:09:19 2016 +0000
 
     Restored defaut vram values
-    
+
     The extra vram was a waste of RAM
 
 commit ef0a4be1b8fc71f07d7773376e6198ac6ab0b08b
@@ -3529,7 +3535,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 29 20:17:54 2016 +0200
 
     Merge pull request #51 from HulaHoopWhonix/patch-52
-    
+
     Rate limit RNG
 
 commit 827e49f9c67ea6d4740c3dc5a10094bc28f5cecf
@@ -3538,7 +3544,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 29 20:17:30 2016 +0200
 
     Merge pull request #50 from HulaHoopWhonix/patch-51
-    
+
     Rate limit RNG
 
 commit 721e53291ee516fecf4b27fce43276bc88c7280f
@@ -3547,7 +3553,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 29 20:17:13 2016 +0200
 
     Merge pull request #49 from HulaHoopWhonix/patch-50
-    
+
     Rate limit RNG
 
 commit 4856377e9e20d4de57edb5f454555624e3602ef9
@@ -3555,9 +3561,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Sep 29 13:33:56 2016 +0000
 
     Rate limit RNG
-    
+
     This is necessary to prevent malicious entropy starvation of other VMs and the host.
-    
+
     https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 commit c314e90c6d3e1aab70e51bf0758fc42783120113
@@ -3565,9 +3571,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Sep 29 13:32:33 2016 +0000
 
     Rate limit RNG
-    
+
     This is necessary to prevent malicious entropy starvation of other VMs and the host.
-    
+
     https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 commit 2ef08ee37b6c82ddc3875569afcb5fad4d98fa45
@@ -3575,9 +3581,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Sep 29 13:30:59 2016 +0000
 
     Rate limit RNG
-    
+
     This is necessary to prevent malicious entropy starvation of other VMs and the host.
-    
+
     https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 commit f17f670847e25368b855aef837fbba3800ef3bb9
@@ -3593,7 +3599,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 9 14:19:49 2016 +0200
 
     Merge pull request #48 from HulaHoopWhonix/patch-49
-    
+
     Memory balloon feature disabled. Could potentially aid rowhammer.
 
 commit a107c1e5a407c5ea05d8762cee9508ce449bd577
@@ -3602,7 +3608,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 9 14:19:42 2016 +0200
 
     Merge pull request #47 from HulaHoopWhonix/patch-48
-    
+
     Memory balloon feature disabled. Could potentially aid rowhammer.
 
 commit 31dca4653d0669e3993a41b63642ff2f095d555e
@@ -3611,7 +3617,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 9 14:19:34 2016 +0200
 
     Merge pull request #46 from HulaHoopWhonix/patch-47
-    
+
     Memory balloon feature disabled. Could potentially aid rowhammer.
 
 commit 2547474b444c745eaea9e62ad13d1071deaa5a91
@@ -3637,7 +3643,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 30 21:17:00 2016 +0000
 
     sudo --non-interactive
-    
+
     https://phabricator.whonix.org/T549
 
 commit 5620e921d2cf0135e1b1ae6deb8f6b746c2df83b
@@ -3653,7 +3659,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 29 17:43:49 2016 +0000
 
     Merge pull request #45 from HulaHoopWhonix/patch-46
-    
+
     attack surface reduction
 
 commit 731b891f4b1486c77990e65e85cf24a3b57dc4b3
@@ -3662,7 +3668,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 29 17:43:32 2016 +0000
 
     Merge pull request #44 from HulaHoopWhonix/patch-45
-    
+
     attack surface reduction
 
 commit df7d27d77da6f4570de3a7173f624fa0794663ee
@@ -3671,7 +3677,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 29 17:43:19 2016 +0000
 
     Merge pull request #43 from HulaHoopWhonix/patch-44
-    
+
     attack surface reduction
 
 commit bc5082cda16282d9f6d24c6fc89abfe77e7f947d
@@ -3679,11 +3685,11 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sun Aug 28 19:57:47 2016 +0000
 
     attack surface reduction
-    
+
     Disabled (for attack surface reduction):
-    
+
     Rest of changes irrelevant for trusted GW.
-    
+
     * (explicitly) mem dedupe in case host is silly enough to have it enabled.
     * pae
     * apic
@@ -3693,9 +3699,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sun Aug 28 19:50:33 2016 +0000
 
     attack surface reduction
-    
+
     Disabled (for attack surface reduction):
-    
+
     * rtc and acpi_pm timers leaving the coarse and inaccurate jiffies and refined_jiffes internal counters as the only guest source.
     * (explicitly) mem dedupe in case host is silly enough to have it enabled.
     * pae
@@ -3708,9 +3714,9 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Sun Aug 28 19:45:10 2016 +0000
 
     attack surface reduction
-    
+
     Disabled (for attack surface reduction):
-    
+
     * rtc and acpi_pm timers leaving the coarse and inaccurate jiffies and refined_jiffies guest internal counters as the only guest source.
     * (explicitly) mem dedupe in case host is silly enough to have it enabled.
     * pae
@@ -3731,7 +3737,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 19 15:44:51 2016 +0000
 
     Merge pull request #42 from HulaHoopWhonix/patch-43
-    
+
     Pin vcpu to physical cpu. Reduce to 1 cpu
 
 commit 2bedebc2c140148b518f22307d44d66d3fd731d7
@@ -3740,7 +3746,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 19 15:44:39 2016 +0000
 
     Merge pull request #41 from HulaHoopWhonix/patch-42
-    
+
     Pin vcpu to physical cpu. Reduce to 1 cpu
 
 commit d31e8e00c5f9a489caeb60760e49fe82e021b259
@@ -3749,7 +3755,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 19 15:44:27 2016 +0000
 
     Merge pull request #40 from HulaHoopWhonix/patch-41
-    
+
     Pin vcpu to physical cpu
 
 commit bcae8efa72f853c35f84111ccaa71f8ab5804b10
@@ -3763,7 +3769,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Aug 18 03:19:49 2016 +0000
 
     Pin vcpu to physical cpu. Reduce to 1 cpu
-    
+
     Makes some covert channel attacks more difficult. Eliminates cross-VM cache attacks on crypto.
 
 commit 1423e91959b0e7bfb9d308fe618f9378bd12796d
@@ -3785,7 +3791,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 5 01:42:54 2016 +0200
 
     Merge pull request #39 from HulaHoopWhonix/patch-40
-    
+
     Removing accel cruft
 
 commit 9892d345a6c627c658f2418ab129ac533e39a3c4
@@ -3794,7 +3800,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 5 01:42:41 2016 +0200
 
     Merge pull request #38 from HulaHoopWhonix/patch-39
-    
+
     Removing accel cruft
 
 commit 7d63a68d5a43796e9e21a3442eb9066afe2404b9
@@ -3803,7 +3809,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 5 01:42:23 2016 +0200
 
     Merge pull request #37 from HulaHoopWhonix/patch-38
-    
+
     Removing accel cruft
 
 commit 8abdba796ca24b598523f6faa79e845a20dc7ef8
@@ -3835,7 +3841,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 14:57:40 2016 +0000
 
     Revert "Merge remote-tracking branch 'origin/master'"
-    
+
     This reverts commit 28d8c080d46ba6923f31d268d65eeee462416ae3, reversing
     changes made to b61635d8ad1a81ef3c9c3c2aa6de55e3e1860764.
 
@@ -3852,7 +3858,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 11:25:51 2016 +0000
 
     Merge pull request #36 from HulaHoopWhonix/patch-37
-    
+
     Hide the KVM hypervisor from standard MSR based discovery
 
 commit e4f109b4cd605c0150108926de00f21efdefd4fd
@@ -3861,7 +3867,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 11:25:33 2016 +0000
 
     Merge pull request #35 from HulaHoopWhonix/patch-36
-    
+
     Hide the KVM hypervisor from standard MSR based discovery
 
 commit 4b0b398a6b5deb49f4ffd2d97d1c9c4f06f97050
@@ -3870,7 +3876,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 11:25:21 2016 +0000
 
     Merge pull request #34 from HulaHoopWhonix/patch-35
-    
+
     Hide the KVM hypervisor from standard MSR based discovery
 
 commit f62deb51ac83437457f57b768dfaf728c5a30aed
@@ -3910,7 +3916,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 19 16:27:51 2016 +0100
 
     Merge pull request #33 from HulaHoopWhonix/patch-34
-    
+
     Update Whonix-Workstation.xml
 
 commit 888ea8770742cbccb3c4ca1575e7caf577e99799
@@ -3919,7 +3925,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 19 16:27:44 2016 +0100
 
     Merge pull request #32 from HulaHoopWhonix/patch-33
-    
+
     Update Whonix-Gateway.xml
 
 commit 7ac2cd9965b1b32bd6faa6ab078bc117ab1fbbc8
@@ -3928,7 +3934,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 19 16:27:36 2016 +0100
 
     Merge pull request #31 from HulaHoopWhonix/patch-32
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit 298bf61f84e83373eb0e34f769a9b332492fc716
@@ -3962,7 +3968,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 19:37:13 2016 +0100
 
     Merge pull request #30 from HulaHoopWhonix/patch-31
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit 0d1c0a7807638e59eb4d2ee2128ea8febcf74d84
@@ -3971,7 +3977,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 19:37:00 2016 +0100
 
     Merge pull request #29 from HulaHoopWhonix/patch-30
-    
+
     Update Whonix-Gateway.xml
 
 commit 3e90584caf33811101d59a39bac26d1a307bfb18
@@ -3980,7 +3986,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 19:36:51 2016 +0100
 
     Merge pull request #28 from HulaHoopWhonix/patch-29
-    
+
     Update Whonix-Workstation.xml
 
 commit 1146e4a9e3dda2c92dfb7e18d4c109c73f20d2f0
@@ -4014,7 +4020,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 03:06:01 2016 +0100
 
     Merge pull request #27 from HulaHoopWhonix/patch-27
-    
+
     Update Whonix-Gateway.xml
 
 commit 22fbd4ee44f8f16652eac5ec643bb68d9919dd69
@@ -4023,7 +4029,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 03:05:46 2016 +0100
 
     Merge pull request #26 from HulaHoopWhonix/patch-28
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit e17d894f0dcf64257e6154af2ec9e9088eed6fd1
@@ -4032,7 +4038,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 10 03:05:31 2016 +0100
 
     Merge pull request #25 from HulaHoopWhonix/patch-26
-    
+
     disable svm until stretch
 
 commit 257b59a843bb7c7c1504aeb69ea83882d1c11567
@@ -4072,7 +4078,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Dec 22 02:27:19 2015 +0100
 
     Merge pull request #24 from HulaHoopWhonix/patch-25
-    
+
     Update Whonix-Gateway.xml
 
 commit 390ae6a6bad866b73f10227bbebe2172fdce0028
@@ -4094,7 +4100,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 12 04:25:07 2015 +0000
 
     Merge pull request #23 from HulaHoopWhonix/patch-24
-    
+
     Update Whonix-Gateway.xml
 
 commit 9212f381db454b08a78ed9649839ce51d129924e
@@ -4103,7 +4109,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 12 04:24:51 2015 +0000
 
     Merge pull request #22 from HulaHoopWhonix/patch-23
-    
+
     Update Whonix-Workstation.xml
 
 commit c6704a86a13c3a7963421d01bb24d46bde5e0b1b
@@ -4112,7 +4118,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 12 04:24:39 2015 +0000
 
     Merge pull request #21 from HulaHoopWhonix/patch-21
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit 072ea8b6d6f6eee9f1662148b236d3da626c8527
@@ -4200,7 +4206,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 22 22:55:52 2015 +0200
 
     Merge pull request #20 from HulaHoopWhonix/patch-20
-    
+
     Update Whonix-Custom-Workstation.xml
 
 commit bc67de4d03a3c84ce5d2759e6ba9208cdfb89a34
@@ -4209,7 +4215,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 22 22:55:47 2015 +0200
 
     Merge pull request #19 from HulaHoopWhonix/patch-18
-    
+
     virtio hardcoded
 
 commit 2eda27deefe19e9ad94d6981d452ed1533b1dad3
@@ -4218,7 +4224,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri May 22 22:55:37 2015 +0200
 
     Merge pull request #18 from HulaHoopWhonix/patch-19
-    
+
     Update Whonix-Gateway.xml
 
 commit d7c95777863036aea6f60b248fda504446d6fb4d
@@ -4300,7 +4306,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Mar 11 13:53:46 2015 +0100
 
     Merge pull request #11 from HulaHoopWhonix/patch-11
-    
+
     minor edit
 
 commit 9044d910fe83bba5390f07cb7d05a4b005090bbe
@@ -4328,7 +4334,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:43:08 2015 +0100
 
     Merge pull request #10 from HulaHoopWhonix/patch-10
-    
+
     Rename Whonix-Custom-Workstation_kvm.xml to Whonix-Custom-Workstation.xm...
 
 commit f0a1ea3ab7ddca9c109613f7d997f3244eeda17a
@@ -4337,7 +4343,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:42:53 2015 +0100
 
     Merge pull request #9 from HulaHoopWhonix/patch-9
-    
+
     Delete Whonix-Custom-Workstation_qemu.xml
 
 commit fc63a5a317ecbc600d04c5110f798462c4a8c0d9
@@ -4346,7 +4352,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:42:40 2015 +0100
 
     Merge pull request #8 from HulaHoopWhonix/patch-8
-    
+
     file rename + enable clipboard for bridge usability
 
 commit a13f04233ee1c67143b75acb783dacd1562fa6de
@@ -4355,7 +4361,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:42:18 2015 +0100
 
     Merge pull request #7 from HulaHoopWhonix/patch-7
-    
+
     Rename Whonix-Workstation_kvm.xml to Whonix-Workstation.xml
 
 commit 8956f6500a50aa1423d0812578b781adc8b32809
@@ -4364,7 +4370,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:41:04 2015 +0100
 
     Merge pull request #6 from HulaHoopWhonix/patch-6
-    
+
     Delete Whonix-Gateway_qemu.xml
 
 commit e7b0c4c05f4e2d7b0826e9c064fa6f3a756562f2
@@ -4373,7 +4379,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Mar 10 22:40:46 2015 +0100
 
     Merge pull request #5 from HulaHoopWhonix/patch-5
-    
+
     Delete Whonix-Workstation_qemu.xml
 
 commit 0ddd1ded396f921c4966f2918b72f8ad8ec2ef45
@@ -4473,7 +4479,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:55 2015 +0100
 
     Merge pull request #4 from HulaHoopWhonix/patch-4
-    
+
     Update Whonix-Workstation_qemu.xml
 
 commit 6e8e23374bea7b1793d68575b528f9f3fa2f02fa
@@ -4482,7 +4488,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:48 2015 +0100
 
     Merge pull request #3 from HulaHoopWhonix/patch-3
-    
+
     Update Whonix-Workstation_kvm.xml
 
 commit ebe4d56699826c852d6393ef4f723491fbcf1faf
@@ -4491,7 +4497,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:40 2015 +0100
 
     Merge pull request #2 from HulaHoopWhonix/patch-2
-    
+
     Update Whonix-Custom-Workstation_qemu.xml
 
 commit dbcac67a685346b2100a7571f2785eaa03d2c842
@@ -4500,7 +4506,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 1 18:35:33 2015 +0100
 
     Merge pull request #1 from HulaHoopWhonix/patch-1
-    
+
     bumped up ws cpu no. to 2
 
 commit 0681699858b5fe32779e46a741cc0cd6e1b70444
