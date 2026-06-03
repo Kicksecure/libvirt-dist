@@ -53,14 +53,13 @@
   <devices>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/Kicksecure.qcow2'/>
+      <source file='/home/user/.local/share/libvirt/images/Kicksecure.qcow2'/>
       <target dev='vda' bus='virtio'/>
     </disk>
 
-    <interface type='network'>
-      <source network='default'/>
+    <interface type='user'>
+      <backend type='passt'/>
       <model type='virtio'/>
-      <driver name='qemu'/>
     </interface>
 
     <controller type='virtio-serial' index='0'/>

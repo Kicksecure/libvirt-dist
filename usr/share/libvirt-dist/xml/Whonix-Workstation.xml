@@ -53,15 +53,9 @@
   <devices>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/Whonix-Workstation.qcow2'/>
+      <source file='/home/user/.local/share/libvirt/images/Whonix-Workstation.qcow2'/>
       <target dev='vda' bus='virtio'/>
     </disk>
-
-    <interface type='network'>
-      <source network='Whonix-Internal'/>
-      <model type='virtio'/>
-      <driver name='qemu'/>
-    </interface>
 
     <controller type='virtio-serial' index='0'/>
 
@@ -104,4 +98,11 @@
       <backend model='random'>/dev/random</backend>
     </rng>
   </devices>
+
+  <qemu:commandline>
+    <qemu:arg value='-netdev'/>
+    <qemu:arg value='stream,id=whonixinternal,server=off,reconnect-ms=1000,addr.type=unix,addr.path=/run/user/1000/whonix-internal.sock'/>
+    <qemu:arg value='-device'/>
+    <qemu:arg value='virtio-net-pci,netdev=whonixinternal,mac=52:54:00:00:00:0b'/>
+  </qemu:commandline>
 </domain>
