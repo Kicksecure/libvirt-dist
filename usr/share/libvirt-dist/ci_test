@@ -3,9 +3,7 @@
 set -x
 set -e
 
-if printf '%s\n' "$PWD" | grep -- travis >/dev/null 2>/dev/null; then
-   true "travis detected, ok."
-elif [ ! "$CI" = "true" ]; then
+if [ ! "$CI" = "true" ]; then
    true "ERROR: You probably do not want to run this outside of a CI \
 environment, because it uses virsh to undefine virtual machines."
    exit 1
@@ -18,13 +16,13 @@ cd ..
 cd ..
 
 ## Debugging.
-cat /etc/apt/sources.list || true
-ls -la /etc/apt/sources.list.d/* || true
-cat /etc/apt/sources.list.d/* || true
-ls -la /etc/apt/apt.conf.d/ || true
-cat /etc/apt/apt.conf.d/* || true
-ls -la /etc/apt/preferences.d/ || true
-cat /etc/apt/preferences.d/* || true
+# cat /etc/apt/sources.list || true
+# ls -la /etc/apt/sources.list.d/* || true
+# cat /etc/apt/sources.list.d/* || true
+# ls -la /etc/apt/apt.conf.d/ || true
+# cat /etc/apt/apt.conf.d/* || true
+# ls -la /etc/apt/preferences.d/ || true
+# cat /etc/apt/preferences.d/* || true
 
 ## Version closer to Debian release.
 # sudo --non-interactive rm -f /etc/apt/sources.list || true
@@ -77,8 +75,8 @@ true "------------------------------------------------------------"
 
 ## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: invalid argument: could not find capabilities for domaintype=kvm
-search="<domain type='kvm'>"
-replace="<domain type='qemu'>"
+search="<domain type='kvm'"
+replace="<domain type='qemu'"
 sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
 sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
