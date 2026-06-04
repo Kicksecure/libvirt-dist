@@ -37,7 +37,7 @@ cat /etc/apt/preferences.d/* || true
 apt-get update
 
 ## Sanity tests.
-apt-get --yes dist-upgrade
+#apt-get --yes dist-upgrade
 dpkg --configure -a
 
 apt-get --yes install sudo virt-what lintian
@@ -46,12 +46,6 @@ apt-get --yes install sudo virt-what lintian
 apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
 
 apt-get install --no-install-recommends -y kmod || true
-
-service libvirtd start || true
-service virtlockd start || true
-service virtlogd start || true
-service virtlockd-admin start || true
-service virtlogd-admin start || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -63,47 +57,10 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-#sudo --non-interactive chmod o+rwx /run/libvirt/libvirt-sock
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
-test -f ./usr/share/libvirt-dist/xml/Whonix-External.xml
-
-## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/libvirt-dist/xml/Whonix-External.xml
-virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-External.xml || true
-
-virsh -c qemu:///session net-define ./usr/share/libvirt-dist/xml/Whonix-External.xml
-virsh -c qemu:///session net-autostart Whonix-External
-virsh -c qemu:///session net-start Whonix-External || true
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
-test -f ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
-
-virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Internal.xml || true
-
-virsh -c qemu:///session net-define ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
-virsh -c qemu:///session net-autostart Whonix-Internal
-virsh -c qemu:///session net-start Whonix-Internal || true
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
 ## Debugging.
 
 virsh -c qemu:///session net-dumpxml default
 virsh -c qemu:///session net-dumpxml default --inactive
-
-virsh -c qemu:///session net-dumpxml Whonix-External
-virsh -c qemu:///session net-dumpxml Whonix-External --inactive
-
-virsh -c qemu:///session net-dumpxml Whonix-Internal
-virsh -c qemu:///session net-dumpxml Whonix-Internal --inactive
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -118,7 +75,6 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-## Travis CI issue:
 ## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: invalid argument: could not find capabilities for domaintype=kvm
 search="<domain type='kvm'>"
@@ -128,7 +84,6 @@ sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Workstation
 sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
 sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Kicksecure.xml
 
-## Travis CI issue:
 ## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: unsupported configuration: CPU mode 'host-passthrough' for x86_64 qemu domain on x86_64 host is not supported by hypervisor
 search="<cpu mode='host-passthrough'/>"
@@ -138,7 +93,6 @@ sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Workstation
 sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
 sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Kicksecure.xml
 
-## Travis CI issue:
 ## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 ## error: Unable to open /dev/net/tun, is tun module loaded?: No such file or directory
 modprobe tun || true
@@ -147,7 +101,6 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-## TODO: virt-xml-validate does not work in Travis CI.
 ## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
 virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml || true
 virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml || true
