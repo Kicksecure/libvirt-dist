@@ -32,14 +32,14 @@ chmod 777 /mnt/workstation-shared
 
 ## TODO: proper error handling. '|| true' can probably be removed.
 
-virsh -c qemu:///system net-autostart "default" || true
-virsh -c qemu:///system net-start "default" || true
-virsh -c qemu:///system net-define "/usr/share/libvirt-dist/xml/Whonix-External.xml" || true
-virsh -c qemu:///system net-define "/usr/share/libvirt-dist/xml/Whonix-Internal.xml" || true
-virsh -c qemu:///system net-autostart "Whonix-External" || true
-virsh -c qemu:///system net-start "Whonix-External" || true
-virsh -c qemu:///system net-autostart "Whonix-Internal" || true
-virsh -c qemu:///system net-start "Whonix-Internal" || true
+virsh -c qemu:///session net-autostart "default" || true
+virsh -c qemu:///session net-start "default" || true
+virsh -c qemu:///session net-define "/usr/share/libvirt-dist/xml/Whonix-External.xml" || true
+virsh -c qemu:///session net-define "/usr/share/libvirt-dist/xml/Whonix-Internal.xml" || true
+virsh -c qemu:///session net-autostart "Whonix-External" || true
+virsh -c qemu:///session net-start "Whonix-External" || true
+virsh -c qemu:///session net-autostart "Whonix-Internal" || true
+virsh -c qemu:///session net-start "Whonix-Internal" || true
 
 ## Doing the following in a temporary directory to avoid modified files should
 ## this be interrupted in the middle.
@@ -80,8 +80,8 @@ fi
 test -f "$temp_dir/xml/Whonix-Gateway.xml"
 test -f "$temp_dir/xml/Whonix-Workstation.xml"
 
-virsh -c qemu:///system define "$temp_dir/xml/Whonix-Gateway.xml" || true
-virsh -c qemu:///system define "$temp_dir/xml/Whonix-Workstation.xml" || true
+virsh -c qemu:///session define "$temp_dir/xml/Whonix-Gateway.xml" || true
+virsh -c qemu:///session define "$temp_dir/xml/Whonix-Workstation.xml" || true
 
 virt-xml "Whonix-Gateway" --add-device --filesystem source=/mnt/gateway-shared,target=shared,type=mount,accessmode=mapped || true
 virt-xml "Whonix-Workstation" --add-device --filesystem source=/mnt/workstation-shared,target=shared,type=mount,accessmode=mapped || true

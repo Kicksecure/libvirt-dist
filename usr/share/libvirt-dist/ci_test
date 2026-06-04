@@ -74,9 +74,9 @@ test -f ./usr/share/libvirt-dist/xml/Whonix-External.xml
 ## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/libvirt-dist/xml/Whonix-External.xml
 virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-External.xml || true
 
-virsh -c qemu:///system net-define ./usr/share/libvirt-dist/xml/Whonix-External.xml
-virsh -c qemu:///system net-autostart Whonix-External
-virsh -c qemu:///system net-start Whonix-External || true
+virsh -c qemu:///session net-define ./usr/share/libvirt-dist/xml/Whonix-External.xml
+virsh -c qemu:///session net-autostart Whonix-External
+virsh -c qemu:///session net-start Whonix-External || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -86,9 +86,9 @@ test -f ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
 
 virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Internal.xml || true
 
-virsh -c qemu:///system net-define ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
-virsh -c qemu:///system net-autostart Whonix-Internal
-virsh -c qemu:///system net-start Whonix-Internal || true
+virsh -c qemu:///session net-define ./usr/share/libvirt-dist/xml/Whonix-Internal.xml
+virsh -c qemu:///session net-autostart Whonix-Internal
+virsh -c qemu:///session net-start Whonix-Internal || true
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -96,14 +96,14 @@ true "------------------------------------------------------------"
 
 ## Debugging.
 
-virsh -c qemu:///system net-dumpxml default
-virsh -c qemu:///system net-dumpxml default --inactive
+virsh -c qemu:///session net-dumpxml default
+virsh -c qemu:///session net-dumpxml default --inactive
 
-virsh -c qemu:///system net-dumpxml Whonix-External
-virsh -c qemu:///system net-dumpxml Whonix-External --inactive
+virsh -c qemu:///session net-dumpxml Whonix-External
+virsh -c qemu:///session net-dumpxml Whonix-External --inactive
 
-virsh -c qemu:///system net-dumpxml Whonix-Internal
-virsh -c qemu:///system net-dumpxml Whonix-Internal --inactive
+virsh -c qemu:///session net-dumpxml Whonix-Internal
+virsh -c qemu:///session net-dumpxml Whonix-Internal --inactive
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
@@ -173,17 +173,17 @@ true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
 
-virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-virsh -c qemu:///system undefine Whonix-Gateway
+virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
+virsh -c qemu:///session undefine Whonix-Gateway
 
-virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
-virsh -c qemu:///system undefine Whonix-Workstation
+virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
+virsh -c qemu:///session undefine Whonix-Workstation
 
-virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
-virsh -c qemu:///system undefine Whonix-Custom-Workstation
+virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
+virsh -c qemu:///session undefine Whonix-Custom-Workstation
 
-virsh -c qemu:///system define ./usr/share/libvirt-dist/xml/Kicksecure.xml
-virsh -c qemu:///system undefine Kicksecure
+virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Kicksecure.xml
+virsh -c qemu:///session undefine Kicksecure
 
 true "------------------------------------------------------------"
 true "------------------------------------------------------------"
