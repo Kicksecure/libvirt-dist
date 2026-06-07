@@ -1,4 +1,4 @@
-<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+<domain type='kvm'>
   <name>Kicksecure</name>
   <description>Do not change any settings if you do not understand the consequences! Learn more: https://www.whonix.org/wiki/KVM#XML_Settings</description>
 
@@ -11,10 +11,6 @@
     <discard/>
     <nosharepages/>
   </memoryBacking>
-
-  <blkiotune>
-    <weight>250</weight>
-  </blkiotune>
 
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <cpu mode='host-passthrough'/>
@@ -51,10 +47,10 @@
   </pm>
 
   <devices>
-    <disk type='file' device='disk'>
-      <driver name='qemu' type='qcow2'/>
-      <source file='/home/user/.local/share/libvirt/images/Kicksecure.qcow2'/>
-      <target dev='vda' bus='virtio'/>
+    <disk type="volume" device="disk">
+      <driver name="qemu" type="qcow2"/>
+      <source pool="default" volume="Kicksecure.qcow2"/>
+      <target dev="vda" bus="virtio"/>
     </disk>
 
     <interface type='user'>
