@@ -11,11 +11,7 @@
     <discard/>
     <nosharepages/>
   </memoryBacking>
-
-  <blkiotune>
-    <weight>250</weight>
-  </blkiotune>
-
+  
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <cpu mode='host-passthrough'/>
 
@@ -53,16 +49,17 @@
   <devices>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/Whonix-Workstation.qcow2'/>
+      <source file='/home/user/.local/share/libvirt/images/Whonix-Workstation.qcow2'/>
       <target dev='vda' bus='virtio'/>
     </disk>
 
-    <interface type='network'>
-      <source network='Whonix-Internal'/>
-      <model type='virtio'/>
-      <driver name='qemu'/>
+    <interface type='udp'>
+      <source address='127.0.0.1' port='6688'>
+        <local address='127.0.0.1' port='5577'/>
+      </source>
+      <model type="virtio"/>
     </interface>
-
+    
     <controller type='virtio-serial' index='0'/>
 
     <serial type='pty'>
