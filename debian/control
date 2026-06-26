@@ -14,8 +14,8 @@ Rules-Requires-Root: no
 
 Package: libvirt-dist
 Architecture: all
-Depends: adduser, qemu-kvm, libvirt-daemon-system, libvirt-clients,
- virt-manager, gir1.2-spiceclientgtk-3.0, dnsmasq-base, helper-scripts,
+Depends: adduser, qemu-kvm, libvirt-daemon, libvirt-clients,
+ virt-manager, gir1.2-spiceclientgtk-3.0, passt, helper-scripts,
  msgcollector, ${misc:Depends}
 Provides: whonix-libvirt
 Replaces: whonix-libvirt
