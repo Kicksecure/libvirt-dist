@@ -12,10 +12,6 @@
     <nosharepages/>
   </memoryBacking>
 
-  <blkiotune>
-    <weight>250</weight>
-  </blkiotune>
-
   <vcpu placement='static' cpuset='1'>1</vcpu>
   <cpu mode='host-passthrough'/>
 
@@ -51,16 +47,15 @@
   </pm>
 
   <devices>
-    <disk type='file' device='disk'>
-      <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/Kicksecure.qcow2'/>
-      <target dev='vda' bus='virtio'/>
+    <disk type="volume" device="disk">
+      <driver name="qemu" type="qcow2"/>
+      <source pool="default" volume="Kicksecure.qcow2"/>
+      <target dev="vda" bus="virtio"/>
     </disk>
 
-    <interface type='network'>
-      <source network='default'/>
+    <interface type='user'>
+      <backend type='passt'/>
       <model type='virtio'/>
-      <driver name='qemu'/>
     </interface>
 
     <controller type='virtio-serial' index='0'/>
