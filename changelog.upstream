@@ -1,3 +1,112 @@
+commit d27f695e861f77a4d5abc73047d48414220e614e
+Merge: 20ebccd 4490af0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jun 26 13:17:58 2026 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 4490af0e83cc16dbd3a70505a3870ecc792f9b1f
+Merge: 20ebccd a44c78f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jun 26 13:16:26 2026 -0400
+
+    Merge pull request #119 from Kicksecure/rootless-kvm-session
+
+    port to rootless and unix domain sockets
+
+commit a44c78fc58daf4b31dd1bb6e55812aad598b4f33
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sun Jun 7 05:40:17 2026 +0000
+
+    Port to QEMU Session
+
+commit 6ad4794d579dc1d8570073c34fc5889f3f5538b2
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sun Jun 7 05:34:51 2026 +0000
+
+    Port to QEMU Session
+
+commit 4e90548fcaae6be9847c37278609f2697c933271
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sun Jun 7 05:27:40 2026 +0000
+
+    Port to QEMU Session
+
+commit 097c8a63572e702b075aba6031d167ef885dabca
+Author: HulaHoop0 <55955185+HulaHoop0@users.noreply.github.com>
+Date:   Sun Jun 7 05:14:17 2026 +0000
+
+    Update Kicksecure.xml
+
+commit cdacccc6a6f6ae90511d74687deb9a865bd6ce3a
+Merge: 726008f 8f14e3d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jun 4 16:06:00 2026 -0400
+
+    Merge remote-tracking branch 'gitlab-adrelanos/rootless-kvm-session' into rootless-kvm-session
+
+commit 8f14e3d4ab0f06b8e2a58fae8fe0424e33b8c3f1
+Author: claude <noreply@anthropic.com>
+Date:   Thu Jun 4 16:02:51 2026 -0400
+
+    pin internal NIC to fixed PCI slot (bus=pcie.0,addr=0x10)
+
+    The internal Gateway<->Workstation NIC is added via <qemu:commandline>,
+    so libvirt's PCI allocator never sees it and QEMU auto-places it at the
+    first free pcie.0 slot, 0x1. virtio-vga is libvirt-assigned to that same
+    slot 0x1, so on q35 with a video device present the domain fails to start:
+
+      PCI: slot 1 function 0 not available for virtio-vga,
+      in use by virtio-net-pci,id=(null)
+
+    Pin the unmanaged NIC to pcie.0 slot 0x10 (clear of libvirt's managed
+    devices) to make placement deterministic and avoid the collision.
+    Network semantics are unchanged: still -netdev stream over a unix domain
+    socket, rootless, no shared memory.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 726008fe9e90b513b466856fa448ea97483b763f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jun 4 15:47:01 2026 -0400
+
+    test
+
+commit b558ecc35f45c3cccf349fd45116a0806533e10b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jun 4 15:44:59 2026 -0400
+
+    test
+
+commit 5b22d3a4cb1706bc028ceac3a318601f77560f8a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jun 4 15:39:46 2026 -0400
+
+    system -> session
+
+commit 6de49597dec92548b38bd212dcea6956b4bdbd21
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jun 3 15:06:55 2026 -0400
+
+    use header `<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>`
+    because required when using `<qemu:commandline>`
+
+commit 3af75f6000da8a0265daa01fe7a1a10e89a34d65
+Author: claude <noreply@anthropic.com>
+Date:   Wed Jun 3 13:21:25 2026 -0400
+
+    port to rootless and unix domain sockets
+
+    https://forums.whonix.org/t/rootless-virtual-machines-with-kvm-and-qemu/20952
+
+    https://forums.whonix.org/t/no-internet-connection-inside-whonix-workstation-kvm-with-nordvpn-with-kill-switch-on-host/13763
+
+commit 20ebccd7677e554c542328dcd789ecedc413e3c9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 20 22:11:37 2026 +0000
+
+    bumped changelog version
+
 commit 63f6e5c2403c4e8552c5b37c6d45923f505fbdbd
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 20 16:56:58 2026 -0400
