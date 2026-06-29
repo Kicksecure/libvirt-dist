@@ -1,3 +1,200 @@
+commit acb6b116e404b97215f4ae60b1e7435c0f138157
+Merge: d30006b fb304b1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 29 07:24:34 2026 -0400
+
+    Merge remote-tracking branch 'org-ai-assisted/ci-test-review'
+
+commit fb304b1a3183d15e59a1a77bf1e4666bfe47cba1
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 07:10:20 2026 -0400
+
+    ci_test: never touch real libvirt state (AI-review fixes)
+
+    Codex and CodeRabbit both flagged that the storage-pool test used the
+    real 'default' pool name and the real ~/.local/share/libvirt/images
+    directory, and cleanup recursively removed that directory - destroying a
+    real user's VM disks on an opt-in CI=true run. CodeRabbit also flagged
+    that define/undefine of the production domain names removes a real
+    operator's domains.
+
+    - Import into a throwaway pool ('libvirt-dist-ci-test') whose target is
+      under work_dir; cleanup no longer touches the real pool or images dir.
+    - Use a uniquely named $HOME test image and refuse to overwrite a
+      pre-existing file, checked BEFORE the cleanup trap is armed so a
+      refusal cannot delete that file.
+    - Refuse to define over a domain that already exists in the session.
+
+    Verified: happy path passes; a pre-existing $HOME image survives the
+    refusal intact; only the throwaway pool/target are used.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit 64619d7da71689145c1b69b13a43894406a750c0
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 06:54:51 2026 -0400
+
+    ci_test: integrate $HOME image import; drop separate pool probe
+
+    Fold the storage-pool image import into the main ci_test and remove the
+    separate default-pool-probe job/script. ci_test now also: creates a
+    qcow2 in $HOME up front (before any virsh), and after the domain
+    define/undefine checks imports it into a dedicated qemu:///session pool
+    via pool-create-as --build + mv + pool-refresh, asserting the volume
+    registers. Cleanup tears the pool + image down. Workflow drops the
+    second job and adds qemu-utils (qemu-img).
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit 199e4aa20d0a97c4179daeac8ce07920361cd1d7
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 06:49:46 2026 -0400
+
+    ci: create the $HOME qcow2 before any virsh command
+
+    Move the qemu-img create to the top of main() so the proof starts from
+    the real precondition: the image already exists in $HOME before any
+    libvirt command runs. It lands in $HOME (not images_dir), so the
+    "directory absent" assertions still hold; cleanup now also removes it.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit e04e8ba6e3cf83a6ed392ef8117cb8a5efa357d2
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 06:45:31 2026 -0400
+
+    ci: extend pool probe with shortest $HOME image import
+
+    Fold the image-import demo into the existing default-pool-probe script
+    instead of a separate job. After proving the directory is created only
+    by pool-build, start the pool and import a pre-existing $HOME image into
+    the dedicated (non-$HOME) pool via mv + pool-refresh, asserting the
+    image registers as a volume and leaves $HOME. Add qemu-utils (qemu-img)
+    to the job's apt packages.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit a8ccfc39c2b2fdff12a32e0c30aff73c2b57bd89
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 06:00:43 2026 -0400
+
+    ci_test: make virt-xml-validate actually validate (drop || true)
+
+    The validate step was masked by '|| true' and silently did nothing: on
+    the runner virt-xml-validate printed "cannot determine schema type"
+    because its xmllint-based root-element autodetection is unreliable and
+    xmllint (libxml2-utils, only a Recommends of libvirt-clients) was
+    dropped by --no-install-recommends.
+
+    - Pass the explicit 'domain' type so validation no longer depends on
+      autodetection, and drop '|| true' so an RNG schema violation fails CI.
+    - Install libxml2-utils in the workflow so xmllint is present for the
+      actual relaxng validation.
+
+    Verified locally: all four domains validate (rc 0) and a corrupted XML
+    fails to validate (rc 3).
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit a88a6d5c3d8fb95efd53088eca742a3786d4cc02
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 05:41:46 2026 -0400
+
+    ci: prove the default session pool dir is not auto-created
+
+    Add ci/libvirt-default-pool-probe.sh and a second workflow job that, on
+    a pristine runner, asserts step by step whether libvirt auto-creates
+    ~/.local/share/libvirt/images (the <source pool='default'> path the
+    domain XML references):
+
+    - fresh runner: absent
+    - after connect + pool-list: no 'default' pool is auto-defined; absent
+    - after pool-define: absent
+    - after pool-start: start FAILS, dir still absent
+    - after pool-build: created
+
+    Each step is an assertion, so CI fails if libvirt's behaviour changes.
+    The conclusion: only 'virsh pool-build' creates the directory; nothing
+    auto-creates it.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit c596d435a7ea7a90f859b3e564953a5d8e44bfa2
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 05:30:47 2026 -0400
+
+    ci: install qemu-system-modules-spice so spice graphics validate
+
+    The runner installs qemu with --no-install-recommends, which drops
+    qemu-system-modules-spice (SPICE is a loadable module, only a Recommends
+    of qemu-system-x86). Without it libvirt rejects the domains'
+    '<graphics type=spice>' device: "spice graphics are not supported with
+    this QEMU", failing 'virsh define'. Add the module so the unmodified
+    production XML validates instead of stripping the device.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit 3f32912c893dc169d9ae438f66354f80da215f04
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 05:25:10 2026 -0400
+
+    ci: use org install-deps composite action for helper-scripts
+
+    A bare git checkout of helper-scripts ships usr/bin/sanitize-string but
+    not its installed python module, so log_run_die.sh's log() aborts with
+    ModuleNotFoundError: No module named 'sanitize_string'. Replace the
+    manual checkout + HELPER_SCRIPTS_PATH/PATH overrides with the org's
+    standard org-ai-assisted/developer-meta-files install-deps action, which
+    genmkfile-installs helper-scripts (str_replace + python packages) to the
+    real system paths and installs the apt deps. The script then runs with
+    no path overrides, identical to a packaged install. @master tracks the
+    org single source of truth (G-A-004).
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit faf8e19e2ee818b85638b6b264b71da55086dde0
+Author: claude (dev23 cdb19ee5-c6d4-436b-8991-f8158258f322) <noreply@anthropic.com>
+Date:   Mon Jun 29 04:49:16 2026 -0400
+
+    ci_test: idiomatic bash rewrite + local- GitHub Actions workflow
+
+    Rewrite usr/share/libvirt-dist/ci_test to the org bash style:
+    - bash + AI-Assisted header + strict-mode preamble; source
+      helper-scripts log_run_die.sh (log/die/has).
+    - Stop editing the shipped XML in place: copy to a mktemp work dir
+      and run the kvm -> qemu rewrite there via str_replace, mirroring
+      the install script. Source tree stays pristine.
+    - Gate the kvm -> qemu / drop-host-passthrough rewrite on
+      'virsh capabilities', so the same test passes on a KVM host and
+      in CI / Qubes / nested virt where KVM is unavailable.
+    - collapse the repeated separator blocks into one separator_line
+      variable; drop the Travis-era apt/debug cruft and dead net-define
+      paths. define/undefine needs no VM disk image (the image is only
+      opened on domain start), so no images are required.
+
+    Add .github/workflows/local-libvirt-xml-test.yml: a repo-private
+    (local-) workflow that installs session-mode libvirt + qemu, checks
+    out helper-scripts @master for the sourced lib + str_replace, and
+    runs the smoke test on a plain hosted runner. contents: read,
+    per-ref cancellable concurrency, SHA-pinned checkout.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01Q9ESjheomo1DVWDvBPensX
+
+commit d30006ba66bcc09e99265b357bd12dc50b530b9f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jun 26 18:26:17 2026 +0000
+
+    bumped changelog version
+
 commit d27f695e861f77a4d5abc73047d48414220e614e
 Merge: 20ebccd 4490af0
 Author: Patrick Schleizer <adrelanos@whonix.org>
