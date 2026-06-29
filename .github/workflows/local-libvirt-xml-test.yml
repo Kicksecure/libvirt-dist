@@ -1,0 +1,58 @@
+---
+name: libvirt XML test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+## Per-ref cancellation (see developer-meta-files agents/github-actions.md
+## G-A-006). github.ref is unique per branch / PR, so a new push cancels only
+## that ref's in-flight run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  libvirt-xml-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          persist-credentials: false
+
+      ## ci_test sources helper-scripts' log_run_die.sh (which calls the
+      ## sanitize-string python package) and runs str_replace. A bare git
+      ## checkout ships the files but not the installed python module; the
+      ## org-standard composite action genmkfile-installs helper-scripts to
+      ## the real system paths, so the script runs exactly as on an install.
+      ## @master tracks the org's single source of truth (G-A-004).
+      - name: Install genmkfile + helper-scripts + libvirt/qemu
+        uses: org-ai-assisted/developer-meta-files/.github/actions/install-deps@master
+        with:
+          ## qemu-system-modules-spice: SPICE is a loadable qemu module and only
+          ## a Recommends of qemu-system-x86; the install runs
+          ## --no-install-recommends, so without this libvirt rejects the
+          ## domains' '<graphics type=spice>' with "spice graphics are not
+          ## supported with this QEMU". Installing it lets the unmodified
+          ## production XML validate, rather than stripping the device.
+          ## libxml2-utils: virt-xml-validate shells out to xmllint for RNG
+          ## validation; it is only a Recommends of libvirt-clients, so
+          ## --no-install-recommends would otherwise drop it.
+          ## qemu-utils: qemu-img, used to create the $HOME test image that the
+          ## script imports into the storage pool.
+          apt-packages: 'qemu-system-x86 qemu-system-modules-spice qemu-utils libvirt-clients libvirt-daemon-system libxml2-utils safe-rm'
+
+      ## CI=true unlocks the script's undefine guard. Rootless qemu:///session,
+      ## so no sudo: define/undefine needs no VM disk image and no KVM.
+      - name: Run libvirt XML smoke test
+        env:
+          CI: "true"
+        run: ./usr/share/libvirt-dist/ci_test
