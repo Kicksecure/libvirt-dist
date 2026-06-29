@@ -51,3 +51,23 @@ jobs:
         env:
           CI: "true"
         run: ./usr/share/libvirt-dist/ci_test
+
+  ## Separate job (own pristine runner): prove whether libvirt auto-creates
+  ## the qemu:///session default storage pool directory that the domain XML
+  ## references via <source pool='default'>.
+  default-pool-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Install genmkfile + helper-scripts + libvirt
+        uses: org-ai-assisted/developer-meta-files/.github/actions/install-deps@master
+        with:
+          apt-packages: 'qemu-system-x86 libvirt-clients libvirt-daemon-system safe-rm'
+
+      - name: Prove the default storage pool directory is not auto-created
+        run: ./ci/libvirt-default-pool-probe.sh
