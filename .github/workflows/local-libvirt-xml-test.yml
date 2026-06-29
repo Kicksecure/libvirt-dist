@@ -37,7 +37,13 @@ jobs:
       - name: Install genmkfile + helper-scripts + libvirt/qemu
         uses: org-ai-assisted/developer-meta-files/.github/actions/install-deps@master
         with:
-          apt-packages: 'qemu-system-x86 libvirt-clients libvirt-daemon-system safe-rm'
+          ## qemu-system-modules-spice: SPICE is a loadable qemu module and only
+          ## a Recommends of qemu-system-x86; the install runs
+          ## --no-install-recommends, so without this libvirt rejects the
+          ## domains' '<graphics type=spice>' with "spice graphics are not
+          ## supported with this QEMU". Installing it lets the unmodified
+          ## production XML validate, rather than stripping the device.
+          apt-packages: 'qemu-system-x86 qemu-system-modules-spice libvirt-clients libvirt-daemon-system safe-rm'
 
       ## CI=true unlocks the script's undefine guard. Rootless qemu:///session,
       ## so no sudo: define/undefine needs no VM disk image and no KVM.
