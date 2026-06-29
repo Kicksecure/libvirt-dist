@@ -32,23 +32,27 @@ domain_list=(Whonix-Gateway Whonix-Workstation Whonix-Custom-Workstation Kicksec
 mydir="$(dirname -- "$(readlink -f -- "$0")")"
 xml_source_dir="${mydir}/xml"
 
-images_dir="${HOME}/.local/share/libvirt/images"
-home_image="${HOME}/Whonix-Gateway.qcow2"
+## Throwaway names/paths so the test never touches a real session 'default'
+## pool, the real images directory, or a real downloaded image (data-loss
+## guard - this is an opt-in CI=true run, possibly on a real Whonix host).
+test_pool="libvirt-dist-ci-test"
+home_image="${HOME}/libvirt-dist-ci-test.qcow2"
 
 ## Set by main() before the trap can reference it; "" keeps it nounset-safe.
 work_dir=""
 
 ci_test_cleanup() {
-   virsh -c qemu:///session pool-destroy default &>/dev/null || true
+   virsh -c qemu:///session pool-destroy "${test_pool}" &>/dev/null || true
+   virsh -c qemu:///session pool-undefine "${test_pool}" &>/dev/null || true
    safe-rm --force -- "${home_image}"
-   safe-rm --recursive --force -- "${images_dir}"
    if [ -n "${work_dir}" ]; then
+      ## work_dir also holds the test pool's target directory.
       safe-rm --recursive --force -- "${work_dir}"
    fi
 }
 
 main() {
-   local cmd vm
+   local cmd vm pool_target image_name
 
    ## virsh undefines domains; refuse to touch an operator's real libvirt
    ## state unless this is explicitly a CI (or opted-in) run.
@@ -60,6 +64,12 @@ main() {
       has "${cmd}" \
          || die 1 "required command '${cmd}' not found on PATH"
    done
+
+   ## Refuse to clobber a real file that happens to share the name. Checked
+   ## BEFORE arming the cleanup trap, so a refusal can never delete that file.
+   if [ -e "${home_image}" ]; then
+      die 1 "refusing to overwrite existing '${home_image}'"
+   fi
 
    trap ci_test_cleanup EXIT
 
@@ -111,24 +121,32 @@ main() {
 
    true "${separator_line}"
 
-   ## The actual assertion: libvirt accepts and registers each domain.
+   ## The actual assertion: libvirt accepts and registers each domain. Refuse
+   ## to clobber a domain that already exists (real Whonix / Kicksecure host),
+   ## since the undefine below would otherwise remove the operator's definition.
    for vm in "${domain_list[@]}"; do
+      if virsh -c qemu:///session dominfo "${vm}" &>/dev/null; then
+         die 1 "refusing to overwrite existing qemu:///session domain '${vm}'"
+      fi
       virsh -c qemu:///session define "${work_dir}/xml/${vm}.xml"
       virsh -c qemu:///session undefine "${vm}"
    done
 
    true "${separator_line}"
 
-   ## Import the pre-existing $HOME image into a dedicated qemu:///session pool
-   ## (not $HOME). For a dir pool this is the shortest correct path:
-   ## pool-create-as --build creates the directory, then move the file in and
-   ## refresh - no manual mkdir, no cp, no vol-create-as / vol-upload.
-   virsh -c qemu:///session pool-create-as default dir --target "${images_dir}" --build
-   mv -- "${home_image}" "${images_dir}/"
-   virsh -c qemu:///session pool-refresh default
-   virsh -c qemu:///session vol-list default \
-      | grep --quiet --fixed-strings -- "Whonix-Gateway.qcow2" \
-      || die 1 "imported image was not registered as a 'default' pool volume"
+   ## Import the pre-existing $HOME image into a dedicated throwaway pool whose
+   ## target lives under work_dir (never the real session pool or images dir).
+   ## For a dir pool this is the shortest correct path: pool-create-as --build
+   ## creates the directory, then move the file in and refresh - no manual
+   ## mkdir, no cp, no vol-create-as / vol-upload.
+   pool_target="${work_dir}/pool"
+   image_name="$(basename -- "${home_image}")"
+   virsh -c qemu:///session pool-create-as "${test_pool}" dir --target "${pool_target}" --build
+   mv -- "${home_image}" "${pool_target}/"
+   virsh -c qemu:///session pool-refresh "${test_pool}"
+   virsh -c qemu:///session vol-list "${test_pool}" \
+      | grep --quiet --fixed-strings -- "${image_name}" \
+      || die 1 "imported image was not registered as a pool volume"
 
    true "${separator_line}"
 
