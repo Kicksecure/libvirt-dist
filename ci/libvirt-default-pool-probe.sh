@@ -27,6 +27,7 @@ set -x
 source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/log_run_die.sh
 
 images_dir="${HOME}/.local/share/libvirt/images"
+home_image="${HOME}/Whonix-Gateway.qcow2"
 pool_xml=""
 
 probe_cleanup() {
@@ -35,7 +36,8 @@ probe_cleanup() {
    if [ -n "${pool_xml}" ]; then
       safe-rm --force -- "${pool_xml}"
    fi
-   ## Only ever remove the directory this probe itself may have built.
+   ## Only ever remove what this probe itself created.
+   safe-rm --force -- "${home_image}"
    safe-rm --recursive --force -- "${images_dir}"
 }
 
@@ -53,6 +55,12 @@ main() {
    local start_rc
 
    trap probe_cleanup EXIT
+
+   ## GIVEN: the user already downloaded a qcow2 into $HOME, before any
+   ## libvirt command runs. Create it first so the proof below starts from
+   ## that real state. It lands directly in $HOME, not in images_dir, so the
+   ## "directory absent" assertions still hold.
+   qemu-img create -f qcow2 "${home_image}" 4M
 
    ## 1. Pristine runner: the directory must not exist yet.
    assert_images_dir_absent "fresh runner"
@@ -96,16 +104,15 @@ main() {
    ## 6. Start the pool so it can hold volumes (the directory now exists).
    virsh -c qemu:///session pool-start default
 
-   ## 7. Shortest import: an image that already exists in $HOME goes into this
+   ## 7. Shortest import: the image created in $HOME at the top goes into this
    ##    dedicated pool (NOT $HOME) with just a move + refresh - the pool was
    ##    defined/built/started above, so no cp and no vol-create-as/vol-upload.
-   qemu-img create -f qcow2 "${HOME}/Whonix-Gateway.qcow2" 4M
-   mv -- "${HOME}/Whonix-Gateway.qcow2" "${images_dir}/"
+   mv -- "${home_image}" "${images_dir}/"
    virsh -c qemu:///session pool-refresh default
    virsh -c qemu:///session vol-list default \
       | grep --quiet --fixed-strings -- "Whonix-Gateway.qcow2" \
       || die 1 "FAIL: imported image was not registered as a pool volume"
-   if [ -e "${HOME}/Whonix-Gateway.qcow2" ]; then
+   if [ -e "${home_image}" ]; then
       die 1 "FAIL: image still present in \$HOME after the move"
    fi
    log notice "PROVEN: a pre-existing \$HOME image imports into the dedicated pool via pool-build + mv + pool-refresh (no manual mkdir, no cp, no vol-create-as/vol-upload)."
