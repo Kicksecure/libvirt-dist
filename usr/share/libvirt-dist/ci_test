@@ -5,8 +5,9 @@
 
 ## AI-Assisted
 
-## CI smoke test for the libvirt domain XML files: assert that libvirt parses
-## and accepts each domain definition. define/undefine never opens the disk
+## CI smoke test for libvirt-dist: assert that libvirt parses and accepts each
+## domain definition, and that a pre-existing $HOME image imports into a
+## dedicated qemu:///session storage pool. define/undefine never opens the disk
 ## image (that only happens on domain start), so this runs with no VM images
 ## and inside environments where KVM is unavailable (CI, Qubes, nested virt).
 
@@ -31,10 +32,16 @@ domain_list=(Whonix-Gateway Whonix-Workstation Whonix-Custom-Workstation Kicksec
 mydir="$(dirname -- "$(readlink -f -- "$0")")"
 xml_source_dir="${mydir}/xml"
 
+images_dir="${HOME}/.local/share/libvirt/images"
+home_image="${HOME}/Whonix-Gateway.qcow2"
+
 ## Set by main() before the trap can reference it; "" keeps it nounset-safe.
 work_dir=""
 
 ci_test_cleanup() {
+   virsh -c qemu:///session pool-destroy default &>/dev/null || true
+   safe-rm --force -- "${home_image}"
+   safe-rm --recursive --force -- "${images_dir}"
    if [ -n "${work_dir}" ]; then
       safe-rm --recursive --force -- "${work_dir}"
    fi
@@ -49,15 +56,20 @@ main() {
       die 1 "refusing to run outside CI: this undefines libvirt domains; set 'CI=true' to override"
    fi
 
-   for cmd in virsh virt-xml-validate str_replace; do
+   for cmd in virsh virt-xml-validate str_replace qemu-img; do
       has "${cmd}" \
          || die 1 "required command '${cmd}' not found on PATH"
    done
 
+   trap ci_test_cleanup EXIT
+
+   ## GIVEN: assume the user already downloaded an image into $HOME, before any
+   ## libvirt command runs. It is imported into the storage pool further below.
+   qemu-img create -f qcow2 "${home_image}" 4M
+
    ## Operate on a throwaway copy. Never edit the shipped XML in place: the
    ## kvm -> qemu rewrite below is a CI-only workaround, not a source change.
    work_dir="$(mktemp --directory)"
-   trap ci_test_cleanup EXIT
    cp -r -- "${xml_source_dir}" "${work_dir}/xml"
 
    true "${separator_line}"
@@ -104,6 +116,19 @@ main() {
       virsh -c qemu:///session define "${work_dir}/xml/${vm}.xml"
       virsh -c qemu:///session undefine "${vm}"
    done
+
+   true "${separator_line}"
+
+   ## Import the pre-existing $HOME image into a dedicated qemu:///session pool
+   ## (not $HOME). For a dir pool this is the shortest correct path:
+   ## pool-create-as --build creates the directory, then move the file in and
+   ## refresh - no manual mkdir, no cp, no vol-create-as / vol-upload.
+   virsh -c qemu:///session pool-create-as default dir --target "${images_dir}" --build
+   mv -- "${home_image}" "${images_dir}/"
+   virsh -c qemu:///session pool-refresh default
+   virsh -c qemu:///session vol-list default \
+      | grep --quiet --fixed-strings -- "Whonix-Gateway.qcow2" \
+      || die 1 "imported image was not registered as a 'default' pool volume"
 
    true "${separator_line}"
 

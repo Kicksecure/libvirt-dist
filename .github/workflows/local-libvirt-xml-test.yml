@@ -46,7 +46,9 @@ jobs:
           ## libxml2-utils: virt-xml-validate shells out to xmllint for RNG
           ## validation; it is only a Recommends of libvirt-clients, so
           ## --no-install-recommends would otherwise drop it.
-          apt-packages: 'qemu-system-x86 qemu-system-modules-spice libvirt-clients libvirt-daemon-system libxml2-utils safe-rm'
+          ## qemu-utils: qemu-img, used to create the $HOME test image that the
+          ## script imports into the storage pool.
+          apt-packages: 'qemu-system-x86 qemu-system-modules-spice qemu-utils libvirt-clients libvirt-daemon-system libxml2-utils safe-rm'
 
       ## CI=true unlocks the script's undefine guard. Rootless qemu:///session,
       ## so no sudo: define/undefine needs no VM disk image and no KVM.
@@ -54,23 +56,3 @@ jobs:
         env:
           CI: "true"
         run: ./usr/share/libvirt-dist/ci_test
-
-  ## Separate job (own pristine runner): prove whether libvirt auto-creates
-  ## the qemu:///session default storage pool directory that the domain XML
-  ## references via <source pool='default'>.
-  default-pool-probe:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
-        with:
-          persist-credentials: false
-
-      - name: Install genmkfile + helper-scripts + libvirt + qemu-img
-        uses: org-ai-assisted/developer-meta-files/.github/actions/install-deps@master
-        with:
-          apt-packages: 'qemu-system-x86 qemu-utils libvirt-clients libvirt-daemon-system safe-rm'
-
-      - name: Prove pool dir creation + shortest $HOME image import
-        run: ./ci/libvirt-default-pool-probe.sh
