@@ -83,9 +83,11 @@ main() {
 
    true "${separator_line}"
 
-   ## virt-xml-validate cannot always determine the schema type; non-fatal.
+   ## Pass the explicit 'domain' type. Autodetection (xmllint --stream)
+   ## is unreliable across libxml2 versions and otherwise fails with
+   ## "cannot determine schema type". A schema violation must fail the test.
    for vm in "${domain_list[@]}"; do
-      virt-xml-validate "${work_dir}/xml/${vm}.xml" || true
+      virt-xml-validate "${work_dir}/xml/${vm}.xml" domain
    done
 
    true "${separator_line}"

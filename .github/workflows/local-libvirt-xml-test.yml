@@ -43,7 +43,10 @@ jobs:
           ## domains' '<graphics type=spice>' with "spice graphics are not
           ## supported with this QEMU". Installing it lets the unmodified
           ## production XML validate, rather than stripping the device.
-          apt-packages: 'qemu-system-x86 qemu-system-modules-spice libvirt-clients libvirt-daemon-system safe-rm'
+          ## libxml2-utils: virt-xml-validate shells out to xmllint for RNG
+          ## validation; it is only a Recommends of libvirt-clients, so
+          ## --no-install-recommends would otherwise drop it.
+          apt-packages: 'qemu-system-x86 qemu-system-modules-spice libvirt-clients libvirt-daemon-system libxml2-utils safe-rm'
 
       ## CI=true unlocks the script's undefine guard. Rootless qemu:///session,
       ## so no sudo: define/undefine needs no VM disk image and no KVM.
