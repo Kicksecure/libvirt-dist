@@ -67,10 +67,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install genmkfile + helper-scripts + libvirt
+      - name: Install genmkfile + helper-scripts + libvirt + qemu-img
         uses: org-ai-assisted/developer-meta-files/.github/actions/install-deps@master
         with:
-          apt-packages: 'qemu-system-x86 libvirt-clients libvirt-daemon-system safe-rm'
+          apt-packages: 'qemu-system-x86 qemu-utils libvirt-clients libvirt-daemon-system safe-rm'
 
-      - name: Prove the default storage pool directory is not auto-created
+      - name: Prove pool dir creation + shortest $HOME image import
         run: ./ci/libvirt-default-pool-probe.sh

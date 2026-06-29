@@ -5,12 +5,14 @@
 
 ## AI-Assisted
 
-## Proof, on a pristine CI runner, of whether libvirt auto-creates the
+## Proof, on a pristine CI runner, of (a) whether libvirt auto-creates the
 ## qemu:///session default storage pool directory (~/.local/share/libvirt/
-## images). The libvirt-dist domain XML references <source pool='default'>,
-## so whether that directory exists by itself decides if a setup step must
-## create it. Each step is an assertion: the script exits non-zero (failing
-## CI) if libvirt's behaviour ever stops matching the documented claim.
+## images), and (b) the shortest correct way to move an image that already
+## exists in $HOME into that dedicated pool. The libvirt-dist domain XML
+## references <source pool='default'>, so whether that directory exists by
+## itself decides if a setup step must create it. Each step is an assertion:
+## the script exits non-zero (failing CI) if libvirt's behaviour ever stops
+## matching the documented claim.
 
 set -o errexit
 set -o nounset
@@ -90,6 +92,23 @@ main() {
       die 1 "FAIL: pool-build did not create '${images_dir}'"
    fi
    log notice "PROVEN: '${images_dir}' is created only by 'virsh pool-build', not by connecting, pool-define, or pool-start."
+
+   ## 6. Start the pool so it can hold volumes (the directory now exists).
+   virsh -c qemu:///session pool-start default
+
+   ## 7. Shortest import: an image that already exists in $HOME goes into this
+   ##    dedicated pool (NOT $HOME) with just a move + refresh - the pool was
+   ##    defined/built/started above, so no cp and no vol-create-as/vol-upload.
+   qemu-img create -f qcow2 "${HOME}/Whonix-Gateway.qcow2" 4M
+   mv -- "${HOME}/Whonix-Gateway.qcow2" "${images_dir}/"
+   virsh -c qemu:///session pool-refresh default
+   virsh -c qemu:///session vol-list default \
+      | grep --quiet --fixed-strings -- "Whonix-Gateway.qcow2" \
+      || die 1 "FAIL: imported image was not registered as a pool volume"
+   if [ -e "${HOME}/Whonix-Gateway.qcow2" ]; then
+      die 1 "FAIL: image still present in \$HOME after the move"
+   fi
+   log notice "PROVEN: a pre-existing \$HOME image imports into the dedicated pool via pool-build + mv + pool-refresh (no manual mkdir, no cp, no vol-create-as/vol-upload)."
 }
 
 main "$@"
