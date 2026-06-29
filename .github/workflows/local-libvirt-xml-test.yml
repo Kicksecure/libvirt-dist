@@ -23,38 +23,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
         with:
           persist-credentials: false
 
-      ## ci_test sources helper-scripts' log_run_die.sh and calls str_replace.
-      ## This repo does not vendor helper-scripts; check it out @master (the
-      ## org's single source of truth) into a sibling path and point
-      ## HELPER_SCRIPTS_PATH at it.
-      - name: Checkout helper-scripts
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+      ## ci_test sources helper-scripts' log_run_die.sh (which calls the
+      ## sanitize-string python package) and runs str_replace. A bare git
+      ## checkout ships the files but not the installed python module; the
+      ## org-standard composite action genmkfile-installs helper-scripts to
+      ## the real system paths, so the script runs exactly as on an install.
+      ## @master tracks the org's single source of truth (G-A-004).
+      - name: Install genmkfile + helper-scripts + libvirt/qemu
+        uses: org-ai-assisted/developer-meta-files/.github/actions/install-deps@master
         with:
-          repository: Kicksecure/helper-scripts
-          ref: master
-          path: helper-scripts
-          persist-credentials: false
+          apt-packages: 'qemu-system-x86 libvirt-clients libvirt-daemon-system safe-rm'
 
-      - name: Install libvirt + qemu (session mode)
-        run: |
-          sudo --non-interactive apt-get update --error-on=any
-          sudo --non-interactive apt-get install --yes --no-install-recommends \
-            qemu-system-x86 \
-            libvirt-clients \
-            libvirt-daemon-system \
-            safe-rm
-
-      ## CI=true unlocks the script's undefine guard. define/undefine needs no
-      ## VM disk image and no KVM, so a plain hosted runner is sufficient.
+      ## CI=true unlocks the script's undefine guard. Rootless qemu:///session,
+      ## so no sudo: define/undefine needs no VM disk image and no KVM.
       - name: Run libvirt XML smoke test
         env:
           CI: "true"
-          HELPER_SCRIPTS_PATH: ${{ github.workspace }}/helper-scripts
-        run: |
-          export PATH="${HELPER_SCRIPTS_PATH}/usr/bin:${PATH}"
-          ./usr/share/libvirt-dist/ci_test
+        run: ./usr/share/libvirt-dist/ci_test
