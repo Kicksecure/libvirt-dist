@@ -1,0 +1,60 @@
+---
+name: libvirt XML test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+## Per-ref cancellation (see developer-meta-files agents/github-actions.md
+## G-A-006). github.ref is unique per branch / PR, so a new push cancels only
+## that ref's in-flight run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  libvirt-xml-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          persist-credentials: false
+
+      ## ci_test sources helper-scripts' log_run_die.sh and calls str_replace.
+      ## This repo does not vendor helper-scripts; check it out @master (the
+      ## org's single source of truth) into a sibling path and point
+      ## HELPER_SCRIPTS_PATH at it.
+      - name: Checkout helper-scripts
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6
+        with:
+          repository: Kicksecure/helper-scripts
+          ref: master
+          path: helper-scripts
+          persist-credentials: false
+
+      - name: Install libvirt + qemu (session mode)
+        run: |
+          sudo --non-interactive apt-get update --error-on=any
+          sudo --non-interactive apt-get install --yes --no-install-recommends \
+            qemu-system-x86 \
+            libvirt-clients \
+            libvirt-daemon-system \
+            safe-rm
+
+      ## CI=true unlocks the script's undefine guard. define/undefine needs no
+      ## VM disk image and no KVM, so a plain hosted runner is sufficient.
+      - name: Run libvirt XML smoke test
+        env:
+          CI: "true"
+          HELPER_SCRIPTS_PATH: ${{ github.workspace }}/helper-scripts
+        run: |
+          export PATH="${HELPER_SCRIPTS_PATH}/usr/bin:${PATH}"
+          ./usr/share/libvirt-dist/ci_test

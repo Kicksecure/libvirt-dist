@@ -1,143 +1,111 @@
-#!/bin/sh
+#!/bin/bash
 
+## Copyright (C) 2012 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+## AI-Assisted
+
+## CI smoke test for the libvirt domain XML files: assert that libvirt parses
+## and accepts each domain definition. define/undefine never opens the disk
+## image (that only happens on domain start), so this runs with no VM images
+## and inside environments where KVM is unavailable (CI, Qubes, nested virt).
+
+set -o errexit
+set -o nounset
+set -o pipefail
+set -o errtrace
+shopt -s inherit_errexit
+shopt -s shift_verbose
+
+## Trace every command so the separator_line markers below land in the CI log.
 set -x
-set -e
 
-if [ ! "$CI" = "true" ]; then
-   true "ERROR: You probably do not want to run this outside of a CI \
-environment, because it uses virsh to undefine virtual machines."
-   exit 1
-fi
+# shellcheck source=../../../../helper-scripts/usr/libexec/helper-scripts/log_run_die.sh
+source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/log_run_die.sh
 
-mydir="$( cd "$( dirname "$0" )" && pwd )"
-cd "$mydir"
-cd ..
-cd ..
-cd ..
+separator_line="------------------------------------------------------------"
 
-## Debugging.
-# cat /etc/apt/sources.list || true
-# ls -la /etc/apt/sources.list.d/* || true
-# cat /etc/apt/sources.list.d/* || true
-# ls -la /etc/apt/apt.conf.d/ || true
-# cat /etc/apt/apt.conf.d/* || true
-# ls -la /etc/apt/preferences.d/ || true
-# cat /etc/apt/preferences.d/* || true
+## Names double as both the XML file stem and the libvirt domain <name>.
+domain_list=(Whonix-Gateway Whonix-Workstation Whonix-Custom-Workstation Kicksecure)
 
-## Version closer to Debian release.
-# sudo --non-interactive rm -f /etc/apt/sources.list || true
-# echo "deb http://us.archive.ubuntu.com/ubuntu/ disco main universe" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
-# echo "deb http://us.archive.ubuntu.com/ubuntu/ disco-security main universe" | sudo --non-interactive tee -a /etc/apt/sources.list.d/disco.list
+mydir="$(dirname -- "$(readlink -f -- "$0")")"
+xml_source_dir="${mydir}/xml"
 
-## Debugging.
-# cat /etc/apt/sources.list.d/disco.list
+## Set by main() before the trap can reference it; "" keeps it nounset-safe.
+work_dir=""
 
-apt-get update
+ci_test_cleanup() {
+   if [ -n "${work_dir}" ]; then
+      safe-rm --recursive --force -- "${work_dir}"
+   fi
+}
 
-## Sanity tests.
-#apt-get --yes dist-upgrade
-dpkg --configure -a
+main() {
+   local cmd vm
 
-apt-get --yes install sudo virt-what lintian
+   ## virsh undefines domains; refuse to touch an operator's real libvirt
+   ## state unless this is explicitly a CI (or opted-in) run.
+   if [ "${CI:-}" != "true" ]; then
+      die 1 "refusing to run outside CI: this undefines libvirt domains; set 'CI=true' to override"
+   fi
 
-## insserv: Service libvirtd has to be enabled to start service libvirt-guests
-apt-get install --no-install-recommends -y qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
+   for cmd in virsh virt-xml-validate str_replace; do
+      has "${cmd}" \
+         || die 1 "required command '${cmd}' not found on PATH"
+   done
 
-apt-get install --no-install-recommends -y kmod || true
+   ## Operate on a throwaway copy. Never edit the shipped XML in place: the
+   ## kvm -> qemu rewrite below is a CI-only workaround, not a source change.
+   work_dir="$(mktemp --directory)"
+   trap ci_test_cleanup EXIT
+   cp -r -- "${xml_source_dir}" "${work_dir}/xml"
 
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
+   true "${separator_line}"
 
-dpkg-query --show --showformat='${Package} ${Version} \n' qemu-kvm libvirt-daemon-system libvirt-clients virt-manager || true
+   if virsh -c qemu:///session capabilities \
+      | grep --quiet --fixed-strings -- "<domain type='kvm'>"; then
+      log notice "KVM available: testing the XML unmodified."
+   else
+      log notice "KVM unavailable (CI / Qubes / nested virt): rewriting domain type 'kvm' -> 'qemu'."
+      for vm in "${domain_list[@]}"; do
+         ## error: could not find capabilities for domaintype=kvm
+         str_replace "<domain type='kvm'>" "<domain type='qemu'>" "${work_dir}/xml/${vm}.xml"
+         ## error: CPU mode 'host-passthrough' ... not supported by hypervisor
+         str_replace "<cpu mode='host-passthrough'/>" "" "${work_dir}/xml/${vm}.xml"
+      done
+   fi
 
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
+   true "${separator_line}"
 
-## Debugging.
+   for vm in "${domain_list[@]}"; do
+      test -f "${work_dir}/xml/${vm}.xml"
+   done
 
-virsh -c qemu:///session net-dumpxml default
-virsh -c qemu:///session net-dumpxml default --inactive
+   true "${separator_line}"
 
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
+   ## virt-xml-validate cannot always determine the schema type; non-fatal.
+   for vm in "${domain_list[@]}"; do
+      virt-xml-validate "${work_dir}/xml/${vm}.xml" || true
+   done
 
-test -f ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-test -f ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
-test -f ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
-test -f ./usr/share/libvirt-dist/xml/Kicksecure.xml
+   true "${separator_line}"
 
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
+   ## domxml-to-native needs KVM capabilities, absent in nested CI; non-fatal.
+   for vm in "${domain_list[@]}"; do
+      virsh -c qemu:///session domxml-to-native qemu-argv "${work_dir}/xml/${vm}.xml" || true
+   done
 
-## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-## error: invalid argument: could not find capabilities for domaintype=kvm
-search="<domain type='kvm'"
-replace="<domain type='qemu'"
-sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
-sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
-sed -i -e "s/$search/$replace/g" ./usr/share/libvirt-dist/xml/Kicksecure.xml
+   true "${separator_line}"
 
-## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-## error: unsupported configuration: CPU mode 'host-passthrough' for x86_64 qemu domain on x86_64 host is not supported by hypervisor
-search="<cpu mode='host-passthrough'/>"
-replace=""
-sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
-sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
-sed -i -e "s#$search#$replace#g" ./usr/share/libvirt-dist/xml/Kicksecure.xml
+   ## The actual assertion: libvirt accepts and registers each domain.
+   for vm in "${domain_list[@]}"; do
+      virsh -c qemu:///session define "${work_dir}/xml/${vm}.xml"
+      virsh -c qemu:///session undefine "${vm}"
+   done
 
-## + virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-## error: Unable to open /dev/net/tun, is tun module loaded?: No such file or directory
-modprobe tun || true
+   true "${separator_line}"
 
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
+   log notice "${0}: all tests passed."
+}
 
-## /usr/bin/virt-xml-validate: cannot determine schema type for ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml || true
-virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml || true
-virt-xml-validate ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml || true
-virt-xml-validate ./usr/share/libvirt-dist/xml/Kicksecure.xml || true
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
-## Not working in nested VM such as CI.
-## error: invalid argument: could not find capabilities for domaintype=kvm
-virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml || true
-true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml || true
-true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml || true
-true "-----"
-virsh domxml-to-native qemu-argv ./usr/share/libvirt-dist/xml/Kicksecure.xml || true
-true "-----"
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
-virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Whonix-Gateway.xml
-virsh -c qemu:///session undefine Whonix-Gateway
-
-virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Whonix-Workstation.xml
-virsh -c qemu:///session undefine Whonix-Workstation
-
-virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Whonix-Custom-Workstation.xml
-virsh -c qemu:///session undefine Whonix-Custom-Workstation
-
-virsh -c qemu:///session define ./usr/share/libvirt-dist/xml/Kicksecure.xml
-virsh -c qemu:///session undefine Kicksecure
-
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-true "------------------------------------------------------------"
-
-true "$0: All tests passed."
+main "$@"
